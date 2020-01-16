@@ -6,7 +6,7 @@ export default {
       link: '#737380',
       linkActive: '#13131A',
       itemActive: '#F5F5FA',
-      footer: '#D5D5E0',
+      footer: '#A8A8B3',
     },
   },
 };

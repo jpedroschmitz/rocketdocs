@@ -2,6 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 import { lighten } from 'polished';
 
 export default createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
   *,
   *::after,
   *::before {
@@ -52,6 +54,7 @@ export default createGlobalStyle`
     font-size: 16px;
     line-height: 28px;
     margin-bottom: 16px;
+    font-weight: 400;
   }
 
   a {
@@ -72,8 +75,6 @@ export default createGlobalStyle`
   code.language-text {
     border-radius: 5px;
     font-size: 15px;
-    /* background: #adadb6!important; */
-    /* color: #737380; */
   }
 
   .gatsby-highlight {
