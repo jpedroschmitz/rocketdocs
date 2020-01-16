@@ -1,0 +1,33 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore . --ext .js,.jsx",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx)\"",
+    "format": "yarn prettier -- --write",
+    "www": "yarn workspace www start",
+    "docs": "yarn workspace @rocketseat/gatsby-theme-docs dev"
+  },
+  "engines": {
+    "yarn": "^1.17.3",
+    "node": ">=8.0.0"
+  },
+  "workspaces": [
+    "@rocketseat/gatsby-theme-docs",
+    "www"
+  ],
+  "devDependencies": {
+    "commitlint": "^8.3.4",
+    "commitlint-config-rocketseat": "^0.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-react": "^7.17.0",
+    "husky": "^4.0.5",
+    "lerna": "^3.19.0",
+    "lint-staged": "^9.5.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1"
+  }
+}

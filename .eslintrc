@@ -1,0 +1,19 @@
+{
+  "extends": ["airbnb", "eslint-config-prettier"],
+  "plugins": ["import", "react"],
+  "overrides": [],
+  "rules": {
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".jsx", ".js"]
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "no-param-reassign": "off",
+    "react/jsx-one-expression-per-line": "off"
+  },
+  "env": {
+    "browser": false
+  }
+}

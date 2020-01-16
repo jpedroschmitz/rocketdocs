@@ -1,0 +1,28 @@
+{
+  "name": "www",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "The documentation of the Gatsby Themes created by Rocketseat",
+  "author": "João Pedro Schmitz <oi@joaopedro.cc> (@joaopedro_cc)",
+  "license": "MIT",
+  "dependencies": {
+    "@rocketseat/gatsby-theme-docs": "*",
+    "gatsby": "^2.18.12",
+    "gatsby-plugin-manifest": "^2.2.37",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "gatsby",
+    "rocketseat",
+    "gatsby-themes"
+  ],
+  "scripts": {
+    "build": "gatsby clean && gatsby build",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  }
+}

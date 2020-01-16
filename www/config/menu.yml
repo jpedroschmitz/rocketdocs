@@ -1,0 +1,10 @@
+# Sidebar navigation
+
+- label: 'Home'
+  link: '/'
+- label: 'Themes'
+  link: '/themes'
+- label: 'Docs'
+  items:
+    - label: 'gatsby-theme-docs'
+      link: '/docs/gatsby-theme-docs'

@@ -1,0 +1,77 @@
+{
+  "name": "@rocketseat/gatsby-theme-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "The theme that we use to build documentation websites at Rocketseat",
+  "author": "João Pedro Schmitz <oi@joaopedro.cc> (@joaopedro_cc)",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "documentation",
+    "open source",
+    "rocketseat",
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme",
+    "react",
+    "docs"
+  ],
+  "homepage": "https://github.com/rocketseat/gatsby-theme-rocketseat/tree/master/@rocketseat/gatsby-theme-docs#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rocketseat/gatsby-theme-rocketseat.git",
+    "directory": "@rocketseat/gatsby-theme-docs"
+  },
+  "bugs": {
+    "url": "https://github.com/rocketseat/gatsby-theme-rocketseat/issues"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^1.5.3",
+    "@mdx-js/react": "^1.5.3",
+    "babel-plugin-styled-components": "^1.10.6",
+    "gatsby-image": "^2.2.34",
+    "gatsby-plugin-canonical-urls": "^2.1.19",
+    "gatsby-plugin-catch-links": "^2.1.24",
+    "gatsby-plugin-google-analytics": "^2.1.31",
+    "gatsby-plugin-mdx": "^1.0.64",
+    "gatsby-plugin-nprogress": "^2.1.18",
+    "gatsby-plugin-offline": "^3.0.27",
+    "gatsby-plugin-react-helmet": "^3.1.16",
+    "gatsby-plugin-sharp": "^2.3.5",
+    "gatsby-plugin-styled-components": "^3.1.16",
+    "gatsby-prismjs-dracula": "^0.1.15",
+    "gatsby-remark-autolink-headers": "2.1.23",
+    "gatsby-remark-code-titles": "^1.1.0",
+    "gatsby-remark-copy-linked-files": "^2.1.36",
+    "gatsby-remark-embedder": "^1.7.0",
+    "gatsby-remark-external-links": "^0.0.4",
+    "gatsby-remark-images": "^3.1.42",
+    "gatsby-remark-lazy-load": "^1.0.2",
+    "gatsby-remark-prismjs": "^3.3.30",
+    "gatsby-remark-responsive-iframe": "^2.2.31",
+    "gatsby-source-filesystem": "^2.1.43",
+    "gatsby-transformer-remark": "^2.6.48",
+    "gatsby-transformer-sharp": "^2.3.7",
+    "gatsby-transformer-yaml": "^2.2.23",
+    "polished": "^3.4.2",
+    "prismjs": "^1.19.0",
+    "prop-types": "^15.7.2",
+    "react-headroom": "^3.0.0",
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.8.0",
+    "styled-components": "5.0.0",
+    "url-join": "^4.0.1"
+  },
+  "devDependencies": {
+    "gatsby": "^2.18.18",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.13.13",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}

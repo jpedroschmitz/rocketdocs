@@ -1,0 +1,11 @@
+{
+  "packages": ["@rocketseat/*"],
+  "version": "independent",
+  "npmClient": "yarn",
+  "ignoreChanges": ["CHANGELOG.md"],
+  "command": {
+    "bootstrap": {
+      "npmClientArgs": ["--no-package-lock"]
+    }
+  }
+}
