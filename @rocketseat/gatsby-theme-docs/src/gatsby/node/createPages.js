@@ -1,6 +1,7 @@
 const withDefaults = require('../../../util/options');
 
 module.exports = ({ graphql, actions, reporter }, themeOptions) => {
+  reporter.info('creating docs pages');
   const { basePath } = withDefaults(themeOptions);
   const { createPage } = actions;
 
@@ -56,5 +57,6 @@ module.exports = ({ graphql, actions, reporter }, themeOptions) => {
         },
       });
     });
+    reporter.success('docs pages created');
   });
 };

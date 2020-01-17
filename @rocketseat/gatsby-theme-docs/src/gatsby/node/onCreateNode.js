@@ -1,6 +1,7 @@
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-const withDefaults = require('../../../util/options');
+const { normalizeBasePath } = require(`../../util/url`);
+const withDefaults = require(`../../../util/options`);
 
 module.exports = ({ node, actions, getNode }, themeOptions) => {
   const { createNodeField } = actions;
@@ -14,7 +15,7 @@ module.exports = ({ node, actions, getNode }, themeOptions) => {
     createNodeField({
       name: `slug`,
       node,
-      value: `/${basePath}/${value}`.replace(/\/\/+/g, `/`),
+      value: normalizeBasePath(basePath, value),
     });
 
     createNodeField({

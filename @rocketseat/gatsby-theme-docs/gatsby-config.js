@@ -2,10 +2,14 @@ const withDefaults = require(`./util/options`);
 
 module.exports = themeOptions => {
   const options = withDefaults(themeOptions);
+  const { basePath, docsPath, configPath } = options;
   const { siteMetadata } = options;
 
   return {
-    siteMetadata,
+    siteMetadata: {
+      ...siteMetadata,
+      basePath,
+    },
     plugins: [
       {
         resolve: `gatsby-plugin-canonical-urls`,
@@ -27,7 +31,7 @@ module.exports = themeOptions => {
         resolve: `gatsby-source-filesystem`,
         options: {
           name: `docs`,
-          path: options.docsPath,
+          path: docsPath,
         },
       },
       {
@@ -40,7 +44,7 @@ module.exports = themeOptions => {
         resolve: `gatsby-source-filesystem`,
         options: {
           name: `config`,
-          path: options.configPath,
+          path: configPath,
         },
       },
       siteMetadata.analyticsID && {

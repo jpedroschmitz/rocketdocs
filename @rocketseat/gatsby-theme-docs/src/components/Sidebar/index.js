@@ -5,7 +5,7 @@ import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 
 import useNavigation from '../../hooks/useNavigation';
 import { Container, LogoContainer, List, Item, SubItem } from './styles';
-import { isExternalUrl } from '../../util/url';
+import { isExternalUrl, normalizeBasePath } from '../../util/url';
 import ExternalLink from './ExternalLink';
 import InternalLink from './InternalLink';
 import Logo from '../Logo';
@@ -34,26 +34,27 @@ export default function Sidebar({ isMenuOpen }) {
       site {
         siteMetadata {
           footer
+          basePath
         }
       }
     }
   `);
 
   const data = useNavigation();
-  const { footer } = siteMetadata;
+  const { footer, basePath } = siteMetadata;
 
   function renderLink(link, label) {
     return isExternalUrl(link) ? (
       <ExternalLink link={link} label={label} />
     ) : (
-      <InternalLink link={link} label={label} />
+      <InternalLink link={normalizeBasePath(basePath, link)} label={label} />
     );
   }
 
   return (
     <Container isMenuOpen={isMenuOpen}>
       <LogoContainer>
-        <Link to="/">
+        <Link to={basePath}>
           <Logo />
         </Link>
       </LogoContainer>
