@@ -72,6 +72,22 @@ export default createGlobalStyle`
     }
   }
 
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr {
+    background-color: #ffffff
+  }
+
   code.language-text {
     border-radius: 5px;
     font-size: 15px;
@@ -80,7 +96,12 @@ export default createGlobalStyle`
   .gatsby-highlight {
     border-radius: 5px;
     margin-bottom: 16px;
-    padding: 2rem;
+    padding: 1rem;
+  }
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    font-size: 14px!important;
   }
 
   .gatsby-highlight pre[class*="language-"] {
