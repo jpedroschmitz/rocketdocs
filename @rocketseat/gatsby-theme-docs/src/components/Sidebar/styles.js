@@ -114,7 +114,8 @@ export const Item = styled.li`
 
     &:hover {
       color: ${({ theme }) => darken('0.04', theme.colors.sidebar.link)};
-      background-color: ${({ theme }) => theme.colors.sidebar.itemActive};
+      background-color: ${({ theme }) =>
+        darken('0.02', theme.colors.sidebar.itemActive)};
     }
   }
 
@@ -124,7 +125,9 @@ export const Item = styled.li`
     color: ${({ theme }) => theme.colors.sidebar.linkActive};
 
     &:hover {
-      color: ${({ theme }) => darken('0.04', theme.colors.sidebar.linkActive)};
+      background-color: ${({ theme }) =>
+        darken('0.02', theme.colors.sidebar.itemActive)};
+      color: ${({ theme }) => theme.colors.sidebar.linkActive};
     }
   }
 `;
