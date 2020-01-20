@@ -81,9 +81,11 @@ export default function Sidebar({ isMenuOpen }) {
           })}
         </List>
       </nav>
-      <footer>
-        <p>{footer}</p>
-      </footer>
+      {footer && (
+        <footer>
+          <p>{footer}</p>
+        </footer>
+      )}
     </Container>
   );
 }

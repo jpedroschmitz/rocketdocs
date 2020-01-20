@@ -7,11 +7,10 @@ module.exports = themeOptions => {
       siteDescription: `Discover free Gatsby themes, plugins and templates created with love by Rocketseat.`,
       siteUrl: `https://gatsby-theme-rocketseat.github.io`,
       siteAuthor: `@rocketseat`,
-      siteName: `Rocketseat Gatsby Themes`,
       siteImage: `/banner.png`,
-      siteLanguage: `en_us`,
+      siteLanguage: `en`,
       themeColor: `#7159c1`,
-      footer: `Created with <3`,
+      footer: false,
     },
   };
 

@@ -12,7 +12,7 @@ export default function SEO({ description, title, slug, image, children }) {
           siteMetadata {
             defaultTitle
             siteTitleShort
-            siteName
+            siteTitle
             siteImage
             siteDescription
             siteLanguage
@@ -26,7 +26,7 @@ export default function SEO({ description, title, slug, image, children }) {
   );
 
   const {
-    siteName,
+    siteTitle,
     siteTitleShort,
     siteUrl,
     defaultTitle,
@@ -38,7 +38,7 @@ export default function SEO({ description, title, slug, image, children }) {
     siteIcon,
   } = site.siteMetadata;
 
-  const metaTitle = title ? `${title} | ${siteName}` : defaultTitle;
+  const metaTitle = title ? `${title} | ${siteTitle}` : defaultTitle;
   const metaUrl = urljoin(siteUrl, slug);
   const metaImage = urljoin(siteUrl, image || siteImage);
   const metaDescription = description || siteDescription;
@@ -77,7 +77,7 @@ export default function SEO({ description, title, slug, image, children }) {
       <meta property="og:title" content={metaTitle} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:locale" content={siteLanguage} />
-      <meta property="og:site_name" content={siteName} />
+      <meta property="og:site_name" content={siteTitle} />
       <meta property="og:image" content={metaImage} />
       <meta property="og:image:secure_url" content={metaImage} />
       <meta property="og:image:alt" content="Banner" />
