@@ -71,6 +71,7 @@ export const LogoContainer = styled.div`
 export const List = styled.ul`
   list-style: none;
   width: 100%;
+  padding-left: 0;
 
   display: flex;
   justify-content: flex-start;

@@ -68,6 +68,7 @@ export default createGlobalStyle`
     p {
       font-style: italic!important;
       font-size: 0.88em!important;
+      line-height: 28px;
     }
   }
 
@@ -105,5 +106,14 @@ export default createGlobalStyle`
 
   .gatsby-highlight pre[class*="language-"] {
     padding: 0;
+  }
+
+  ul {
+    color: #737380;
+    padding-left: 15px;
+
+    li {
+      line-height: 28px;
+    }
   }
 `;
