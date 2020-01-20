@@ -2,7 +2,7 @@ module.exports = themeOptions => {
   const baseMetadata = {
     metadata: {
       siteTitle: `Rocketseat Gatsby Themes`,
-      siteTitleAlt: `Rocketseat Gatsby Themes`,
+      defaultTitle: `Rocketseat Gatsby Themes`,
       siteTitleShort: `Rocketseat Gatsby Themes`,
       siteDescription: `Discover free Gatsby themes, plugins and templates created with love by Rocketseat.`,
       siteUrl: `https://gatsby-theme-rocketseat.github.io`,

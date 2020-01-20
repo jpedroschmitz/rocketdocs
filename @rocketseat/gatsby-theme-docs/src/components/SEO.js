@@ -10,7 +10,7 @@ export default function SEO({ description, title, slug, image, children }) {
       query {
         site {
           siteMetadata {
-            siteTitleAlt
+            defaultTitle
             siteTitleShort
             siteName
             siteImage
@@ -29,7 +29,7 @@ export default function SEO({ description, title, slug, image, children }) {
     siteName,
     siteTitleShort,
     siteUrl,
-    siteTitleAlt,
+    defaultTitle,
     siteImage,
     siteDescription,
     siteLanguage,
@@ -38,7 +38,7 @@ export default function SEO({ description, title, slug, image, children }) {
     siteIcon,
   } = site.siteMetadata;
 
-  const metaTitle = title ? `${title} | ${siteName}` : siteTitleAlt;
+  const metaTitle = title ? `${title} | ${siteName}` : defaultTitle;
   const metaUrl = urljoin(siteUrl, slug);
   const metaImage = urljoin(siteUrl, image || siteImage);
   const metaDescription = description || siteDescription;
