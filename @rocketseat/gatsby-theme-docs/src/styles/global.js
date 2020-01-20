@@ -31,6 +31,8 @@ export default createGlobalStyle`
 
   h2 {
     font-size: 24px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #D5D5E0;
   }
 
   h3 {
@@ -43,10 +45,7 @@ export default createGlobalStyle`
 
   h2, h3, h4, h5, h6 {
     color: #737380;
-    margin-top: 16px;
-    padding-bottom: 8px;
-    margin-bottom: 16px;
-    border-bottom: 1px solid #D5D5E0;
+    margin: 24px 0 16px 0;
   }
 
   p {
