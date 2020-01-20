@@ -32,10 +32,12 @@
 
 ## Contributing
 
-Are you interested in contributing? We would love to see you helping out! Please
-take a little bit of your time and look at our
+Thanks for being interested in contributing! We’re so glad you want to help!
+
+Please take a little bit of your time and look at our
 [contributing guidelines](.github/CONTRIBUTING.md) and our
-[code of conduct](.github/CODE_OF_CONDUCT.md)!
+[code of conduct](.github/CODE_OF_CONDUCT.md)! All type of contributions are welcome, such as bug fixes, issues or feature requests.
+Also, don't forget to check the roadmap.
 
 ## Need help?
 
