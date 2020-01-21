@@ -27,17 +27,12 @@
 
 ## Themes
 
-- [`gatsby-theme-docs`](./@rocketseat/gatsby-theme-docs): An amazing theme to
-  create documentation websites easily and quickly.
+- [`gatsby-theme-docs`](./@rocketseat/gatsby-theme-docs): Out of the box Gatsby Theme for creating documentation websites easily and quickly.
 
 ## Contributing
 
-Thanks for being interested in contributing! We’re so glad you want to help!
-
-Please take a little bit of your time and look at our
-[contributing guidelines](.github/CONTRIBUTING.md) and our
-[code of conduct](.github/CODE_OF_CONDUCT.md)! All type of contributions are welcome, such as bug fixes, issues or feature requests.
-Also, don't forget to check the roadmap.
+Thanks for being interested in contributing! We’re so glad you want to help! Please take a little bit of your time and look at our [contributing guidelines](.github/CONTRIBUTING.md) and our
+[code of conduct](.github/CODE_OF_CONDUCT.md)! All type of contributions are welcome, such as bug fixes, issues or feature requests. Also, don't forget to check the roadmap.
 
 ## Need help?
 
