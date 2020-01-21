@@ -1,5 +1,6 @@
 name: Deploy docs
 
+on: push
 jobs:
   build:
     name: Build Gatsby Site
