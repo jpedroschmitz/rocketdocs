@@ -9,7 +9,6 @@
     "@rocketseat/gatsby-theme-docs": "*",
     "gatsby": "^2.18.12",
     "gatsby-plugin-manifest": "^2.2.37",
-    "gh-pages": "^2.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
@@ -21,7 +20,6 @@
     "gatsby-themes"
   ],
   "scripts": {
-    "deploy": "gatsby build && gh-pages -d public",
     "build": "gatsby clean && gatsby build",
     "start": "gatsby develop",
     "serve": "gatsby serve",
