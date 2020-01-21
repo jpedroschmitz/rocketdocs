@@ -39,7 +39,7 @@
 
 ## ✍🏻 Docs
 
-Full documentation for `@rocketseat/gatsby-theme-docs` lives [on the website](https://gatsby-theme-rocketseat.github.io).
+Full documentation for `@rocketseat/gatsby-theme-docs` lives [on the website](https://rocketseat.github.io/gatsby-theme-rocketseat/gatsby-theme-docs).
 
 ## ✨ Contributing
 
