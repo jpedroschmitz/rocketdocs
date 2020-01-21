@@ -1,6 +1,10 @@
 name: Deploy docs
 
-on: push
+on:
+  push:
+    branches:
+      - master
+
 jobs:
   build:
     name: Build Gatsby Site
@@ -11,6 +15,6 @@ jobs:
 
       - name: Build Docs Site
         uses: jzweifel/gatsby-cli-github-action@master
-        env: GATSBY_PROJECT_PATH = "./www"
+        env: GATSBY_PROJECT_PATH = "www"
         with:
           gatsby-arg: build
