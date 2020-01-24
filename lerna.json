@@ -1,11 +1,15 @@
 {
-  "packages": ["@rocketseat/*"],
-  "version": "independent",
   "npmClient": "yarn",
+  "version": "independent",
+  "useWorkspaces": true,
+  "registry": "https://registry.npmjs.org/",
   "ignoreChanges": ["CHANGELOG.md"],
   "command": {
-    "bootstrap": {
-      "npmClientArgs": ["--no-package-lock"]
+    "publish": {
+      "allowBranch": "master",
+      "bump": "patch",
+      "conventionalCommits": true,
+      "message": "chore(release): Publish"
     }
   }
 }

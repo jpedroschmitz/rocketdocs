@@ -5,16 +5,15 @@
     "lint": "eslint --ignore-path .gitignore . --ext .js,.jsx",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx)\"",
     "format": "yarn prettier -- --write",
-    "www": "yarn workspace www start",
-    "docs": "yarn workspace @rocketseat/gatsby-theme-docs dev"
+    "publish": "lerna publish"
   },
   "engines": {
     "yarn": "^1.17.3",
     "node": ">=8.0.0"
   },
   "workspaces": [
-    "@rocketseat/gatsby-theme-docs",
-    "www"
+    "@rocketseat/*",
+    "examples/*"
   ],
   "devDependencies": {
     "commitlint": "^8.3.4",
