@@ -6,7 +6,7 @@
   <br>
 </h1>
 
-<h4 align="center">Gatsby themes and tools created with love by <a href="https://rocketseat.com.br" target="_blank">Rocketseat</a>.</h4>
+<h4 align="center">Gatsby themes that we use to build websites at Rocketseat <a href="https://rocketseat.com.br" target="_blank">Rocketseat</a> ⚡️🔥</h4>
 
 <p align="center">
   <img src="https://img.shields.io/badge/PRs-welcome-%237159c1.svg" alt="PRs welcome!" />
@@ -27,7 +27,11 @@
 
 ## Themes
 
-- [`gatsby-theme-docs`](./@rocketseat/gatsby-theme-docs): Out of the box Gatsby Theme for creating documentation websites easily and quickly.
+🚀 [`gatsby-theme-docs-core`](./@rocketseat/gatsby-theme-docs-core): The core theme for docs websites that includes all the data structures you need.
+
+🚀 [`gatsby-theme-docs`](./@rocketseat/gatsby-theme-docs): Out of the box Gatsby Theme for creating documentation websites easily and quickly.
+
+🏗 [`gatsby-theme-seo`](./@rocketseat/gatsby-theme-seo): A work in progress theme that will change the way you deal with SEO in Gatsby.
 
 ## Contributing
 
