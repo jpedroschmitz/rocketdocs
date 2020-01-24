@@ -19,14 +19,14 @@
     "docs",
     "mdx"
   ],
-  "homepage": "https://github.com/rocketseat/gatsby-theme-rocketseat/tree/master/@rocketseat/gatsby-theme-docs-core#readme",
+  "homepage": "https://github.com/Rocketseat/gatsby-themes/tree/master/@rocketseat/gatsby-theme-docs-core#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rocketseat/gatsby-theme-rocketseat.git",
+    "url": "https://github.com/Rocketseat/gatsby-themes.git",
     "directory": "@rocketseat/gatsby-theme-docs-core"
   },
   "bugs": {
-    "url": "https://github.com/rocketseat/gatsby-theme-rocketseat/issues"
+    "url": "https://github.com/Rocketseat/gatsby-themes/issues"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.5.5",

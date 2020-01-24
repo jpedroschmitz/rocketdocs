@@ -16,14 +16,14 @@
     "react",
     "seo"
   ],
-  "homepage": "https://github.com/rocketseat/gatsby-theme-rocketseat/tree/master/@rocketseat/gatsby-theme-seo#readme",
+  "homepage": "https://github.com/Rocketseat/gatsby-themes/tree/master/@rocketseat/gatsby-theme-seo#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rocketseat/gatsby-theme-rocketseat.git",
+    "url": "https://github.com/Rocketseat/gatsby-themes.git",
     "directory": "@rocketseat/gatsby-theme-seo"
   },
   "bugs": {
-    "url": "https://github.com/rocketseat/gatsby-theme-rocketseat/issues"
+    "url": "https://github.com/Rocketseat/gatsby-themes/issues"
   },
   "dependencies": {},
   "devDependencies": {
