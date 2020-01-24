@@ -1,0 +1,55 @@
+{
+  "name": "@rocketseat/gatsby-theme-docs-core",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Core theme for @rocketseat/gatsby-theme-docs with no additional theming or style opinions. Includes all of the data structures you need to get up and building a documentation website.",
+  "author": "João Pedro Schmitz <oi@joaopedro.cc> (@joaopedro_cc)",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "documentation",
+    "open source",
+    "rocketseat",
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme",
+    "react",
+    "docs",
+    "mdx"
+  ],
+  "homepage": "https://github.com/rocketseat/gatsby-theme-rocketseat/tree/master/@rocketseat/gatsby-theme-docs-core#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rocketseat/gatsby-theme-rocketseat.git",
+    "directory": "@rocketseat/gatsby-theme-docs-core"
+  },
+  "bugs": {
+    "url": "https://github.com/rocketseat/gatsby-theme-rocketseat/issues"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^1.5.5",
+    "gatsby-plugin-mdx": "^1.0.67",
+    "gatsby-plugin-sharp": "^2.4.0",
+    "gatsby-remark-autolink-headers": "^2.1.23",
+    "gatsby-remark-copy-linked-files": "^2.1.36",
+    "gatsby-remark-embedder": "^1.8.0",
+    "gatsby-remark-images": "^3.1.42",
+    "gatsby-remark-responsive-iframe": "^2.2.31",
+    "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-transformer-sharp": "^2.3.13",
+    "gatsby-transformer-yaml": "^2.2.23"
+  },
+  "devDependencies": {
+    "gatsby": "^2.18.18",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "peerDependencies": {
+    "@mdx-js/react": "^1.5.1",
+    "gatsby": "^2.13.13",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}

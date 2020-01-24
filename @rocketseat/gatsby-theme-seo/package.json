@@ -1,0 +1,39 @@
+{
+  "name": "@rocketseat/gatsby-theme-seo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "",
+  "author": "João Pedro Schmitz <oi@joaopedro.cc> (@joaopedro_cc)",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "rocketseat",
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme",
+    "react",
+    "seo"
+  ],
+  "homepage": "https://github.com/rocketseat/gatsby-theme-rocketseat/tree/master/@rocketseat/gatsby-theme-seo#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rocketseat/gatsby-theme-rocketseat.git",
+    "directory": "@rocketseat/gatsby-theme-seo"
+  },
+  "bugs": {
+    "url": "https://github.com/rocketseat/gatsby-theme-rocketseat/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gatsby": "^2.18.18",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.13.13",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
