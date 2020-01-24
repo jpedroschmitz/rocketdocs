@@ -7,7 +7,7 @@
 </h2>
 
 <p align="center">
-  Core theme for <a href="https://github.com/Rocketseat/gatsby-theme-rocketseat/tree/master/%40rocketseat/gatsby-theme-docs">@rocketseat/gatsby-theme-docs</a> with no additional theming or style opinions. Includes all of the data structures you need to get up and building a documentation website.
+  Core theme for <a href="https://github.com/Rocketseat/gatsby-theme-rocketseat/tree/master/%40rocketseat/gatsby-theme-docs">@rocketseat/gatsby-theme-docs</a> with no additional theming or style opinions. Includes all of the data structures you need to get up and build a documentation website.
 </p>
 
 <p align="center">

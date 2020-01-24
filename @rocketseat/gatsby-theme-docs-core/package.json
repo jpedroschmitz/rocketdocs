@@ -2,7 +2,7 @@
   "name": "@rocketseat/gatsby-theme-docs-core",
   "version": "1.0.0",
   "main": "index.js",
-  "description": "Core theme for @rocketseat/gatsby-theme-docs with no additional theming or style opinions. Includes all of the data structures you need to get up and building a documentation website.",
+  "description": "Core theme for @rocketseat/gatsby-theme-docs with no additional theming or style opinions. Includes all of the data structures you need to get up and build a documentation website.",
   "author": "João Pedro Schmitz <oi@joaopedro.cc> (@joaopedro_cc)",
   "license": "MIT",
   "publishConfig": {
