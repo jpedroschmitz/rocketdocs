@@ -49,6 +49,8 @@ npm i @rocketseat/gatsby-theme-docs-core
 
 ## 🔥 Usage
 
+If you need help, make sure to check the [custom example](https://github.com/Rocketseat/gatsby-themes/blob/master/examples/gatsby-theme-docs-core) we created for you!
+
 ### Theme options
 
 <div style="overflow-x:auto;">
