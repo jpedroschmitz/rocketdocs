@@ -78,6 +78,19 @@ exports.createSchemaCustomization = ({ actions }) => {
       image: String
     }
   `);
+
+  actions.createTypes(`
+    type SidebarItems implements Node {
+      label: String!
+      link: String
+      items: [SidebarItemsItems]
+    }
+
+    type SidebarItemsItems {
+      label: String
+      link: String
+    }
+  `);
 };
 
 exports.onPreBootstrap = ({ store, reporter }, themeOptions) => {
