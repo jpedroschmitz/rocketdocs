@@ -114,9 +114,16 @@ exports.onCreateNode = (
   { node, actions: { createNodeField }, getNode },
   themeOptions,
 ) => {
-  const { basePath } = withDefault(themeOptions);
+  const { basePath, docsPath } = withDefault(themeOptions);
 
-  if (node.internal.type === `Mdx`) {
+  if (node.internal.type !== `Mdx`) {
+    return;
+  }
+
+  const fileNode = getNode(node.parent);
+  const source = fileNode.sourceInstanceName;
+
+  if (node.internal.type === `Mdx` && source === docsPath) {
     let value = createFilePath({ node, getNode });
     if (value === 'index') value = '';
 
