@@ -1,8 +1,0 @@
-# Sidebar navigation
-
-- label: 'Home'
-  link: '/'
-- label: 'Themes'
-  items:
-    - label: 'gatsby-theme-docs'
-      link: '/gatsby-theme-docs'

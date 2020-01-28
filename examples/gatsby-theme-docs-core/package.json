@@ -1,0 +1,21 @@
+{
+  "name": "gatsby-theme-docs-core",
+  "private": true,
+  "description": "An example using the @rocketseat/gatsby-theme-docs-core theme",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@rocketseat/gatsby-theme-docs-core": "*",
+    "gatsby": "^2.18.12",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {}
+}

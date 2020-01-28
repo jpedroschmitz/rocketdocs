@@ -1,0 +1,50 @@
+---
+title: 'Getting started'
+---
+
+The best way yo start is by using our starter:
+
+```bash
+gatsby new rocket-docs https://github.com/rocketseat/gatsby-starter-theme-docs
+```
+
+But, if you prefer, you can install and configure manually.
+
+```bash
+# Using Yarn:
+yarn add @rocketseat/gatsby-theme-docs
+
+# Using NPM:
+npm i @rocketseat/gatsby-theme-docs
+```
+
+## Example usage
+
+```js title=gatsby-config.js
+module.exports = {
+  siteMetadata: {
+    siteTitle: `@rocketseat/gatsby-theme-docs`,
+    defaultTitle: `@rocketseat/gatsby-theme-docs`,
+    siteTitleShort: `gatsby-theme-docs`,
+    siteDescription: `Out of the box Gatsby Theme for creating documentation websites easily and quickly`,
+    siteUrl: `https://rocketseat.github.io/gatsby-themes`,
+    siteAuthor: `@rocketseat`,
+    siteImage: `/banner.png`,
+    siteLanguage: `en`,
+    themeColor: `#7159c1`,
+  },
+  plugins: [
+    {
+      resolve: `@rocketseat/gatsby-theme-docs`,
+      options: {
+        docsPath: `src/docs`,
+        basePath: `gatsby-themes`,
+      },
+    },
+  ],
+};
+```
+
+Once you have installed the dependencies you will need to create the [navigation](/gatsby-themes/usage/navigation) and [documentation](/gatsby-themes/usage/creating-docs) file.
+
+After that, you are ready to launch 🚀

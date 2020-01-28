@@ -1,5 +1,5 @@
 {
-  "name": "www",
+  "name": "gatsby-theme-docs",
   "private": true,
   "version": "1.0.0",
   "description": "The documentation of all Gatsby Themes created by Rocketseat",
@@ -8,7 +8,11 @@
   "dependencies": {
     "@rocketseat/gatsby-theme-docs": "*",
     "gatsby": "^2.18.12",
+    "gatsby-plugin-canonical-urls": "^2.1.19",
+    "gatsby-plugin-google-analytics": "^2.1.34",
     "gatsby-plugin-manifest": "^2.2.37",
+    "gatsby-plugin-offline": "^3.0.32",
+    "gatsby-plugin-sitemap": "^2.2.26",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
