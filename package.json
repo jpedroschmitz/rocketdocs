@@ -11,8 +11,7 @@
     "node": ">=8.0.0"
   },
   "workspaces": [
-    "@rocketseat/*",
-    "examples/*"
+    "@rocketseat/*"
   ],
   "devDependencies": {
     "commitlint": "^8.3.4",
