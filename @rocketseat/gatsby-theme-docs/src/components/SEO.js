@@ -18,7 +18,6 @@ export default function SEO({ description, title, slug, image, children }) {
             siteLanguage
             siteUrl
             siteAuthor
-            themeColor
           }
         }
       }
@@ -33,7 +32,6 @@ export default function SEO({ description, title, slug, image, children }) {
     siteImage,
     siteDescription,
     siteLanguage,
-    themeColor,
     siteAuthor,
     siteIcon,
   } = site.siteMetadata;
@@ -67,8 +65,6 @@ export default function SEO({ description, title, slug, image, children }) {
       <meta httpEquiv="x-ua-compatible" content="IE=edge,chrome=1" />
       <meta name="MobileOptimized" content="320" />
       <meta name="HandheldFriendly" content="True" />
-      <meta name="theme-color" content={themeColor} />
-      <meta name="msapplication-TileColor" content={themeColor} />
       <meta name="google" content="notranslate" />
       <meta name="referrer" content="no-referrer-when-downgrade" />
 

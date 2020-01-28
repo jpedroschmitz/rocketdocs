@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { lighten } from 'polished';
+import code from './code';
 
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
@@ -20,6 +21,8 @@ export default createGlobalStyle`
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
     background-color: ${({ theme }) => theme.colors.background};
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
   }
 
   h1 {
@@ -77,6 +80,7 @@ export default createGlobalStyle`
     border-spacing: 0;
     width: 100%;
     border: 1px solid #ddd;
+    margin-bottom: 16px;
   }
 
   th, td {
@@ -88,24 +92,8 @@ export default createGlobalStyle`
     background-color: #ffffff
   }
 
-  code.language-text {
-    border-radius: 5px;
-    font-size: 15px;
-  }
-
-  .gatsby-highlight {
-    border-radius: 5px;
+  iframe {
     margin-bottom: 16px;
-    padding: 1rem;
-  }
-
-  code[class*="language-"],
-  pre[class*="language-"] {
-    font-size: 14px!important;
-  }
-
-  .gatsby-highlight pre[class*="language-"] {
-    padding: 0;
   }
 
   ul {
@@ -116,4 +104,6 @@ export default createGlobalStyle`
       line-height: 28px;
     }
   }
+
+  ${code}
 `;

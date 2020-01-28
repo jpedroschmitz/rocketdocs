@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
+import { useSidebar } from '@rocketseat/gatsby-theme-docs-core';
 
-import useNavigation from '../../hooks/useNavigation';
 import { Container, LogoContainer, List, Item, SubItem } from './styles';
-import { isExternalUrl, normalizeBasePath } from '../../util/url';
+import { isExternalUrl } from '../../util/url';
 import ExternalLink from './ExternalLink';
 import InternalLink from './InternalLink';
 import Logo from '../Logo';
@@ -28,9 +28,11 @@ function ListWithSubItems({ children, text }) {
 
 export default function Sidebar({ isMenuOpen }) {
   const {
-    site: { siteMetadata },
+    site: {
+      siteMetadata: { footer, basePath },
+    },
   } = useStaticQuery(graphql`
-    query HeaderQuery {
+    {
       site {
         siteMetadata {
           footer
@@ -40,14 +42,13 @@ export default function Sidebar({ isMenuOpen }) {
     }
   `);
 
-  const data = useNavigation();
-  const { footer, basePath } = siteMetadata;
+  const data = useSidebar();
 
   function renderLink(link, label) {
     return isExternalUrl(link) ? (
       <ExternalLink link={link} label={label} />
     ) : (
-      <InternalLink link={normalizeBasePath(basePath, link)} label={label} />
+      <InternalLink link={link} label={label} />
     );
   }
 
@@ -81,11 +82,9 @@ export default function Sidebar({ isMenuOpen }) {
           })}
         </List>
       </nav>
-      {footer && (
-        <footer>
-          <p>{footer}</p>
-        </footer>
-      )}
+      <footer>
+        <p>{footer}</p>
+      </footer>
     </Container>
   );
 }
