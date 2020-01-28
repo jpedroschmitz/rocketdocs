@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@mdx-js/react": "^1.5.5",
-    "@rocketseat/gatsby-theme-docs-core": "*",
+    "@rocketseat/gatsby-theme-docs-core": "^1.0.0",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby-plugin-catch-links": "^2.1.24",
     "gatsby-plugin-mdx": "^1.0.68",
