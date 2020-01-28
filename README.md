@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src=".github/assets/logo.svg" alt="Rocketseat and Gatsby" width="260">
+  <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/gatsby-themes-logo.svg" alt="Rocketseat and Gatsby" width="260">
   <br>
   Rocketseat Gatsby Themes
   <br>
