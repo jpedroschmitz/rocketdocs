@@ -5,6 +5,7 @@
   "description": "The documentation of all Gatsby Themes created by Rocketseat",
   "author": "João Pedro Schmitz <oi@joaopedro.cc> (@joaopedro_cc)",
   "license": "MIT",
+  "starter-name": "gatsby-starter-rocket-docs",
   "dependencies": {
     "@rocketseat/gatsby-theme-docs": "*",
     "gatsby": "^2.18.12",
