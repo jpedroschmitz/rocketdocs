@@ -3,11 +3,11 @@
 </p>
 
 <h2 align="center">
-  Gatsby Starter: Documentation website
+  Gatsby Starter: Rocket Docs
 </h2>
 
 <p align="center">
-  Uma descrição do caralho aqui. <a href="https://github.com/Rocketseat/gatsby-themes/tree/master/%40rocketseat/gatsby-theme-docs">@rocketseat/gatsby-theme-docs</a>
+  Out of the box Gatsby Starter for creating documentation websites easily and quickly. With support for MDX, code highlight, Analytics, SEO and much more 🔥 Using the theme: <a href="https://github.com/Rocketseat/gatsby-themes/tree/master/%40rocketseat/gatsby-theme-docs">@rocketseat/gatsby-theme-docs</a>
 </p>
 
 <p align="center">
