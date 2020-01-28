@@ -4,8 +4,7 @@
   "scripts": {
     "lint": "eslint --ignore-path .gitignore . --ext .js,.jsx",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx)\"",
-    "format": "yarn prettier -- --write",
-    "publish": "lerna publish"
+    "format": "yarn prettier -- --write"
   },
   "engines": {
     "yarn": "^1.17.3",

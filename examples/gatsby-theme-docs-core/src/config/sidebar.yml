@@ -1,8 +1,0 @@
-# Simple item
-- label: 'Home'
-  link: '/'
-# With list of subitems
-- label: 'With dropdown'
-  items:
-    - label: 'My Example'
-      link: '/my-example'
