@@ -22,9 +22,9 @@
 
 <p align="center">
   <a href="#-features">Features</a> •
+  <a href="#%EF%B8%8F-getting-started">Getting started</a> •
   <a href="#-docs">Docs</a> •
   <a href="#-contributing">Contributing</a> •
-  <a href="#-roadmap">Roadmap</a> •
   <a href="#memo-license">License</a>
 </p>
 
@@ -61,7 +61,7 @@ Your site is now running at `http://localhost:8000`
 
 ## 📄 Docs
 
-Looking for docs? Check our live demo and documentation [website](https://rocketseat.github.io/gatsby-starter-rocket-docs).
+Looking for docs? Check our live demo and documentation [website](https://rocketdocs.netlify.com).
 
 ## ✨ Contributing
 

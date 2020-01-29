@@ -22,7 +22,7 @@
 
 <p align="center">
   <a href="#-features">Features</a> •
-  <a href="#-installation">Installation</a> •
+  <a href="#%EF%B8%8F-getting-started">Getting started</a> •
   <a href="#-usage">Usage</a> •
   <a href="#-contributing">Contributing</a> •
   <a href="#-license">License</a>
@@ -33,7 +33,7 @@
 - MDX for docs;
 - Sidebar customization with Yaml;
 
-## ⚡️ Installation
+## ⚡️ Getting started
 
 Using Yarn:
 

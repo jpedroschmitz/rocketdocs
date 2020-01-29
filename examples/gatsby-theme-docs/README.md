@@ -38,7 +38,7 @@ gatsby new rocket-docs https://github.com/rocketseat/gatsby-starter-rocket-docs
 
 ## 📝 Docs
 
-Looking for docs? Check our live demo and documentation [website](https://rocketseat.github.io/gatsby-starter-rocket-docs).
+Looking for docs? Check our live demo and documentation [website](https://rocketdocs.netlify.com).
 
 ---
 
