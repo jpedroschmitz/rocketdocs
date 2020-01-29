@@ -6,7 +6,7 @@
   <br>
 </h1>
 
-<h4 align="center">Gatsby themes that we use to build websites at Rocketseat <a href="https://rocketseat.com.br" target="_blank">Rocketseat</a> ⚡️🔥</h4>
+<h4 align="center">Gatsby themes that we use to build websites at <a href="https://rocketseat.com.br" target="_blank">Rocketseat</a> ⚡️🔥</h4>
 
 <p align="center">
   <img src="https://img.shields.io/badge/PRs-welcome-%237159c1.svg" alt="PRs welcome!" />
