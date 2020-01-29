@@ -9,6 +9,7 @@ module.exports = {
     siteImage: `/banner.png`,
     siteLanguage: `en`,
     themeColor: `#7159c1`,
+    footer: `Theme by Rocketseat`,
   },
   plugins: [
     {
