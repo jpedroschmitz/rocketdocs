@@ -17,7 +17,6 @@ module.exports = {
       options: {
         configPath: `src/config`,
         docsPath: `src/docs`,
-        basePath: `gatsby-starter-rocket-docs`,
       },
     },
     {
