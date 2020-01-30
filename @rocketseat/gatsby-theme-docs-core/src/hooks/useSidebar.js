@@ -1,6 +1,10 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { isExternalUrl, normalizeBasePath } from '../../util/url';
 
+function resolveLink(link, basePath) {
+  return isExternalUrl(link) ? link : normalizeBasePath(basePath, link);
+}
+
 export function useSidebar() {
   const data = useStaticQuery(graphql`
     {
@@ -37,22 +41,16 @@ export function useSidebar() {
         if (Array.isArray(items)) {
           items = items.map(item => ({
             label: item.label,
-            link: isExternalUrl(link)
-              ? link
-              : normalizeBasePath(basePath, item.link),
+            link: resolveLink(item.link, basePath),
           }));
         }
-
-        const auxLink = isExternalUrl(link)
-          ? link
-          : normalizeBasePath(basePath, link);
 
         return {
           node: {
             id,
             label,
             items,
-            link: link && auxLink,
+            link: resolveLink(link, basePath),
           },
         };
       },
@@ -63,5 +61,3 @@ export function useSidebar() {
 
   return edges;
 }
-
-// TODO - already returns with basePath if it was defined
