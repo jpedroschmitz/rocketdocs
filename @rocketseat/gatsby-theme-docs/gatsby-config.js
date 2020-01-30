@@ -17,7 +17,7 @@ module.exports = options => {
         options,
       },
       `gatsby-plugin-catch-links`,
-      `gatsby-plugin-styled-components`,
+      `gatsby-plugin-emotion`,
       `gatsby-plugin-react-helmet`,
     ].filter(Boolean),
   };

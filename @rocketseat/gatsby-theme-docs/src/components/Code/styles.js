@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import { darken } from 'polished';
 import {
   LiveError as AuxLiveError,
@@ -18,7 +19,7 @@ export const Pre = styled.pre`
   & .token-line {
     line-height: 1.3rem;
     height: 1.3rem;
-    font-size: 14px;
+    font-size: 15px;
   }
 `;
 
@@ -50,8 +51,12 @@ const column = css`
 `;
 
 export const StyledEditor = styled.div`
-  font-family: 'Source Code Pro', monospace;
-  font-size: 14px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+  font-variant: no-common-ligatures no-discretionary-ligatures
+    no-historical-ligatures no-contextual;
+  font-size: 16px;
+  line-height: 1.3rem;
   height: 350px;
   max-height: 350px;
   overflow: auto;
@@ -81,8 +86,11 @@ export const LiveError = styled(AuxLiveError)`
   color: rgb(248, 248, 242);
   white-space: pre-wrap;
   text-align: left;
-  font-size: 14px;
-  font-family: 'Source Code Pro', monospace;
+  font-size: 15px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+  font-variant: no-common-ligatures no-discretionary-ligatures
+    no-historical-ligatures no-contextual;
   padding: 0.5rem;
   border-radius: 3px;
   background: rgb(255, 85, 85);

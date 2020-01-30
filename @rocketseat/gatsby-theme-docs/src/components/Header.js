@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Headroom from 'react-headroom';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { useStaticQuery, graphql } from 'gatsby';
 

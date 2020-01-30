@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'emotion-theming';
 
 import defaultTheme from '../src/styles/theme';
 import GlobalStyle from '../src/styles/global';

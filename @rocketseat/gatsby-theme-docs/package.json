@@ -1,6 +1,6 @@
 {
   "name": "@rocketseat/gatsby-theme-docs",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main": "index.js",
   "description": "Out of the box Gatsby Theme for creating documentation websites easily and quickly.",
   "author": "João Pedro Schmitz <oi@joaopedro.cc> (@joaopedro_cc)",
@@ -29,13 +29,15 @@
     "url": "https://github.com/Rocketseat/gatsby-themes/issues"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
     "@mdx-js/react": "^1.5.5",
-    "@rocketseat/gatsby-theme-docs-core": "^1.0.1",
-    "babel-plugin-styled-components": "^1.10.6",
+    "@rocketseat/gatsby-theme-docs-core": "^1.0.2",
+    "emotion-theming": "^10.0.27",
     "gatsby-plugin-catch-links": "^2.1.24",
+    "gatsby-plugin-emotion": "^4.1.21",
     "gatsby-plugin-mdx": "^1.0.68",
     "gatsby-plugin-react-helmet": "^3.1.16",
-    "gatsby-plugin-styled-components": "^3.1.16",
     "polished": "^3.4.2",
     "prism-react-renderer": "^1.0.2",
     "prop-types": "^15.7.2",
@@ -43,11 +45,10 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^3.8.0",
     "react-live": "^2.2.2",
-    "styled-components": "^5.0.0",
     "url-join": "^4.0.1"
   },
   "devDependencies": {
-    "gatsby": "^2.18.18",
+    "gatsby": "^2.19.10",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },

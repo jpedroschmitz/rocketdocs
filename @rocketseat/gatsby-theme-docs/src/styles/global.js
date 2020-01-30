@@ -1,109 +1,230 @@
-import { createGlobalStyle } from 'styled-components';
+import React from 'react';
+import { Global, css } from '@emotion/core';
+import { useTheme } from 'emotion-theming';
 import { lighten } from 'polished';
-import code from './code';
 
-export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+export default function GlobalStyle() {
+  const theme = useTheme();
 
-  *,
-  *::after,
-  *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  return (
+    <Global
+      styles={css`
+        @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-  *::selection {
-    background: ${lighten('0.35', '#737380')}!important;
-  }
+        *,
+        *::after,
+        *::before {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
 
-  body {
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-    background-color: ${({ theme }) => theme.colors.background};
-    text-rendering: optimizelegibility;
-    -webkit-font-smoothing: antialiased;
-  }
+        *::selection {
+          background: ${lighten('0.35', '#737380')}!important;
+        }
 
-  h1 {
-    font-size: 32px;
-    color: #13131A;
-    font-weight: bold;
-    margin-bottom: 24px;
-  }
+        body {
+          font-size: 16px;
+          font-family: 'Roboto', sans-serif;
+          background-color: ${theme.colors.background};
+          text-rendering: optimizelegibility;
+          -webkit-font-smoothing: antialiased;
+        }
 
-  h2 {
-    font-size: 24px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #D5D5E0;
-  }
+        h1 {
+          font-size: 32px;
+          color: #13131a;
+          font-weight: bold;
+          margin-bottom: 24px;
+        }
 
-  h3 {
-    font-size: 18px;
-  }
+        h2 {
+          font-size: 24px;
+          padding-bottom: 8px;
+          border-bottom: 1px solid #d5d5e0;
+        }
 
-  h4 {
-    font-size: 16px;
-  }
+        h3 {
+          font-size: 18px;
+        }
 
-  h2, h3, h4, h5, h6 {
-    color: #737380;
-    margin: 24px 0 16px 0;
-  }
+        h4 {
+          font-size: 16px;
+        }
 
-  p {
-    color: #737380;
-    font-size: 16px;
-    line-height: 28px;
-    margin-bottom: 16px;
-    font-weight: 400;
-  }
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          color: #737380;
+          margin: 24px 0 16px 0;
+        }
 
-  a {
-    color: #737380;
-    font-weight: bold;
-  }
+        p {
+          color: #737380;
+          font-size: 16px;
+          line-height: 28px;
+          margin-bottom: 16px;
+          font-weight: 400;
+        }
 
-  blockquote {
-    border-left: 4px solid #e7e7e7;
-    padding: 0 2rem;
+        a {
+          color: #737380;
+          font-weight: bold;
+        }
 
-    p {
-      font-style: italic!important;
-      font-size: 0.88em!important;
-      line-height: 28px;
-    }
-  }
+        blockquote {
+          border-left: 4px solid #e7e7e7;
+          padding: 0 2rem;
 
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    border: 1px solid #ddd;
-    margin-bottom: 16px;
-  }
+          p {
+            font-style: italic !important;
+            font-size: 0.88em !important;
+            line-height: 28px;
+          }
+        }
 
-  th, td {
-    text-align: left;
-    padding: 8px;
-  }
+        table {
+          border-collapse: collapse;
+          border-spacing: 0;
+          width: 100%;
+          border: 1px solid #ddd;
+          margin-bottom: 16px;
+        }
 
-  tr {
-    background-color: #ffffff
-  }
+        th,
+        td {
+          text-align: left;
+          padding: 8px;
+        }
 
-  iframe {
-    margin-bottom: 16px;
-  }
+        tr {
+          background-color: #ffffff;
+        }
 
-  ul {
-    color: #737380;
-    padding-left: 15px;
+        iframe {
+          margin-bottom: 16px;
+        }
 
-    li {
-      line-height: 28px;
-    }
-  }
+        ul {
+          color: #737380;
+          padding-left: 15px;
 
-  ${code}
-`;
+          li {
+            line-height: 28px;
+          }
+        }
+
+        .gatsby-highlight {
+          position: relative;
+        }
+
+        pre[class*='language-']::before {
+          background: #d9d7e0;
+          border-radius: 0 0 4px 4px;
+          color: #232129;
+          font-size: 12px;
+          font-family: SFMono-Regular, Menlo, Monaco, Consolas,
+            'Liberation Mono', 'Courier New', monospace;
+          letter-spacing: 0.075em;
+          line-height: 1;
+          padding: 0.25rem 0.5rem;
+          position: absolute;
+          left: 1rem;
+          text-align: right;
+          text-transform: uppercase;
+          top: 0;
+        }
+
+        pre[class*='language-'] code {
+          font-family: SFMono-Regular, Menlo, Monaco, Consolas,
+            'Liberation Mono', 'Courier New', monospace;
+          font-variant: no-common-ligatures no-discretionary-ligatures
+            no-historical-ligatures no-contextual;
+        }
+
+        pre[class~='language-javascript']::before {
+          content: 'js';
+          background: #f7df1e;
+        }
+
+        pre[class~='language-js']::before {
+          content: 'js';
+          background: #f7df1e;
+        }
+
+        pre[class~='language-jsx']::before {
+          content: 'jsx';
+          background: #61dafb;
+        }
+
+        pre[class~='language-graphql']::before {
+          content: 'GraphQL';
+          background: #e10098;
+          color: #fff;
+        }
+
+        pre[class~='language-html']::before {
+          content: 'html';
+          background: #005a9c;
+          color: #fff;
+        }
+
+        pre[class~='language-css']::before {
+          content: 'css';
+          background: #ff9800;
+          color: #fff;
+        }
+
+        pre[class~='language-mdx']::before {
+          content: 'mdx';
+          background: #f9ac00;
+          color: #fff;
+        }
+
+        pre[class~='language-shell']::before {
+          content: 'shell';
+        }
+
+        pre[class~='language-sh']::before {
+          content: 'sh';
+        }
+
+        pre[class~='language-bash']::before {
+          content: 'bash';
+        }
+
+        pre[class~='language-yaml']::before {
+          content: 'yaml';
+          background: #ffa8df;
+        }
+
+        pre[class~='language-markdown']::before {
+          content: 'md';
+        }
+
+        pre[class~='language-json']::before,
+        pre[class~='language-json5']::before {
+          content: 'json';
+          background: linen;
+        }
+
+        pre[class~='language-diff']::before {
+          content: 'diff';
+          background: #e6ffed;
+        }
+
+        pre[class~='language-text']::before {
+          content: 'text';
+          background: #fff;
+        }
+
+        pre[class~='language-flow']::before {
+          content: 'flow';
+          background: #e8bd36;
+        }
+      `}
+    />
+  );
+}
