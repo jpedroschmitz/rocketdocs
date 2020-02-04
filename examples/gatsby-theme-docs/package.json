@@ -22,7 +22,7 @@
   "keywords": [
     "gatsby",
     "rocketseat",
-    "gatsby-themes"
+    "gatsby-starter"
   ],
   "scripts": {
     "build": "gatsby build",
