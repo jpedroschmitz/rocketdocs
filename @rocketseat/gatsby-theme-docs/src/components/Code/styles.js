@@ -69,6 +69,10 @@ export const StyledEditor = styled.div`
   * > textarea:focus {
     outline: none;
   }
+
+  .token {
+    font-style: normal !important;
+  }
 `;
 
 export const LivePreview = styled(AuxLivePreview)`

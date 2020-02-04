@@ -6,7 +6,6 @@ export const Container = styled.aside`
   max-width: 280px;
   min-width: 280px;
   background-color: ${({ theme }) => theme.colors.sidebar.background};
-  border-right: 1px solid #d5d5e0;
 
   position: fixed;
   overflow-y: scroll;
@@ -29,9 +28,8 @@ export const Container = styled.aside`
   }
 
   footer {
-    padding: 24px 0 24px 40px;
+    padding: 24px 0 24px 30px;
     width: 100%;
-    border-top: 1px solid ${({ theme }) => theme.colors.sidebar.footer};
 
     p {
       color: ${({ theme }) => theme.colors.sidebar.footer};
@@ -54,13 +52,14 @@ export const Container = styled.aside`
 export const LogoContainer = styled.div`
   width: 100%;
   height: 100%;
-  max-height: 122px;
-  min-height: 122px;
+  max-height: 100px;
+  min-height: 100px;
+  padding: 20px 0;
 
   a {
     width: 100%;
     height: 100%;
-    padding-left: 40px;
+    padding-left: 30px;
 
     display: flex;
     justify-content: flex-start;
@@ -79,18 +78,33 @@ export const List = styled.ul`
   flex-direction: column;
 `;
 
+export const Heading = styled.li`
+  padding-left: 30px;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: ${({ theme }) => theme.colors.primary};
+  letter-spacing: 0.142em;
+`;
+
 export const Item = styled.li`
-  line-height: 46px;
-  font-size: 16px;
+  font-size: 15px;
   width: 100%;
   transition: all 200ms ease-in-out;
+  padding: 0 20px;
 
   a,
   span {
     display: block;
-    font-weight: normal;
+    font-size: 15px;
     color: ${({ theme }) => theme.colors.sidebar.link};
     background-color: ${({ theme }) => theme.colors.sidebar.background};
+    padding: 4px 10px;
+    margin: 4px 0;
+    border-radius: 4px;
+    font-weight: normal;
 
     text-decoration: none;
     width: 100%;
@@ -101,11 +115,9 @@ export const Item = styled.li`
     align-items: center;
 
     cursor: pointer;
-
     margin: 0 auto;
-    padding-left: ${({ isSubitem }) => (isSubitem ? '80px' : '40px')};
 
-    transition: all 200ms ease-in-out;
+    transition: background-color .2s, color .2s, padding-left .2s;
 
     svg {
       width: 20px;
@@ -113,14 +125,18 @@ export const Item = styled.li`
       margin-right: 10px;
     }
 
-    &:hover {
-      color: ${({ theme }) => darken('0.04', theme.colors.sidebar.link)};
-      background-color: ${({ theme }) =>
-        darken('0.02', theme.colors.sidebar.itemActive)};
+    &:not(.active-link):hover {
+      padding-left: 20px;
+      color: ${({ theme }) => darken('0.2', theme.colors.sidebar.link)};
+    }
+
+    &.active-link {
+      color: ${({ theme }) => darken('0.2', theme.colors.sidebar.link)};
+      background-color: ${({ theme }) => theme.colors.sidebar.itemActive};
     }
   }
 
-  .active-link {
+  /* .active-link {
     border-left: 2px solid #7159c1;
     background-color: ${({ theme }) => theme.colors.sidebar.itemActive};
     color: ${({ theme }) => theme.colors.sidebar.linkActive};
@@ -130,9 +146,9 @@ export const Item = styled.li`
         darken('0.02', theme.colors.sidebar.itemActive)};
       color: ${({ theme }) => theme.colors.sidebar.linkActive};
     }
-  }
+  } */
 `;
 
 export const SubItem = styled(List)`
-  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  margin-top: 5px;
 `;

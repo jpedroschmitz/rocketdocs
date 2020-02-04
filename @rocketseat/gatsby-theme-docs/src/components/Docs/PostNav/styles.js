@@ -38,6 +38,7 @@ export const Post = styled.div`
       text-transform: uppercase;
       font-size: 12px;
       margin: 0;
+      color: #999;
     }
 
     h3 {
@@ -45,6 +46,8 @@ export const Post = styled.div`
       border: none;
       margin: 0;
       padding: 0;
+      font-weight: normal;
+      font-size: 16px;
     }
   }
 
