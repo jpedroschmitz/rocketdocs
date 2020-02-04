@@ -32,11 +32,24 @@
 
 ## ⚡️ Getting started
 
-```sh
-gatsby new rocket-docs https://github.com/rocketseat/gatsby-starter-rocket-docs
-```
+1. Create the website.
 
-## 📝 Docs
+    ```sh
+    gatsby new rocket-docs https://github.com/rocketseat/gatsby-starter-rocket-docs
+    ```
+
+2. Start developing.
+
+    ```sh
+    cd rocket-docs
+    gatsby develop
+    ```
+
+3. Are you ready for launch? 
+
+    Your site is now running at `http://localhost:8000`
+
+## 📄 Docs
 
 Looking for docs? Check our live demo and documentation [website](https://rocketdocs.netlify.com).
 
