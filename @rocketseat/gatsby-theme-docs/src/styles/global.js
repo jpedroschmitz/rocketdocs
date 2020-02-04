@@ -28,20 +28,19 @@ export default function GlobalStyle() {
           font-family: 'Roboto', sans-serif;
           background-color: ${theme.colors.background};
           text-rendering: optimizelegibility;
-          -webkit-font-smoothing: antialiased;
         }
 
         h1 {
           font-size: 32px;
-          color: #13131a;
-          font-weight: bold;
+          color: #333;
+          font-weight: normal;
           margin-bottom: 24px;
         }
 
         h2 {
           font-size: 24px;
           padding-bottom: 8px;
-          border-bottom: 1px solid #d5d5e0;
+          border-bottom: 1px solid #eee;
         }
 
         h3 {
@@ -59,6 +58,7 @@ export default function GlobalStyle() {
         h6 {
           color: #737380;
           margin: 24px 0 16px 0;
+          font-weight: normal;
         }
 
         p {
@@ -67,6 +67,10 @@ export default function GlobalStyle() {
           line-height: 28px;
           margin-bottom: 16px;
           font-weight: 400;
+
+          > code {
+            background: #44475a !important;
+          }
         }
 
         a {
@@ -89,14 +93,18 @@ export default function GlobalStyle() {
           border-collapse: collapse;
           border-spacing: 0;
           width: 100%;
-          border: 1px solid #ddd;
           margin-bottom: 16px;
+          color: #444;
         }
 
         th,
         td {
           text-align: left;
-          padding: 8px;
+          padding: 12px;
+        }
+
+        tr:nth-child(2n) td {
+          background-color: ${theme.colors.sidebar.itemActive};
         }
 
         tr {
@@ -118,6 +126,10 @@ export default function GlobalStyle() {
 
         .gatsby-highlight {
           position: relative;
+
+          .token {
+            font-style: normal !important;
+          }
         }
 
         pre[class*='language-']::before {

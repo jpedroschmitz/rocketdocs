@@ -1,27 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql, Link } from 'gatsby';
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 import { useSidebar } from '@rocketseat/gatsby-theme-docs-core';
 
-import { Container, LogoContainer, List, Item, SubItem } from './styles';
+import {
+  Container,
+  LogoContainer,
+  List,
+  Heading,
+  Item,
+  SubItem,
+} from './styles';
 import { isExternalUrl } from '../../util/url';
 import ExternalLink from './ExternalLink';
 import InternalLink from './InternalLink';
 import Logo from '../Logo';
 
 function ListWithSubItems({ children, text }) {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
-      <Item onClick={() => setIsOpen(!isOpen)}>
-        <span>
-          {isOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
-          {text}
-        </span>
-      </Item>
-      <SubItem isOpen={isOpen}>{children}</SubItem>
+      <Heading>{text}</Heading>
+      <SubItem>{children}</SubItem>
     </>
   );
 }
@@ -65,7 +64,7 @@ export default function Sidebar({ isMenuOpen }) {
             if (Array.isArray(items)) {
               const subitems = items.map(item => {
                 return (
-                  <Item key={item.link} isSubitem>
+                  <Item key={item.link}>
                     {renderLink(item.link, item.label)}
                   </Item>
                 );

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const Container = styled.main`
   margin-left: 280px;
-  padding: 64px 100px;
+  padding: 40px 40px;
   height: 100%;
 
   transition: transform 0.5s;
