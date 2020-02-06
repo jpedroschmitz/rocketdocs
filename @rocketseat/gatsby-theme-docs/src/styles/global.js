@@ -67,10 +67,20 @@ export default function GlobalStyle() {
           line-height: 28px;
           margin-bottom: 16px;
           font-weight: 400;
+        }
 
-          > code {
-            background: #44475a !important;
-          }
+        code.inline-code {
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 1;
+          padding: 0.2em 0.2em 0.3em 0.2em;
+          background-color: rgb(40, 42, 54);
+          color: rgba(248, 248, 242);
+          font-size: 14px;
+          border-radius: 3px;
+          font-feature-settings: 'clig' 0, 'calt' 0;
+          font-variant: no-common-ligatures no-discretionary-ligatures
+            no-historical-ligatures no-contextual;
         }
 
         a {
@@ -115,9 +125,11 @@ export default function GlobalStyle() {
           margin-bottom: 16px;
         }
 
-        ul {
+        ul,
+        ol {
           color: #737380;
           padding-left: 15px;
+          margin-bottom: 16px;
 
           li {
             line-height: 28px;
@@ -156,12 +168,8 @@ export default function GlobalStyle() {
             no-historical-ligatures no-contextual;
         }
 
+        pre[class~='language-js']::before,
         pre[class~='language-javascript']::before {
-          content: 'js';
-          background: #f7df1e;
-        }
-
-        pre[class~='language-js']::before {
           content: 'js';
           background: #f7df1e;
         }
@@ -169,6 +177,19 @@ export default function GlobalStyle() {
         pre[class~='language-jsx']::before {
           content: 'jsx';
           background: #61dafb;
+        }
+
+        pre[class~='language-typescript']::before,
+        pre[class~='language-ts']::before {
+          content: 'ts';
+          background: #294e80;
+          color: #fff;
+        }
+
+        pre[class~='language-tsx']::before {
+          content: 'tsx';
+          background: #294e80;
+          color: #fff;
         }
 
         pre[class~='language-graphql']::before {
