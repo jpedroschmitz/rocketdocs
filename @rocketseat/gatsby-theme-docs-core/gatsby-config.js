@@ -1,8 +1,7 @@
 const withDefault = require(`./util/with-default`);
 
-module.exports = themeOptions => {
-  const { basePath, configPath, docsPath } = withDefault(themeOptions);
-
+module.exports = options => {
+  const { basePath, configPath, docsPath } = withDefault(options);
   return {
     siteMetadata: {
       basePath,

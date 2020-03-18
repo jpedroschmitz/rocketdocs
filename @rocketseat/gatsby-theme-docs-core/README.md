@@ -51,30 +51,13 @@ npm i @rocketseat/gatsby-theme-docs-core
 
 ### Theme options
 
-<div style="overflow-x:auto;">
-  <table>
-    <tr>
-      <th>Key</th>
-      <th>Default value</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>basePath</td>
-      <td>/</td>
-      <td>Root url for all docs</td>
-    </tr>
-    <tr>
-      <td>configPath</td>
-      <td>config</td>
-      <td>Location of config files</td>
-    </tr>
-    <tr>
-      <td>docsPath</td>
-      <td>docs</td>
-      <td>Location of the docs files</td>
-    </tr>
-  </table>
-</div>
+| Key        | Default | Required | Description                                                                                                                             |
+| ---------- | ------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| basePath   | /       | No       | Root url for all docs                                                                                                                   |
+| configPath | config  | No       | Location of config files                                                                                                                |
+| docsPath   | docs    | No       | The site description for SEO and social (FB, Twitter) tags                                                                              |
+| githubUrl  | -       | No       | The complete URL of your repository. For example: `https://github/rocketseat/gatsby-themes`                                             |
+| baseDir    | -       | No       | If your Gatsby site does not live in the root of your project directory/git repo, pass the subdirectory name here (`docs`, for example) |
 
 ### Example usage
 
@@ -88,6 +71,8 @@ module.exports = {
         basePath: `documentation`,
         configPath: `config`,
         docsPath: `docs`,
+        githubUrl: `https://github.com/rocketseat/gatsby-themes`,
+        baseDir: `www`,
       },
     },
   ],

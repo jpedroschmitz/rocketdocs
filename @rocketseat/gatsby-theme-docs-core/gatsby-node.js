@@ -9,9 +9,9 @@ exports.createPages = (
   { graphql, actions: { createPage }, reporter },
   themeOptions,
 ) => {
-  reporter.info(`starting docs page creation`);
+  reporter.success(`onCreateDocs`);
 
-  const { basePath } = withDefault(themeOptions);
+  const { basePath, baseDir, docsPath, githubUrl } = withDefault(themeOptions);
 
   const docsTemplate = require.resolve(`./src/templates/docs-query.js`);
   const homeTemplate = require.resolve(`./src/templates/homepage-query.js`);
@@ -19,15 +19,15 @@ exports.createPages = (
   return graphql(
     `
       {
-        allMdx {
+        allFile(filter: { extension: { in: ["md", "mdx"] } }) {
           edges {
             node {
               id
-              fields {
-                slug
-              }
-              frontmatter {
-                title
+              relativePath
+              childMdx {
+                fields {
+                  slug
+                }
               }
             }
           }
@@ -48,12 +48,28 @@ exports.createPages = (
       component: homeTemplate,
     });
 
-    const posts = result.data.allMdx.edges;
+    const posts = result.data.allFile.edges;
 
     posts.forEach((post, index) => {
       const prev = index === posts.length - 1 ? null : posts[index + 1].node;
       const next = index === 0 ? null : posts[index - 1].node;
-      const { slug } = post.node.fields;
+      const {
+        childMdx: {
+          fields: { slug },
+        },
+        relativePath,
+      } = post.node;
+
+      let githubEditUrl;
+
+      if (githubUrl) {
+        githubEditUrl = path.join(
+          githubUrl,
+          'tree',
+          path.join('master', baseDir, docsPath),
+          relativePath,
+        );
+      }
 
       createPage({
         path: slug,
@@ -62,6 +78,7 @@ exports.createPages = (
           slug,
           prev,
           next,
+          githubEditUrl,
         },
       });
     });
