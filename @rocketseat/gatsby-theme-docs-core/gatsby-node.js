@@ -93,6 +93,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String!
       description: String
       image: String
+      disableTableOfContents: Boolean
     }
   `);
 
