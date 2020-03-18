@@ -1,9 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import { isExternalUrl, normalizeBasePath } from '../../util/url';
-
-function resolveLink(link, basePath) {
-  return isExternalUrl(link) ? link : normalizeBasePath(basePath, link);
-}
+import { resolveLink } from '../../util/url';
 
 export function useSidebar() {
   const data = useStaticQuery(graphql`

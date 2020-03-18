@@ -2,7 +2,7 @@ const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const fs = require(`fs`);
 
-const { normalizeBasePath } = require(`./util/url`);
+const { normalizeBasePath, resolveLink } = require(`./util/url`);
 const withDefault = require(`./util/with-default`);
 
 exports.createPages = (
@@ -19,7 +19,7 @@ exports.createPages = (
   return graphql(
     `
       {
-        allFile(filter: { extension: { in: ["md", "mdx"] } }) {
+        files: allFile(filter: { extension: { in: ["md", "mdx"] } }) {
           edges {
             node {
               id
@@ -29,6 +29,19 @@ exports.createPages = (
                   slug
                 }
               }
+            }
+          }
+        }
+        sidebar: allSidebarItems {
+          edges {
+            node {
+              label
+              link
+              items {
+                label
+                link
+              }
+              id
             }
           }
         }
@@ -48,17 +61,35 @@ exports.createPages = (
       component: homeTemplate,
     });
 
-    const posts = result.data.allFile.edges;
+    // Generate prev/next items based on sidebar.yml file
+    const sidebar = result.data.sidebar.edges;
+    const listOfItems = [];
 
-    posts.forEach((post, index) => {
-      const prev = index === posts.length - 1 ? null : posts[index + 1].node;
-      const next = index === 0 ? null : posts[index - 1].node;
+    sidebar.forEach(({ node: { label, link, items } }) => {
+      if (Array.isArray(items)) {
+        items.forEach(item => {
+          listOfItems.push({
+            label: item.label,
+            link: resolveLink(item.link, basePath),
+          });
+        });
+      } else {
+        listOfItems.push({
+          label,
+          link: resolveLink(link, basePath),
+        });
+      }
+    });
+
+    // Generate docs pages
+    const docs = result.data.files.edges;
+    docs.forEach(doc => {
       const {
         childMdx: {
           fields: { slug },
         },
         relativePath,
-      } = post.node;
+      } = doc.node;
 
       let githubEditUrl;
 
@@ -70,6 +101,14 @@ exports.createPages = (
           relativePath,
         );
       }
+
+      const pageLink = slug.slice(0, slug.length - 1);
+      const currentPageIndex = listOfItems.findIndex(
+        page => page.link === pageLink,
+      );
+
+      const prev = listOfItems[currentPageIndex - 1];
+      const next = listOfItems[currentPageIndex + 1];
 
       createPage({
         path: slug,
@@ -153,3 +192,57 @@ exports.onCreateNode = (
     value: node.id,
   });
 };
+
+/**
+[
+  {
+    "node": {
+      "label": "Home",
+      "link": "/",
+      "items": null,
+      "id": "a2913be3-af3c-5fc9-967e-a058e86b20a9"
+    }
+  },
+  {
+    "node": {
+      "label": "With dropdown",
+      "link": null,
+      "items": [
+        { "label": "My Example", "link": "/my-example" },
+        { "label": "Teste 2", "link": "/teste-2" }
+      ],
+      "id": "c7d9606c-4bda-5097-a0df-53108e9f4efd"
+    }
+  }
+]
+*/
+
+// Ler todo o array e salvar em uma objeto chave/valor
+/**
+ * {
+ *    '/': {
+ *       prev: null,
+ *       next: {
+ *          label: 'My example',
+ *          link: '/my-example'
+ *       }
+ *    },
+ *    '/my-example': {
+ *       prev: {
+ *          label: 'Home',
+ *          link: '/'
+ *       },
+ *       next: {
+ *          label: 'Teste 2',
+ *          link: '/teste-2'
+ *       }
+ *    },
+ *    '/teste-2': {
+ *       prev: {
+ *          label: 'My example',
+ *          link: '/my-example'
+ *       },
+ *       next: null
+ *    }
+ * }
+ */

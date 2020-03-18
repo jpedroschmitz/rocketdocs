@@ -6,4 +6,8 @@ function isExternalUrl(url) {
   return new RegExp('^((https?:)?//)', 'i').test(url);
 }
 
-module.exports = { normalizeBasePath, isExternalUrl };
+function resolveLink(link, basePath) {
+  return isExternalUrl(link) ? link : normalizeBasePath(basePath, link);
+}
+
+module.exports = { resolveLink, normalizeBasePath, isExternalUrl };
