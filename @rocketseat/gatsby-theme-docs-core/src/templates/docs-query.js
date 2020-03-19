@@ -18,6 +18,10 @@ export const query = graphql`
         disableTableOfContents
       }
       body
+      headings {
+        depth
+        value
+      }
     }
   }
 `;
