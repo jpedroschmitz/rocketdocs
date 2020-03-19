@@ -3,7 +3,12 @@ title: Shadowing
 ---
 
 To shadow/override this theme, you will need to place your files into `src/@rocketseat/gatsby-theme-docs/` folder.
-For example, if you want to change the logo, you will need to create the following file:
+
+_ps: if you still have questions, check the [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) article._
+
+## Changing the logo
+
+If you want to change the logo just create the following file:
 
 ```js title=src/@rocketseat/gatsby-theme-docs/components/Logo.js
 import styled from '@emotion/styled';
@@ -17,8 +22,6 @@ export default styled.div`
   background: url(${logo}) center no-repeat;
 `;
 ```
-
-_ps: if you still have questions, check the [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) article._
 
 ## Changing the home text
 

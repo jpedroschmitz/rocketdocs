@@ -18,6 +18,16 @@ yarn add @rocketseat/gatsby-theme-docs
 npm i @rocketseat/gatsby-theme-docs
 ```
 
+## Theme Options
+
+| Key        | Default | Required | Description                                                                                                                    |
+| ---------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| basePath   | /       | No       | Root url for all docs                                                                                                          |
+| configPath | config  | No       | Location of config files                                                                                                       |
+| docsPath   | docs    | No       | The site description for SEO and social (FB, Twitter) tags                                                                     |
+| githubUrl  | -       | No       | The complete URL of your repository. For example: `https://github/rocketseat/gatsby-themes`                                    |
+| baseDir    | -       | No       | If your Gatsby site does not live in the root of your project directory/git repo, pass the subdirectory name here (ex: `docs`) |
+
 ## Example usage
 
 ```js title=gatsby-config.js
@@ -47,4 +57,4 @@ module.exports = {
 
 Once you have installed the dependencies you will need to create the [navigation](/usage/navigation) and [documentation](/usage/creating-docs) file.
 
-After that, you are ready to launch 🚀
+After that, you are ready 🚀
