@@ -74,7 +74,7 @@ export default function GlobalStyle() {
           vertical-align: middle;
           line-height: 1;
           padding: 0.2em 0.2em 0.3em 0.2em;
-          background-color: rgb(40, 42, 54);
+          background-color: #44475a;
           color: rgba(248, 248, 242);
           font-size: 14px;
           border-radius: 3px;
@@ -86,6 +86,12 @@ export default function GlobalStyle() {
         a {
           color: #737380;
           font-weight: bold;
+
+          &:hover {
+            color: ${theme.colors.primary}!important;
+            transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+            opacity: 1 !important;
+          }
         }
 
         blockquote {
@@ -113,7 +119,7 @@ export default function GlobalStyle() {
           padding: 12px;
         }
 
-        tr:nth-child(2n) td {
+        tr:nth-of-type(2n) td {
           background-color: ${theme.colors.sidebar.itemActive};
         }
 

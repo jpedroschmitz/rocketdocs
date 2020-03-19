@@ -10,21 +10,21 @@ export default function Docs({ prev, next }) {
     <Container>
       {prev && (
         <Post isLeft>
-          <Link to={prev.fields.slug}>
+          <Link to={prev.link}>
             <MdKeyboardArrowLeft />
             <div>
               <p>Prev</p>
-              <h3>{prev.frontmatter.title}</h3>
+              <h3>{prev.label}</h3>
             </div>
           </Link>
         </Post>
       )}
       {next && (
         <Post>
-          <Link to={next.fields.slug}>
+          <Link to={next.link}>
             <div>
               <p>Next</p>
-              <h3>{next.frontmatter.title}</h3>
+              <h3>{next.label}</h3>
             </div>
             <MdKeyboardArrowRight />
           </Link>
@@ -36,20 +36,12 @@ export default function Docs({ prev, next }) {
 
 Docs.propTypes = {
   prev: PropTypes.shape({
-    fields: PropTypes.shape({
-      slug: PropTypes.string,
-    }),
-    frontmatter: PropTypes.shape({
-      title: PropTypes.string,
-    }),
+    label: PropTypes.string,
+    link: PropTypes.string,
   }),
   next: PropTypes.shape({
-    fields: PropTypes.shape({
-      slug: PropTypes.string,
-    }),
-    frontmatter: PropTypes.shape({
-      title: PropTypes.string,
-    }),
+    label: PropTypes.string,
+    link: PropTypes.string,
   }),
 };
 

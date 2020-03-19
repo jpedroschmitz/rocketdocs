@@ -1,4 +1,7 @@
+const withDefault = require('@rocketseat/gatsby-theme-docs-core/util/with-default');
+
 module.exports = options => {
+  const themeOtions = withDefault(options);
   return {
     siteMetadata: {
       defaultTitle: `Gatsby Themes from Rocketseat`,
@@ -10,11 +13,13 @@ module.exports = options => {
       siteImage: `/banner.png`,
       siteLanguage: `en`,
       footer: `Theme by Rocketseat`,
+      basePath: themeOtions.basePath,
+      docsPath: themeOtions.docsPath,
     },
     plugins: [
       {
         resolve: `@rocketseat/gatsby-theme-docs-core`,
-        options,
+        options: themeOtions,
       },
       `gatsby-plugin-catch-links`,
       `gatsby-plugin-emotion`,

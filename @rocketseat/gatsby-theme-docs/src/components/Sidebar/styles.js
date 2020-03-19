@@ -8,7 +8,7 @@ export const Container = styled.aside`
   background-color: ${({ theme }) => theme.colors.sidebar.background};
 
   position: fixed;
-  overflow-y: scroll;
+  overflow-y: auto;
   left: 0;
 
   display: flex;
@@ -117,7 +117,7 @@ export const Item = styled.li`
     cursor: pointer;
     margin: 0 auto;
 
-    transition: background-color .2s, color .2s, padding-left .2s;
+    transition: background-color 0.2s, color 0.2s, padding-left 0.2s;
 
     svg {
       width: 20px;
@@ -135,18 +135,6 @@ export const Item = styled.li`
       background-color: ${({ theme }) => theme.colors.sidebar.itemActive};
     }
   }
-
-  /* .active-link {
-    border-left: 2px solid #7159c1;
-    background-color: ${({ theme }) => theme.colors.sidebar.itemActive};
-    color: ${({ theme }) => theme.colors.sidebar.linkActive};
-
-    &:hover {
-      background-color: ${({ theme }) =>
-        darken('0.02', theme.colors.sidebar.itemActive)};
-      color: ${({ theme }) => theme.colors.sidebar.linkActive};
-    }
-  } */
 `;
 
 export const SubItem = styled(List)`

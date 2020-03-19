@@ -44,20 +44,20 @@
 
 1. Create the website.
 
-```sh
-gatsby new rocket-docs https://github.com/rocketseat/gatsby-starter-rocket-docs
-```
+   ```sh
+   gatsby new rocket-docs https://github.com/rocketseat/gatsby-starter-rocket-docs
+   ```
 
 2. Start developing.
 
-```sh
-cd rocket-docs
-gatsby develop
-```
+   ```sh
+   cd rocket-docs
+   gatsby develop
+   ```
 
 3. Are you ready for launch? 🚀
 
-Your site is now running at `http://localhost:8000`
+   Your site is now running at `http://localhost:8000`
 
 ## 📄 Docs
 
@@ -70,7 +70,7 @@ Thanks for being interested in contributing! We’re so glad you want to help! P
 
 ## 🗺 Roadmap
 
-If you'd like to see our next steps or in which feature our bug fix we are working on, please check our [roadmap project](https://github.com/Rocketseat/gatsby-themes/projects/2).
+If you'd like to see our next steps or in which feature our bug fix we are working on, please check our [project roadmap](https://github.com/Rocketseat/gatsby-themes/projects/2).
 
 ## 📝 License
 

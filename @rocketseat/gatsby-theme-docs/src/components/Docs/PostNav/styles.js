@@ -5,7 +5,7 @@ export const Container = styled.section`
   justify-content: space-between;
   align-items: center;
 
-  padding: 40px 0 32px;
+  padding: 48px 0;
   width: 100%;
 
   @media (max-width: 780px) {
