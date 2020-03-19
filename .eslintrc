@@ -12,7 +12,8 @@
     "import/prefer-default-export": "off",
     "no-param-reassign": "off",
     "react/jsx-one-expression-per-line": "off",
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "react/forbid-prop-types": "off"
   },
   "env": {
     "browser": false
