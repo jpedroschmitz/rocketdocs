@@ -39,8 +39,6 @@ export default function GlobalStyle() {
 
         h2 {
           font-size: 24px;
-          padding-bottom: 8px;
-          border-bottom: 1px solid #eee;
         }
 
         h3 {
@@ -95,14 +93,20 @@ export default function GlobalStyle() {
         }
 
         blockquote {
-          border-left: 4px solid #e7e7e7;
-          padding: 0 2rem;
+          margin: 0;
 
           p {
-            font-style: italic !important;
-            font-size: 0.88em !important;
-            line-height: 28px;
+            padding: 1rem;
+            background: #f5f5fa;
+            border-radius: 5px;
           }
+        }
+
+        hr {
+          border: 0;
+          height: 0;
+          border-top: 1px solid rgba(0, 0, 0, 0.1);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         table {
@@ -129,6 +133,10 @@ export default function GlobalStyle() {
 
         iframe {
           margin-bottom: 16px;
+        }
+
+        img {
+          max-width: 100%;
         }
 
         ul,

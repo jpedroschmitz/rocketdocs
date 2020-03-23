@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { darken } from 'polished';
 
 export const Container = styled.div`
   position: sticky;
@@ -12,12 +13,14 @@ export const Container = styled.div`
   max-width: 25%;
 
   h2 {
-    color: #78757a;
-    font-size: 0.875rem;
-    letter-spacing: 0.075em;
-    margin-top: 0rem;
+    color: #737380;
     text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.142em;
+    margin-top: 0rem;
     border: none;
+    margin: 0 0 24px 0;
   }
 
   nav ul {
@@ -26,14 +29,18 @@ export const Container = styled.div`
     list-style: none;
 
     li {
-      margin-bottom: 5px;
+      margin-bottom: 12px;
+      line-height: 1.1;
 
       a {
-        font-size: 0.9rem;
+        font-size: 13px;
+        color: #999999;
+        font-weight: 400;
         text-decoration: none;
+        transition: all 0.2s;
 
         &:hover {
-          text-decoration: underline;
+          color: ${({ theme }) => darken('0.2', theme.colors.sidebar.link)};
         }
       }
     }
@@ -46,6 +53,6 @@ export const Container = styled.div`
     max-width: 100%;
     margin: 0 0 24px 0;
     padding-bottom: 16px;
-    border-bottom: 1px solid #78757a;
+    border-bottom: 1px solid rgba(120, 117, 122, 0.2);
   }
 `;
