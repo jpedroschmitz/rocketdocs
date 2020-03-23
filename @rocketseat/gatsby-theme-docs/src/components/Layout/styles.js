@@ -26,9 +26,11 @@ export const Main = styled.main`
 export const Children = styled.div`
   width: 100%;
   min-width: 75%;
+  max-width: 75%;
 
-  @media (min-width: 1200px) {
-    max-width: ${({ disableTOC }) => (!disableTOC ? '75%' : '100%')};
+  @media (max-width: 1200px) {
+    min-width: 100%;
+    max-width: 100%;
   }
 
   ${({ hasTitle }) => !hasTitle && 'padding-top: 40px'};

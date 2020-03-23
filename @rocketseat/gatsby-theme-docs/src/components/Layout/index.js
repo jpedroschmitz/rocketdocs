@@ -28,9 +28,7 @@ export default function Layout({
         {title && <Title>{title}</Title>}
         <Main disableTOC={disableTOC}>
           {!disableTOC && <TableOfContents headings={headings} />}
-          <Children hasTitle={title} disableTOC={disableTOC}>
-            {children}
-          </Children>
+          <Children hasTitle={title}>{children}</Children>
         </Main>
       </Wrapper>
     </>
