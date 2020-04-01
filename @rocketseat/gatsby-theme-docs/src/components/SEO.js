@@ -43,8 +43,8 @@ export default function SEO({ description, title, slug, image, children }) {
 
   const schemaOrgJSONLD = [
     {
-      '@context': 'http://schema.org',
-      '@type': 'WebSite',
+      '@context': `http://schema.org`,
+      '@type': `WebSite`,
       url: metaUrl,
       name: title,
       alternateName: siteTitleShort,
@@ -111,9 +111,9 @@ SEO.propTypes = {
 };
 
 SEO.defaultProps = {
-  title: '',
-  description: '',
-  slug: '',
-  image: '',
-  children: '',
+  title: ``,
+  description: ``,
+  slug: ``,
+  image: ``,
+  children: ``,
 };

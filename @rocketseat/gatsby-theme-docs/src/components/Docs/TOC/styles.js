@@ -40,7 +40,7 @@ export const Container = styled.div`
         transition: all 0.2s;
 
         &:hover {
-          color: ${({ theme }) => darken('0.2', theme.colors.sidebar.link)};
+          color: ${({ theme }) => darken(`0.2`, theme.colors.sidebar.link)};
         }
       }
     }

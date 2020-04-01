@@ -7,7 +7,7 @@ export default function ExternalLink({ link, label }) {
     <a href={link} rel="noopener noreferrer">
       {label}
       <FiExternalLink
-        style={{ width: '16px', height: '16px', marginLeft: '10px' }}
+        style={{ width: `16px`, height: `16px`, marginLeft: `10px` }}
       />
     </a>
   );

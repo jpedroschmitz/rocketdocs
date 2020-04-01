@@ -13,7 +13,7 @@ export const Pre = styled.pre`
   padding: 2rem 1rem 1rem 1rem;
   overflow: auto;
   word-wrap: normal;
-  border-radius: ${({ hasTitle }) => (hasTitle ? '0 0 3px 3px' : '3px')};
+  border-radius: ${({ hasTitle }) => (hasTitle ? `0 0 3px 3px` : `3px`)};
   webkit-overflow-scrolling: touch;
 
   & .token-line {
@@ -102,7 +102,7 @@ export const LiveError = styled(AuxLiveError)`
 `;
 
 export const PreHeader = styled.div`
-  background-color: ${darken('0.05', '#282a36')};
+  background-color: ${darken(`0.05`, `#282a36`)};
   color: rgba(248, 248, 242, 0.75);
   font-size: 0.75rem;
   margin-top: 0.5rem;

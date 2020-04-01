@@ -15,7 +15,7 @@ export const Container = styled.section`
 
 export const Post = styled.div`
   transition: all 200ms;
-  ${({ isLeft }) => !isLeft && 'margin-left: auto;'}
+  ${({ isLeft }) => !isLeft && `margin-left: auto;`}
 
   a {
     display: flex;
@@ -30,7 +30,7 @@ export const Post = styled.div`
       height: 25px;
       color: #737380;
 
-      ${({ isLeft }) => (isLeft ? 'margin-right: 16px' : 'margin-left: 16px')};
+      ${({ isLeft }) => (isLeft ? `margin-right: 16px` : `margin-left: 16px`)};
     }
 
     p {
@@ -61,10 +61,10 @@ export const Post = styled.div`
 
   @media (max-width: 780px) {
     width: 100%;
-    ${({ isLeft }) => isLeft && 'margin-bottom: 16px'};
+    ${({ isLeft }) => isLeft && `margin-bottom: 16px`};
 
     a {
-      justify-content: ${({ isLeft }) => (isLeft ? 'flex-start' : 'flex-end')};
+      justify-content: ${({ isLeft }) => (isLeft ? `flex-start` : `flex-end`)};
     }
   }
 `;

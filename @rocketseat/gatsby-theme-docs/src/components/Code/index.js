@@ -26,7 +26,7 @@ export default function CodeHighlight({
 }) {
   const [copied, setCopied] = useState(false);
   const codeString = children.trim();
-  const language = className.replace(/language-/, '');
+  const language = className.replace(/language-/, ``);
 
   if (live) {
     return (
@@ -73,7 +73,7 @@ export default function CodeHighlight({
           }) => (
             <Pre className={blockClassName} style={style} hasTitle={title}>
               <CopyCode onClick={handleClick}>
-                {copied ? 'Copied!' : 'Copy'}
+                {copied ? `Copied!` : `Copy`}
               </CopyCode>
               <code>
                 {tokens.map((line, i) => (

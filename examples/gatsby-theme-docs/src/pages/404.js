@@ -10,8 +10,8 @@ export default function NotFound() {
       <SEO title="404: Not found" />
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
       <p>
-        If you&#39;d like to go back to homepage,{' '}
-        <Link to="/">click here</Link>.
+        If you&#39;d like to go back to homepage, <Link to="/">click here</Link>
+        .
       </p>
     </Layout>
   );

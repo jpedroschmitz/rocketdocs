@@ -33,7 +33,7 @@ export const Children = styled.div`
     max-width: 100%;
   }
 
-  ${({ hasTitle }) => !hasTitle && 'padding-top: 40px'};
+  ${({ hasTitle }) => !hasTitle && `padding-top: 40px`};
 `;
 
 export const Wrapper = styled.div`
@@ -43,7 +43,7 @@ export const Wrapper = styled.div`
   @media (max-width: 780px) {
     padding-left: 0;
     transform: translate3d(
-      ${({ isMenuOpen }) => (isMenuOpen ? '240px' : '0')},
+      ${({ isMenuOpen }) => (isMenuOpen ? `240px` : `0`)},
       0,
       0
     );

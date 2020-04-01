@@ -47,6 +47,6 @@ Layout.propTypes = {
 
 Layout.defaultProps = {
   disableTableOfContents: false,
-  title: '',
+  title: ``,
   headings: null,
 };

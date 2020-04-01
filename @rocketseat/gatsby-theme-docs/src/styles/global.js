@@ -20,7 +20,7 @@ export default function GlobalStyle() {
         }
 
         *::selection {
-          background: ${lighten('0.35', '#737380')}!important;
+          background: ${lighten(`0.35`, `#737380`)}!important;
         }
 
         body {

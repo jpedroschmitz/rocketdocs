@@ -96,8 +96,8 @@ exports.createPages = (
       if (githubUrl) {
         githubEditUrl = path.join(
           githubUrl,
-          'tree',
-          path.join('master', baseDir, docsPath),
+          `tree`,
+          path.join(`master`, baseDir, docsPath),
           relativePath,
         );
       }
@@ -178,7 +178,7 @@ exports.onCreateNode = (
   const { basePath } = withDefault(themeOptions);
 
   let value = createFilePath({ node, getNode });
-  if (value === 'index') value = '';
+  if (value === `index`) value = ``;
 
   createNodeField({
     name: `slug`,

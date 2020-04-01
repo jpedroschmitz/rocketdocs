@@ -17,7 +17,7 @@ const Container = styled.header`
   transition: transform 0.5s;
 
   transform: translate3d(
-    ${({ isMenuOpen }) => (isMenuOpen ? '240px' : '0')},
+    ${({ isMenuOpen }) => (isMenuOpen ? `240px` : `0`)},
     0,
     0
   );

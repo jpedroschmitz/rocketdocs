@@ -3,7 +3,7 @@ function normalizeBasePath(basePath, link) {
 }
 
 function isExternalUrl(url) {
-  return new RegExp('^((https?:)?//)', 'i').test(url);
+  return new RegExp(`^((https?:)?//)`, `i`).test(url);
 }
 
 function resolveLink(link, basePath) {

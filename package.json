@@ -21,6 +21,12 @@
       "pre-commit": "lint-staged"
     }
   },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "yarn lint --fix",
+      "yarn format"
+    ]
+  },
   "devDependencies": {
     "@types/node": "^13.9.8",
     "@types/react": "^16.9.30",
@@ -38,7 +44,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^3.0.0",
-    "husky": "^4.0.5",
+    "husky": "^4.2.3",
     "lerna": "^3.19.0",
     "lint-staged": "^9.5.0",
     "npm-run-all": "^4.1.5",
