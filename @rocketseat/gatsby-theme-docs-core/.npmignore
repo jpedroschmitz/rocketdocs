@@ -4,3 +4,6 @@ public/
 
 .vscode
 .DS_Store
+
+index.d.ts
+types.ts
