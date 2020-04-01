@@ -2,14 +2,16 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
+    "lib": ["dom", "es2017"],
     "jsx": "react",
-    "lib": ["dom", "es2015", "es2017"],
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
     "strict": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "esModuleInterop": true
+    "noImplicitAny": false,
+    "resolveJsonModule": true
   },
   "include": ["./@rocketseat/**/src/**/*"],
   "exclude": ["node_modules", "@rocketseat/**/node_modules"]

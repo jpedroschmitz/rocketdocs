@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { resolveLink } from '../../util/url';
 
-export function useSidebar() {
+export const useSidebar: React.FC<{}> = () => {
   const data = useStaticQuery(graphql`
     {
       allSidebarItems {
@@ -56,4 +56,4 @@ export function useSidebar() {
   }
 
   return edges;
-}
+};
