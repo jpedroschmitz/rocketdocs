@@ -45,7 +45,6 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^3.8.0",
     "react-live": "^2.2.2",
-    "slug": "^2.1.1",
     "url-join": "^4.0.1"
   },
   "devDependencies": {
