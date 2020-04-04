@@ -16,9 +16,7 @@ export default function TableOfContents({ headings }) {
               .filter(heading => heading.depth === 2)
               .map(heading => (
                 <li key={heading.value}>
-                  <a href={`#${slug(heading.value)}`}>
-                    {heading.value}
-                  </a>
+                  <a href={`#${slug(heading.value)}`}>{heading.value}</a>
                 </li>
               ))}
           </ul>
