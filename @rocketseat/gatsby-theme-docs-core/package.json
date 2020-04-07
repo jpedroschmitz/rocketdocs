@@ -39,8 +39,7 @@
     "gatsby-remark-images": "^3.1.42",
     "gatsby-remark-responsive-iframe": "^2.2.31",
     "gatsby-source-filesystem": "^2.1.46",
-    "gatsby-transformer-sharp": "^2.3.13",
-    "gatsby-transformer-yaml": "^2.2.23"
+    "gatsby-transformer-sharp": "^2.3.13"
   },
   "devDependencies": {
     "gatsby": "^2.19.45",

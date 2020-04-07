@@ -2,8 +2,11 @@ const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const fs = require(`fs`);
 
-const { normalizeBasePath, resolveLink } = require(`./util/url`);
 const withDefault = require(`./util/with-default`);
+
+function normalizeBasePath(basePath, link) {
+  return `/${basePath}/${link}`.replace(/\/\/+/g, `/`);
+}
 
 exports.createPages = (
   { graphql, actions: { createPage }, reporter },
@@ -32,25 +35,12 @@ exports.createPages = (
             }
           }
         }
-        sidebar: allSidebarItems {
-          edges {
-            node {
-              label
-              link
-              items {
-                label
-                link
-              }
-              id
-            }
-          }
-        }
       }
     `,
   ).then(result => {
     if (result.errors) {
       reporter.panic(
-        `docs: there was an error loading the docs folder!`,
+        `docs: There was an error loading the docs folder!`,
         result.errors,
       );
       return;
@@ -61,27 +51,6 @@ exports.createPages = (
       component: homeTemplate,
     });
 
-    // Generate prev/next items based on sidebar.yml file
-    const sidebar = result.data.sidebar.edges;
-    const listOfItems = [];
-
-    sidebar.forEach(({ node: { label, link, items } }) => {
-      if (Array.isArray(items)) {
-        items.forEach(item => {
-          listOfItems.push({
-            label: item.label,
-            link: resolveLink(item.link, basePath),
-          });
-        });
-      } else {
-        listOfItems.push({
-          label,
-          link: resolveLink(link, basePath),
-        });
-      }
-    });
-
-    // Generate docs pages
     const docs = result.data.files.edges;
     docs.forEach(doc => {
       const {
@@ -102,27 +71,17 @@ exports.createPages = (
         );
       }
 
-      const pageLink = slug.slice(0, slug.length - 1);
-      const currentPageIndex = listOfItems.findIndex(
-        page => page.link === pageLink,
-      );
-
-      const prev = listOfItems[currentPageIndex - 1];
-      const next = listOfItems[currentPageIndex + 1];
-
       createPage({
         path: slug,
         component: docsTemplate,
         context: {
           slug,
-          prev,
-          next,
           githubEditUrl,
         },
       });
     });
 
-    reporter.success(`docs pages created`);
+    reporter.success(`success: Docs pages created`);
   });
 };
 
@@ -135,33 +94,17 @@ exports.createSchemaCustomization = ({ actions }) => {
       disableTableOfContents: Boolean
     }
   `);
-
-  actions.createTypes(`
-    type SidebarItems implements Node {
-      label: String!
-      link: String
-      items: [SidebarItemsItems]
-    }
-
-    type SidebarItemsItems {
-      label: String
-      link: String
-    }
-  `);
 };
 
 exports.onPreBootstrap = ({ store, reporter }, themeOptions) => {
-  const { configPath, docsPath } = withDefault(themeOptions);
+  const { docsPath } = withDefault(themeOptions);
   const { program } = store.getState();
 
-  const dirs = [
-    path.join(program.directory, configPath),
-    path.join(program.directory, docsPath),
-  ];
+  const dirs = [path.join(program.directory, docsPath)];
 
   dirs.forEach(dir => {
     if (!fs.existsSync(dir)) {
-      reporter.success(`docs: intialized the ${dir} directory`);
+      reporter.success(`Docs: intialized the ${dir} directory`);
       fs.mkdirSync(dir);
     }
   });

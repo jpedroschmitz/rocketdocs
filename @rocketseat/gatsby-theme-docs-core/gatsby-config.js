@@ -1,7 +1,7 @@
 const withDefault = require(`./util/with-default`);
 
 module.exports = options => {
-  const { basePath, configPath, docsPath } = withDefault(options);
+  const { basePath, docsPath } = withDefault(options);
   return {
     siteMetadata: {
       basePath,
@@ -15,19 +15,6 @@ module.exports = options => {
         options: {
           name: `docs`,
           path: docsPath,
-        },
-      },
-      {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          name: `config`,
-          path: configPath,
-        },
-      },
-      {
-        resolve: `gatsby-transformer-yaml`,
-        options: {
-          typeName: `SidebarItems`,
         },
       },
       {
