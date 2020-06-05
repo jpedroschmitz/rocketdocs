@@ -6,7 +6,7 @@ export default function EditGithub({ githubEditUrl }) {
   if (githubEditUrl) {
     return (
       <a
-        href={githubEditUrl}
+        href={githubEditUrl.replace(':/', '://')}
         target="_blank"
         rel="noopener noreferrer"
         style={{
