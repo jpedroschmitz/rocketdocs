@@ -1,4 +1,6 @@
 const path = require(`path`);
+const urljoin = require(`url-join`);
+
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const fs = require(`fs`);
 
@@ -63,12 +65,8 @@ exports.createPages = (
       let githubEditUrl;
 
       if (githubUrl) {
-        githubEditUrl = path.join(
-          githubUrl,
-          `tree`,
-          path.join(`master`, baseDir, docsPath),
-          relativePath,
-        );
+        const pathLink = path.join(`master`, baseDir, docsPath);
+        githubEditUrl = urljoin(githubUrl, `tree`, pathLink, relativePath);
       }
 
       createPage({

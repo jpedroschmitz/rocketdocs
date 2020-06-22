@@ -30,16 +30,17 @@
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.5.5",
-    "gatsby-plugin-mdx": "^1.0.67",
+    "gatsby-plugin-mdx": "^1.2.7",
     "gatsby-plugin-sharp": "^2.4.0",
     "gatsby-plugin-typescript": "^2.3.1",
     "gatsby-remark-autolink-headers": "^2.1.23",
     "gatsby-remark-copy-linked-files": "^2.1.36",
-    "gatsby-remark-embedder": "^1.8.0",
+    "gatsby-remark-embedder": "^2.0.1",
     "gatsby-remark-images": "^3.1.42",
     "gatsby-remark-responsive-iframe": "^2.2.31",
     "gatsby-source-filesystem": "^2.1.46",
-    "gatsby-transformer-sharp": "^2.3.13"
+    "gatsby-transformer-sharp": "^2.3.13",
+    "url-join": "^4.0.1"
   },
   "devDependencies": {
     "gatsby": "^2.19.45",
