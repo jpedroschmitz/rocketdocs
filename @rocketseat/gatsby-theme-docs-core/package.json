@@ -1,6 +1,6 @@
 {
   "name": "@rocketseat/gatsby-theme-docs-core",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "index.js",
   "description": "Core theme for @rocketseat/gatsby-theme-docs with no additional theming or style opinions. Includes all of the data structures you need to get up and build a documentation website.",
   "author": "João Pedro Schmitz <oi@joaopedro.cc> (@joaopedro_cc)",
@@ -39,7 +39,8 @@
     "gatsby-remark-responsive-iframe": "^2.2.31",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-sharp": "^2.3.13",
-    "gatsby-transformer-yaml": "^2.2.23"
+    "gatsby-transformer-yaml": "^2.2.23",
+    "url-join": "^4.0.1"
   },
   "devDependencies": {
     "gatsby": "^2.19.45",
