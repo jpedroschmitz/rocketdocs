@@ -1,6 +1,7 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const fs = require(`fs`);
+const urljoin = require(`url-join`);
 
 const { normalizeBasePath, resolveLink } = require(`./util/url`);
 const withDefault = require(`./util/with-default`);
@@ -94,12 +95,8 @@ exports.createPages = (
       let githubEditUrl;
 
       if (githubUrl) {
-        githubEditUrl = path.join(
-          githubUrl,
-          'tree',
-          path.join('master', baseDir, docsPath),
-          relativePath,
-        );
+        const pathLink = path.join(`master`, baseDir, docsPath);
+        githubEditUrl = urljoin(githubUrl, `tree`, pathLink, relativePath);
       }
 
       const pageLink = slug.slice(0, slug.length - 1);
@@ -128,7 +125,7 @@ exports.createPages = (
 
 exports.createSchemaCustomization = ({ actions }) => {
   actions.createTypes(`
-    type MdxFrontmatter @dontInfer {
+    type MdxFrontmatter {
       title: String!
       description: String
       image: String
