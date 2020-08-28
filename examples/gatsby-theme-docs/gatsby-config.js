@@ -8,7 +8,7 @@ module.exports = {
     siteAuthor: `@rocketseat`,
     siteImage: `/banner.png`,
     siteLanguage: `en`,
-    themeColor: `#7159c1`,
+    themeColor: `#8257E6`,
     basePath: `/`,
     footer: `Theme by Rocketseat`,
   },
