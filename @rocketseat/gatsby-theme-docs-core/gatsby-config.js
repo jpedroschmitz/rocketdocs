@@ -1,7 +1,8 @@
 const withDefault = require(`./util/with-default`);
 
 module.exports = options => {
-  const { basePath, configPath, docsPath } = withDefault(options);
+  const { basePath, configPath, docsPath, withMdx } = withDefault(options);
+
   return {
     siteMetadata: {
       basePath,
@@ -29,7 +30,7 @@ module.exports = options => {
           typeName: `SidebarItems`,
         },
       },
-      {
+      withMdx && {
         resolve: `gatsby-plugin-mdx`,
         options: {
           extensions: [`.mdx`, `.md`],

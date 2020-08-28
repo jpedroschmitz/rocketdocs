@@ -3,7 +3,7 @@ module.exports = themeOptions => {
   const configPath = themeOptions.configPath || `config`;
   const docsPath = themeOptions.docsPath || `docs`;
   const baseDir = themeOptions.baseDir || ``;
-  const { githubUrl } = themeOptions;
+  const { githubUrl, withMdx = true } = themeOptions;
 
   return {
     basePath,
@@ -11,5 +11,6 @@ module.exports = themeOptions => {
     docsPath,
     baseDir,
     githubUrl,
+    withMdx,
   };
 };

@@ -2,6 +2,7 @@ const withDefault = require('@rocketseat/gatsby-theme-docs-core/util/with-defaul
 
 module.exports = options => {
   const themeOtions = withDefault(options);
+
   return {
     siteMetadata: {
       defaultTitle: `Gatsby Themes from Rocketseat`,

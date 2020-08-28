@@ -51,13 +51,14 @@ npm i @rocketseat/gatsby-theme-docs-core
 
 ### Theme options
 
-| Key        | Default | Required | Description                                                                                                                             |
-| ---------- | ------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| basePath   | /       | No       | Root url for all docs                                                                                                                   |
-| configPath | config  | No       | Location of config files                                                                                                                |
-| docsPath   | docs    | No       | The site description for SEO and social (FB, Twitter) tags                                                                              |
-| githubUrl  | -       | No       | The complete URL of your repository. For example: `https://github/rocketseat/gatsby-themes`                                             |
-| baseDir    | -       | No       | If your Gatsby site does not live in the root of your project directory/git repo, pass the subdirectory name here (`docs`, for example) |
+| Key        | Default | Required | Description                                                                                                                                                            |
+| ---------- | ------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| basePath   | /       | No       | Root url for all docs                                                                                                                                                  |
+| configPath | config  | No       | Location of config files                                                                                                                                               |
+| docsPath   | docs    | No       | The site description for SEO and social (FB, Twitter) tags                                                                                                             |
+| githubUrl  | -       | No       | The complete URL of your repository. For example: `https://github/rocketseat/gatsby-themes`                                                                            |
+| baseDir    | -       | No       | If your Gatsby site does not live in the root of your project directory/git repo, pass the subdirectory name here (`docs`, for example)                                |
+| withMdx    | -       | No       | If necessary, you can add your own MDX options to the theme. To do so, make sure you turn this option to false and include `gatsby-plugin-mdx` on your `gatsby-config` |
 
 ### Example usage
 
