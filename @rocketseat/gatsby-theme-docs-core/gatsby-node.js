@@ -12,7 +12,9 @@ exports.createPages = (
 ) => {
   reporter.success(`onCreateDocs`);
 
-  const { basePath, baseDir, docsPath, githubUrl } = withDefault(themeOptions);
+  const { basePath, baseDir, docsPath, githubUrl, branch } = withDefault(
+    themeOptions,
+  );
 
   const docsTemplate = require.resolve(`./src/templates/docs-query.js`);
   const homeTemplate = require.resolve(`./src/templates/homepage-query.js`);
@@ -95,7 +97,7 @@ exports.createPages = (
       let githubEditUrl;
 
       if (githubUrl) {
-        const pathLink = path.join(`master`, baseDir, docsPath);
+        const pathLink = path.join(branch, baseDir, docsPath);
         githubEditUrl = urljoin(githubUrl, `tree`, pathLink, relativePath);
       }
 
