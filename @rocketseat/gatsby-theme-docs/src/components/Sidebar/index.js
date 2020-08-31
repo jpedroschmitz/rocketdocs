@@ -28,13 +28,12 @@ function ListWithSubItems({ children, text }) {
 export default function Sidebar({ isMenuOpen }) {
   const {
     site: {
-      siteMetadata: { footer, basePath },
+      siteMetadata: { basePath },
     },
   } = useStaticQuery(graphql`
     {
       site {
         siteMetadata {
-          footer
           basePath
         }
       }
@@ -81,9 +80,6 @@ export default function Sidebar({ isMenuOpen }) {
           })}
         </List>
       </nav>
-      <footer>
-        <p>{footer}</p>
-      </footer>
     </Container>
   );
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
 import { useTheme } from 'emotion-theming';
-import { lighten } from 'polished';
 
 export default function GlobalStyle() {
   const theme = useTheme();
@@ -9,8 +8,6 @@ export default function GlobalStyle() {
   return (
     <Global
       styles={css`
-        @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
         *,
         *::after,
         *::before {
@@ -19,15 +16,12 @@ export default function GlobalStyle() {
           box-sizing: border-box;
         }
 
-        *::selection {
-          background: ${lighten('0.35', '#737380')}!important;
-        }
-
         body {
           font-size: 16px;
-          font-family: 'Roboto', sans-serif;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
           background-color: ${theme.colors.background};
           text-rendering: optimizelegibility;
+          -webkit-font-smoothing: antialiased;
         }
 
         h1 {
@@ -71,7 +65,7 @@ export default function GlobalStyle() {
           display: inline-block;
           vertical-align: middle;
           line-height: 1;
-          padding: 0.2em 0.2em 0.3em 0.2em;
+          padding: 0.2em;
           background-color: #44475a;
           color: rgba(248, 248, 242);
           font-size: 14px;
