@@ -6,7 +6,12 @@ import Code from '../src/components/Code';
 
 const components = {
   code: Code,
-  inlineCode: props => <code className="inline-code" {...props} />,
+  inlineCode: (props) => <code className="inline-code" {...props} />,
+  table: ({ children, ...rest }) => (
+    <div style={{ overflowX: `auto` }}>
+      <table {...rest}>{children}</table>
+    </div>
+  ),
 };
 
 export function wrapPageElement({ element }) {
