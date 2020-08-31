@@ -13,7 +13,6 @@ module.exports = options => {
       siteAuthor: `@rocketseat`,
       siteImage: `/banner.png`,
       siteLanguage: `en`,
-      footer: `Theme by Rocketseat`,
       basePath: themeOtions.basePath,
       docsPath: themeOtions.docsPath,
     },

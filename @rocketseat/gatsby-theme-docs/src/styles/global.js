@@ -146,6 +146,7 @@ export default function GlobalStyle() {
 
         .gatsby-highlight {
           position: relative;
+          z-index: 0;
 
           .token {
             font-style: normal !important;

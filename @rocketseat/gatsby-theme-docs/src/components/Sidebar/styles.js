@@ -2,45 +2,38 @@ import styled from '@emotion/styled';
 import { darken } from 'polished';
 
 export const Container = styled.aside`
-  width: 20%;
-  max-width: 280px;
-  min-width: 280px;
+  width: 100%;
   background-color: ${({ theme }) => theme.colors.sidebar.background};
 
-  position: fixed;
   overflow-y: auto;
-  left: 0;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
 
+  position: sticky;
+  top: 0;
+  padding-top: 36px;
   transition: transform 0.5s;
-
   height: 100vh;
 
   nav {
     width: 100%;
+    padding-top: 24px;
     align-self: flex-start;
-    margin-bottom: 20px;
     flex: 1;
-  }
-
-  footer {
-    padding: 24px 0 24px 30px;
-    width: 100%;
-
-    p {
-      color: ${({ theme }) => theme.colors.sidebar.footer};
-      font-size: 12px;
-      margin: 0;
-    }
   }
 
   @media (max-width: 780px) {
     max-width: 240px;
     min-width: 240px;
+    z-index: 1001;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 32px;
     transform: translate3d(
       ${({ isMenuOpen }) => (isMenuOpen ? '0' : '-100%')},
       0,
@@ -51,14 +44,9 @@ export const Container = styled.aside`
 
 export const LogoContainer = styled.div`
   width: 100%;
-  height: 100%;
-  max-height: 100px;
-  min-height: 100px;
-  padding: 20px 0;
 
   a {
     width: 100%;
-    height: 100%;
     padding-left: 30px;
 
     display: flex;
@@ -138,5 +126,5 @@ export const Item = styled.li`
 `;
 
 export const SubItem = styled(List)`
-  margin-top: 5px;
+  margin: 5px 0 0 0;
 `;

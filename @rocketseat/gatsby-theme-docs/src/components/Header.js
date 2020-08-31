@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Headroom from 'react-headroom';
 import styled from '@emotion/styled';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { useStaticQuery, graphql } from 'gatsby';
@@ -10,17 +9,9 @@ const Container = styled.header`
   justify-content: flex-start;
   align-items: center;
 
-  height: 60px;
-  padding: 0 24px;
+  height: 40px;
+  margin-bottom: 24px;
   background: #fff;
-
-  transition: transform 0.5s;
-
-  transform: translate3d(
-    ${({ isMenuOpen }) => (isMenuOpen ? '240px' : '0')},
-    0,
-    0
-  );
 
   h2 {
     margin: 0;
@@ -28,6 +19,10 @@ const Container = styled.header`
     padding: 0;
     font-size: 18px;
     color: #000;
+
+    @media (max-width: 359px) {
+      font-size: 14px;
+    }
   }
 
   button {
@@ -35,6 +30,10 @@ const Container = styled.header`
     background: #fff;
     cursor: pointer;
     margin-right: 16px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   @media (min-width: 780px) {
@@ -42,38 +41,31 @@ const Container = styled.header`
   }
 `;
 
-export default function Header({ handleMenuOpen, isMenuOpen }) {
+export default function Header({ handleMenuOpen }) {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
-            siteTitleShort
+            siteTitle
           }
         }
       }
     `,
   );
 
-  const { siteTitleShort } = site.siteMetadata;
+  const { siteTitle } = site.siteMetadata;
 
   return (
-    <Headroom>
-      <Container isMenuOpen={isMenuOpen}>
-        <button
-          aria-label="Open sidebar"
-          type="button"
-          onClick={handleMenuOpen}
-        >
-          <GiHamburgerMenu size={23} />
-        </button>
-        <h2>{siteTitleShort}</h2>
-      </Container>
-    </Headroom>
+    <Container>
+      <button aria-label="Open sidebar" type="button" onClick={handleMenuOpen}>
+        <GiHamburgerMenu size={23} aria-hidden="true" />
+      </button>
+      <h2>{siteTitle}</h2>
+    </Container>
   );
 }
 
 Header.propTypes = {
   handleMenuOpen: PropTypes.func.isRequired,
-  isMenuOpen: PropTypes.bool.isRequired,
 };
