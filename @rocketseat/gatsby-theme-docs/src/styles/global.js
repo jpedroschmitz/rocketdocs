@@ -18,16 +18,18 @@ export default function GlobalStyle() {
 
         body {
           font-size: 16px;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+            Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
           background-color: ${theme.colors.background};
           text-rendering: optimizelegibility;
           -webkit-font-smoothing: antialiased;
+          overflow-y: scroll;
         }
 
         h1 {
           font-size: 32px;
-          color: #333;
-          font-weight: normal;
+          color: ${theme.colors.title};
+          font-weight: bold;
           margin-bottom: 24px;
         }
 
@@ -48,13 +50,14 @@ export default function GlobalStyle() {
         h4,
         h5,
         h6 {
-          color: #737380;
+          color: ${theme.colors.title};
+
           margin: 24px 0 16px 0;
-          font-weight: normal;
+          font-weight: bold;
         }
 
         p {
-          color: #737380;
+          color: ${theme.colors.text};
           font-size: 16px;
           line-height: 28px;
           margin-bottom: 16px;
@@ -76,13 +79,12 @@ export default function GlobalStyle() {
         }
 
         a {
-          color: #737380;
+          color: ${theme.colors.text};
           font-weight: bold;
+          text-decoration: none;
 
           &:hover {
-            color: ${theme.colors.primary}!important;
-            transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
-            opacity: 1 !important;
+            text-decoration: underline;
           }
         }
 
@@ -91,7 +93,7 @@ export default function GlobalStyle() {
 
           p {
             padding: 1rem;
-            background: #f5f5fa;
+            background: ${theme.colors.text};
             border-radius: 5px;
           }
         }
@@ -104,25 +106,41 @@ export default function GlobalStyle() {
         }
 
         table {
-          border-collapse: collapse;
-          border-spacing: 0;
-          width: 100%;
+          border-collapse: separate;
+          border-spacing: 0 4px;
+          margin-top: -4px;
           margin-bottom: 16px;
-          color: #444;
-        }
+          width: 100%;
 
-        th,
-        td {
-          text-align: left;
-          padding: 12px;
-        }
+          th,
+          td {
+            margin: 0;
+            color: ${theme.colors.text};
+            background-color: ${theme.colors.shape};
+            border: solid 1px ${theme.colors.shape};
+            border-style: solid none;
+            padding: 12px;
 
-        tr:nth-of-type(2n) td {
-          background-color: ${theme.colors.sidebar.itemActive};
-        }
+            :first-child {
+              border-left-style: solid;
+              border-top-left-radius: 5px;
+              border-bottom-left-radius: 5px;
+            }
 
-        tr {
-          background-color: #ffffff;
+            :last-child {
+              border-right-style: solid;
+              border-bottom-right-radius: 5px;
+              border-top-right-radius: 5px;
+            }
+          }
+
+          tr {
+            th {
+              color: ${theme.colors.title};
+              text-align: left;
+              font-weight: bold;
+            }
+          }
         }
 
         iframe {
@@ -135,7 +153,7 @@ export default function GlobalStyle() {
 
         ul,
         ol {
-          color: #737380;
+          color: ${theme.colors.text};
           padding-left: 15px;
           margin-bottom: 16px;
 

@@ -1,10 +1,7 @@
 import styled from '@emotion/styled';
-import { darken } from 'polished';
 
 export const Container = styled.aside`
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.sidebar.background};
-
   overflow-y: auto;
 
   display: flex;
@@ -34,6 +31,7 @@ export const Container = styled.aside`
     bottom: 0;
     left: 0;
     padding-top: 32px;
+    background: ${({ theme }) => theme.colors.shape};
     transform: translate3d(
       ${({ isMenuOpen }) => (isMenuOpen ? '0' : '-100%')},
       0,
@@ -70,10 +68,10 @@ export const Heading = styled.li`
   padding-left: 30px;
   width: 100%;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   margin-top: 20px;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.title};
   letter-spacing: 0.142em;
 `;
 
@@ -87,8 +85,8 @@ export const Item = styled.li`
   span {
     display: block;
     font-size: 15px;
-    color: ${({ theme }) => theme.colors.sidebar.link};
-    background-color: ${({ theme }) => theme.colors.sidebar.background};
+    color: ${({ theme }) => theme.colors.text};
+    background-color: ${({ theme }) => theme.colors.background};
     padding: 4px 10px;
     margin: 4px 0;
     border-radius: 4px;
@@ -105,7 +103,7 @@ export const Item = styled.li`
     cursor: pointer;
     margin: 0 auto;
 
-    transition: background-color 0.2s, color 0.2s, padding-left 0.2s;
+    transition: all 0.2s ease;
 
     svg {
       width: 20px;
@@ -114,13 +112,20 @@ export const Item = styled.li`
     }
 
     &:not(.active-link):hover {
-      padding-left: 20px;
-      color: ${({ theme }) => darken('0.2', theme.colors.sidebar.link)};
+      color: ${({ theme }) => theme.colors.primary};
     }
 
     &.active-link {
-      color: ${({ theme }) => darken('0.2', theme.colors.sidebar.link)};
-      background-color: ${({ theme }) => theme.colors.sidebar.itemActive};
+      color: ${({ theme }) => theme.colors.title};
+      background-color: ${({ theme }) => theme.colors.shape};
+    }
+
+    @media (max-width: 780px) {
+      background: ${({ theme }) => theme.colors.shape};
+
+      &.active-link {
+        background: ${({ theme }) => theme.colors.background};
+      }
     }
   }
 `;

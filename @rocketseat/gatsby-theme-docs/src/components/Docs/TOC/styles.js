@@ -1,10 +1,9 @@
 import styled from '@emotion/styled';
-import { darken } from 'polished';
 
 export const Wrapper = styled.div`
   position: sticky;
   order: 2;
-  top: 72px;
+  top: 96px;
   max-height: calc(100vh - 72px);
   overflow-y: auto;
   width: 100%;
@@ -21,7 +20,6 @@ export const Wrapper = styled.div`
 
 export const Container = styled.div`
   h2 {
-    color: #737380;
     text-transform: uppercase;
     font-size: 13px;
     font-weight: bold;
@@ -42,13 +40,13 @@ export const Container = styled.div`
 
       a {
         font-size: 13px;
-        color: #999999;
+        color: ${({ theme }) => theme.colors.text};
         font-weight: 400;
         text-decoration: none;
         transition: all 0.2s;
 
         &:hover {
-          color: ${({ theme }) => darken('0.2', theme.colors.sidebar.link)};
+          text-decoration: underline;
         }
       }
     }

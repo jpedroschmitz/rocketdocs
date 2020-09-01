@@ -11,14 +11,12 @@ const Container = styled.header`
 
   height: 40px;
   margin-bottom: 24px;
-  background: #fff;
 
   h2 {
     margin: 0;
     border: none;
     padding: 0;
     font-size: 18px;
-    color: #000;
 
     @media (max-width: 359px) {
       font-size: 14px;
@@ -27,7 +25,7 @@ const Container = styled.header`
 
   button {
     border: none;
-    background: #fff;
+    background: none;
     cursor: pointer;
     margin-right: 16px;
 

@@ -8,6 +8,7 @@ export const Container = styled.div`
 
   display: grid;
   grid-template-columns: 280px calc(100% - 320px);
+  grid-auto-flow: row;
   grid-gap: 40px;
 
   @media (max-width: 780px) {
@@ -18,7 +19,6 @@ export const Container = styled.div`
 
 export const Main = styled.main`
   height: 100%;
-  min-height: calc(100vh - 36px);
   padding-top: 36px;
   width: 100%;
 
@@ -31,7 +31,7 @@ export const Main = styled.main`
   }
 
   @media (max-width: 780px) {
-    padding-top: 24px;
+    padding-top: 0;
   }
 `;
 
