@@ -21,7 +21,7 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
   h2 {
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
     letter-spacing: 0.142em;
     margin-top: 0rem;
@@ -39,8 +39,7 @@ export const Container = styled.div`
       line-height: 1.1;
 
       a {
-        font-size: 13px;
-        color: ${({ theme }) => theme.colors.text};
+        font-size: 14px;
         font-weight: 400;
         text-decoration: none;
         transition: all 0.2s;

@@ -1,5 +1,5 @@
 /* @jsx jsx */
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { jsx, css } from '@emotion/core';
 import PropTypes from 'prop-types';
 
@@ -15,6 +15,7 @@ export default function Layout({
   title,
   headings,
 }) {
+  const contentRef = useRef(null);
   const [isMenuOpen, setMenuOpen] = useState(false);
   const disableTOC =
     disableTableOfContents === true || !headings || headings.length === 0;
@@ -43,7 +44,7 @@ export default function Layout({
               {title}
             </h1>
           )}
-          <Children>
+          <Children ref={contentRef}>
             {title && (
               <h1
                 css={css`
@@ -57,7 +58,11 @@ export default function Layout({
             )}
             {children}
           </Children>
-          <TableOfContents headings={headings} disableTOC={disableTOC} />
+          <TableOfContents
+            headings={headings}
+            disableTOC={disableTOC}
+            contentRef={contentRef}
+          />
         </Main>
       </Container>
     </>
