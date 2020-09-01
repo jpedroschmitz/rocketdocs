@@ -13,7 +13,7 @@ export const Container = styled.aside`
   top: 0;
   padding-top: 36px;
   transition: transform 0.5s;
-  height: 100vh;
+  height: calc(100vh - 1px);
 
   nav {
     width: 100%;

@@ -2,8 +2,10 @@ import styled from '@emotion/styled';
 
 export const Wrapper = styled.div`
   position: sticky;
+  top: 0;
   order: 2;
-  top: 96px;
+
+  padding-top: 72px;
   max-height: calc(100vh - 72px);
   overflow-y: auto;
   width: 100%;
