@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/gatsby-themes-logo.svg" alt="Rocketseat and Gatsby" width="260">
+  <img src="https://storage.googleapis.com/golden-wind/github/gatsby-themes-logo.svg" alt="Rocketseat and Gatsby" width="260">
   <br>
   Rocketseat Gatsby Themes
   <br>
@@ -9,9 +9,9 @@
 <h4 align="center">Gatsby themes that we use to build websites at <a href="https://rocketseat.com.br" target="_blank">Rocketseat</a> ⚡️🔥</h4>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/PRs-welcome-%237159c1.svg" alt="PRs welcome!" />
+  <img src="https://img.shields.io/badge/PRs-welcome-%238257E6.svg" alt="PRs welcome!" />
 
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-%237159c1">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-%238257E6">
 
   <a href="https://twitter.com/intent/follow?screen_name=rocketseat">
     <img src="https://img.shields.io/twitter/follow/rocketseat.svg?label=Follow%20@rocketseat" alt="Follow @rocketseat" />
