@@ -80,6 +80,7 @@ export const Item = styled.li`
   width: 100%;
   transition: all 200ms ease-in-out;
   padding: 0 20px;
+  cursor: pointer;
 
   a,
   span {
@@ -116,7 +117,7 @@ export const Item = styled.li`
     }
 
     &.active-link {
-      color: ${({ theme }) => theme.colors.title};
+      color: ${({ theme }) => theme.colors.primary};
       background-color: ${({ theme }) => theme.colors.shape};
     }
 

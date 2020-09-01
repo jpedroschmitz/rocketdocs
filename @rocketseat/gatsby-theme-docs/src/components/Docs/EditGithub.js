@@ -3,8 +3,11 @@ import React from 'react';
 import { jsx, css } from '@emotion/core';
 import PropTypes from 'prop-types';
 import { MdEdit } from 'react-icons/md';
+import { useTheme } from 'emotion-theming';
 
 export default function EditGithub({ githubEditUrl }) {
+  const theme = useTheme();
+
   if (githubEditUrl) {
     return (
       <a
@@ -16,7 +19,7 @@ export default function EditGithub({ githubEditUrl }) {
           align-items: center;
           text-decoration: none;
           margin-top: 48px;
-          color: ${({ theme }) => theme.colors.text};
+          color: ${theme.colors.text};
           opacity: 0.8;
           font-size: 14px;
           font-weight: normal;

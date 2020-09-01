@@ -121,7 +121,7 @@ export default function GlobalStyle() {
             border-style: solid none;
             padding: 12px;
 
-            :first-child {
+            :first-of-type {
               border-left-style: solid;
               border-top-left-radius: 5px;
               border-bottom-left-radius: 5px;
