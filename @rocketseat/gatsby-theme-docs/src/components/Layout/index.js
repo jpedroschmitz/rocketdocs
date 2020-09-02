@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+/* @jsx jsx */
+import React, { useState, useRef } from 'react';
+import { jsx, css } from '@emotion/core';
 import PropTypes from 'prop-types';
 
 import TableOfContents from '../Docs/TOC';
 import Sidebar from '../Sidebar';
 import Header from '../Header';
-import { Wrapper, Main, Title, Children } from './styles';
+import Overlay from '../Overlay';
+import { Container, Main, Children } from './styles';
 
 export default function Layout({
   children,
@@ -12,6 +15,7 @@ export default function Layout({
   title,
   headings,
 }) {
+  const contentRef = useRef(null);
   const [isMenuOpen, setMenuOpen] = useState(false);
   const disableTOC =
     disableTableOfContents === true || !headings || headings.length === 0;
@@ -22,15 +26,45 @@ export default function Layout({
 
   return (
     <>
-      <Sidebar isMenuOpen={isMenuOpen} />
-      <Header handleMenuOpen={handleMenuOpen} isMenuOpen={isMenuOpen} />
-      <Wrapper isMenuOpen={isMenuOpen}>
-        {title && <Title>{title}</Title>}
-        <Main disableTOC={disableTOC}>
-          {!disableTOC && <TableOfContents headings={headings} />}
-          <Children hasTitle={title}>{children}</Children>
+      <Overlay isMenuOpen={isMenuOpen} onClick={handleMenuOpen} />
+      <Container>
+        <Sidebar isMenuOpen={isMenuOpen} />
+        <Main>
+          <Header handleMenuOpen={handleMenuOpen} />
+          {title && (
+            <h1
+              css={css`
+                display: none;
+
+                @media (max-width: 1200px) {
+                  display: block;
+                }
+              `}
+            >
+              {title}
+            </h1>
+          )}
+          <Children ref={contentRef}>
+            {title && (
+              <h1
+                css={css`
+                  @media (max-width: 1200px) {
+                    display: none;
+                  }
+                `}
+              >
+                {title}
+              </h1>
+            )}
+            {children}
+          </Children>
+          <TableOfContents
+            headings={headings}
+            disableTOC={disableTOC}
+            contentRef={contentRef}
+          />
         </Main>
-      </Wrapper>
+      </Container>
     </>
   );
 }

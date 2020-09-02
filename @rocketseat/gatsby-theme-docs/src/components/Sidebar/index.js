@@ -28,13 +28,12 @@ function ListWithSubItems({ children, text }) {
 export default function Sidebar({ isMenuOpen }) {
   const {
     site: {
-      siteMetadata: { footer, basePath },
+      siteMetadata: { basePath },
     },
   } = useStaticQuery(graphql`
     {
       site {
         siteMetadata {
-          footer
           basePath
         }
       }
@@ -54,15 +53,15 @@ export default function Sidebar({ isMenuOpen }) {
   return (
     <Container isMenuOpen={isMenuOpen}>
       <LogoContainer>
-        <Link to={basePath}>
-          <Logo />
+        <Link to={basePath} aria-label="Go to home page">
+          <Logo aria-hidden="true" />
         </Link>
       </LogoContainer>
       <nav>
         <List>
           {data.map(({ node: { label, link, items, id } }) => {
             if (Array.isArray(items)) {
-              const subitems = items.map(item => {
+              const subitems = items.map((item) => {
                 return (
                   <Item key={item.link}>
                     {renderLink(item.link, item.label)}
@@ -81,9 +80,6 @@ export default function Sidebar({ isMenuOpen }) {
           })}
         </List>
       </nav>
-      <footer>
-        <p>{footer}</p>
-      </footer>
     </Container>
   );
 }

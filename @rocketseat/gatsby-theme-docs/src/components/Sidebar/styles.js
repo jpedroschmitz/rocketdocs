@@ -1,46 +1,37 @@
 import styled from '@emotion/styled';
-import { darken } from 'polished';
 
 export const Container = styled.aside`
-  width: 20%;
-  max-width: 280px;
-  min-width: 280px;
-  background-color: ${({ theme }) => theme.colors.sidebar.background};
-
-  position: fixed;
+  width: 100%;
   overflow-y: auto;
-  left: 0;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
 
+  position: sticky;
+  top: 0;
+  padding-top: 36px;
   transition: transform 0.5s;
-
-  height: 100vh;
+  height: calc(100vh - 1px);
 
   nav {
     width: 100%;
+    padding-top: 24px;
     align-self: flex-start;
-    margin-bottom: 20px;
     flex: 1;
-  }
-
-  footer {
-    padding: 24px 0 24px 30px;
-    width: 100%;
-
-    p {
-      color: ${({ theme }) => theme.colors.sidebar.footer};
-      font-size: 12px;
-      margin: 0;
-    }
   }
 
   @media (max-width: 780px) {
     max-width: 240px;
     min-width: 240px;
+    z-index: 1001;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 32px;
+    background: ${({ theme }) => theme.colors.shape};
     transform: translate3d(
       ${({ isMenuOpen }) => (isMenuOpen ? '0' : '-100%')},
       0,
@@ -51,14 +42,9 @@ export const Container = styled.aside`
 
 export const LogoContainer = styled.div`
   width: 100%;
-  height: 100%;
-  max-height: 100px;
-  min-height: 100px;
-  padding: 20px 0;
 
   a {
     width: 100%;
-    height: 100%;
     padding-left: 30px;
 
     display: flex;
@@ -82,10 +68,10 @@ export const Heading = styled.li`
   padding-left: 30px;
   width: 100%;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   margin-top: 20px;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.title};
   letter-spacing: 0.142em;
 `;
 
@@ -94,13 +80,14 @@ export const Item = styled.li`
   width: 100%;
   transition: all 200ms ease-in-out;
   padding: 0 20px;
+  cursor: pointer;
 
   a,
   span {
     display: block;
     font-size: 15px;
-    color: ${({ theme }) => theme.colors.sidebar.link};
-    background-color: ${({ theme }) => theme.colors.sidebar.background};
+    color: ${({ theme }) => theme.colors.text};
+    background-color: ${({ theme }) => theme.colors.background};
     padding: 4px 10px;
     margin: 4px 0;
     border-radius: 4px;
@@ -117,7 +104,7 @@ export const Item = styled.li`
     cursor: pointer;
     margin: 0 auto;
 
-    transition: background-color 0.2s, color 0.2s, padding-left 0.2s;
+    transition: all 0.2s ease;
 
     svg {
       width: 20px;
@@ -126,17 +113,24 @@ export const Item = styled.li`
     }
 
     &:not(.active-link):hover {
-      padding-left: 20px;
-      color: ${({ theme }) => darken('0.2', theme.colors.sidebar.link)};
+      color: ${({ theme }) => theme.colors.primary};
     }
 
     &.active-link {
-      color: ${({ theme }) => darken('0.2', theme.colors.sidebar.link)};
-      background-color: ${({ theme }) => theme.colors.sidebar.itemActive};
+      color: ${({ theme }) => theme.colors.primary};
+      background-color: ${({ theme }) => theme.colors.shape};
+    }
+
+    @media (max-width: 780px) {
+      background: ${({ theme }) => theme.colors.shape};
+
+      &.active-link {
+        background: ${({ theme }) => theme.colors.background};
+      }
     }
   }
 `;
 
 export const SubItem = styled(List)`
-  margin-top: 5px;
+  margin: 5px 0 0 0;
 `;

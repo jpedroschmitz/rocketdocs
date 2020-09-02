@@ -28,7 +28,7 @@ export const Post = styled.div`
     svg {
       width: 25px;
       height: 25px;
-      color: #737380;
+      color: ${({ theme }) => theme.colors.text};
 
       ${({ isLeft }) => (isLeft ? 'margin-right: 16px' : 'margin-left: 16px')};
     }
@@ -38,15 +38,14 @@ export const Post = styled.div`
       text-transform: uppercase;
       font-size: 12px;
       margin: 0;
-      color: #999;
+      color: ${({ theme }) => theme.colors.text};
     }
 
     h3 {
-      color: #737380;
+      color: ${({ theme }) => theme.colors.text};
       border: none;
       margin: 0;
       padding: 0;
-      font-weight: normal;
       font-size: 16px;
     }
   }

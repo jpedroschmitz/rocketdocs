@@ -2,8 +2,9 @@ module.exports = themeOptions => {
   const basePath = themeOptions.basePath || `/`;
   const configPath = themeOptions.configPath || `config`;
   const docsPath = themeOptions.docsPath || `docs`;
+  const branch = themeOptions.branch || `master`;
   const baseDir = themeOptions.baseDir || ``;
-  const { githubUrl } = themeOptions;
+  const { githubUrl, withMdx = true } = themeOptions;
 
   return {
     basePath,
@@ -11,5 +12,7 @@ module.exports = themeOptions => {
     docsPath,
     baseDir,
     githubUrl,
+    withMdx,
+    branch,
   };
 };
