@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import Highlight, { defaultProps } from 'prism-react-renderer';
 import PropTypes from 'prop-types';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import rangeParser from 'parse-numeric-range';
 import theme from 'prism-react-renderer/themes/dracula';
 import { LiveProvider, LiveEditor } from 'react-live';
-import { mdx } from '@mdx-js/react';
 
 import { copyToClipboard } from '../../util/copy-to-clipboard';
+import scope from './LiveCodeScope';
 import {
   CopyCode,
   LineNo,
@@ -17,16 +18,40 @@ import {
   StyledEditor,
 } from './styles';
 
+const calculateLinesToHighlight = (meta) => {
+  const RE = /{([\d,-]+)}/;
+
+  if (RE.test(meta)) {
+    const strlineNumbers = RE.exec(meta)[1];
+    const lineNumbers = rangeParser(strlineNumbers);
+    return (index) => lineNumbers.includes(index + 1);
+  } else {
+    return () => false;
+  }
+};
+
 export default function CodeHighlight({
   children,
   className,
   live,
+  highlight,
   title,
   lineNumbers,
 }) {
   const [copied, setCopied] = useState(false);
   const codeString = children.trim();
-  const language = className.replace(/language-/, '');
+  const language = className && className.replace(/language-/, '');
+
+  const shouldHighlightLine = calculateLinesToHighlight(highlight);
+
+  const handleClick = () => {
+    setCopied(true);
+    copyToClipboard(codeString);
+
+    setTimeout(() => {
+      setCopied(false);
+    }, 4000);
+  };
 
   if (live) {
     return (
@@ -34,25 +59,25 @@ export default function CodeHighlight({
         code={codeString}
         noInline
         theme={theme}
-        transformCode={code => `/** @jsx mdx */${code}`}
-        scope={{ mdx }}
+        transformCode={(code) => `/** @jsx mdx */${code}`}
+        scope={scope}
       >
         <LiveWrapper>
+          <LivePreview />
+
           <StyledEditor>
+            <CopyCode onClick={handleClick} disabled={copied} hasTitle>
+              {copied ? 'Copied!' : 'Copy'}
+            </CopyCode>
+
             <LiveEditor />
           </StyledEditor>
-          <LivePreview />
-        </LiveWrapper>
 
-        <LiveError />
+          <LiveError />
+        </LiveWrapper>
       </LiveProvider>
     );
   }
-
-  const handleClick = () => {
-    setCopied(true);
-    copyToClipboard(codeString);
-  };
 
   return (
     <>
@@ -71,19 +96,36 @@ export default function CodeHighlight({
             getLineProps,
             getTokenProps,
           }) => (
-            <Pre className={blockClassName} style={style} hasTitle={title}>
-              <CopyCode onClick={handleClick}>
+            <Pre
+              className={blockClassName}
+              style={style}
+              hasTitle={title}
+              hasLanguage={!!language}
+            >
+              <CopyCode
+                onClick={handleClick}
+                disabled={copied}
+                hasTitle={title}
+              >
                 {copied ? 'Copied!' : 'Copy'}
               </CopyCode>
               <code>
-                {tokens.map((line, i) => (
-                  <div {...getLineProps({ line, key: i })}>
-                    {lineNumbers && <LineNo>{i + 1}</LineNo>}
-                    {line.map((token, key) => (
-                      <span {...getTokenProps({ token, key })} />
-                    ))}
-                  </div>
-                ))}
+                {tokens.map((line, index) => {
+                  const lineProps = getLineProps({ line, key: index });
+
+                  if (shouldHighlightLine(index)) {
+                    lineProps.className = `${lineProps.className} highlight-line`;
+                  }
+
+                  return (
+                    <div {...lineProps}>
+                      {lineNumbers && <LineNo>{index + 1}</LineNo>}
+                      {line.map((token, key) => (
+                        <span {...getTokenProps({ token, key })} />
+                      ))}
+                    </div>
+                  );
+                })}
               </code>
             </Pre>
           )}

@@ -163,12 +163,23 @@ export default function GlobalStyle() {
         }
 
         .gatsby-highlight {
+          font-family: Hack, SFMono-Regular, Menlo, Monaco, Consolas,
+            'Liberation Mono', 'Courier New', monospace;
+          font-variant: no-common-ligatures no-discretionary-ligatures
+            no-historical-ligatures no-contextual;
+
           position: relative;
           z-index: 0;
+          margin: 0 0 16px 0;
+          overflow: auto;
 
           .token {
             font-style: normal !important;
           }
+        }
+
+        pre[class*='language-'] code {
+          font-family: inherit;
         }
 
         pre[class*='language-']::before {
@@ -176,8 +187,7 @@ export default function GlobalStyle() {
           border-radius: 0 0 4px 4px;
           color: #232129;
           font-size: 12px;
-          font-family: SFMono-Regular, Menlo, Monaco, Consolas,
-            'Liberation Mono', 'Courier New', monospace;
+          font-family: inherit;
           letter-spacing: 0.075em;
           line-height: 1;
           padding: 0.25rem 0.5rem;
@@ -186,13 +196,6 @@ export default function GlobalStyle() {
           text-align: right;
           text-transform: uppercase;
           top: 0;
-        }
-
-        pre[class*='language-'] code {
-          font-family: SFMono-Regular, Menlo, Monaco, Consolas,
-            'Liberation Mono', 'Courier New', monospace;
-          font-variant: no-common-ligatures no-discretionary-ligatures
-            no-historical-ligatures no-contextual;
         }
 
         pre[class~='language-js']::before,
