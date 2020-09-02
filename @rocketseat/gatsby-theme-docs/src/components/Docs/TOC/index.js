@@ -99,7 +99,7 @@ export default function TableOfContents({ headings, disableTOC, contentRef }) {
 TableOfContents.propTypes = {
   headings: PropTypes.array,
   disableTOC: PropTypes.bool.isRequired,
-  contentRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  contentRef: PropTypes.shape({ current: PropTypes.object }),
 };
 
 TableOfContents.defaultProps = {
