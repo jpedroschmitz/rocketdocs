@@ -23,7 +23,7 @@
 ## 🚀 Features
 
 - MDX for docs;
-- Fully customizable through the usage of Gatsby Themes (and Theme UI)
+- Fully customizable through the usage of Gatsby Themes
 - Sidebar customization with Yaml;
 - Code highlighting with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) and [react-live](https://github.com/FormidableLabs/react-live) support. Copy code button and option to show line numbers.
 - SEO (Sitemap, schema.org data, Open Graph and Twitter tags).
