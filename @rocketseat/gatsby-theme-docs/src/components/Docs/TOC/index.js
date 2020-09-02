@@ -14,7 +14,7 @@ export default function TableOfContents({ headings, disableTOC, contentRef }) {
   const { width, height } = useWindowSize();
   const [offsets, setOffsets] = useState([]);
 
-  const isMobile = width <= 720;
+  const isMobile = width <= 1200;
 
   useEffect(() => {
     if (!isMobile || disableTOC) {
@@ -52,8 +52,6 @@ export default function TableOfContents({ headings, disableTOC, contentRef }) {
       }
     }
   }, [offsets, height, y, isMobile, disableTOC]);
-
-  console.log(activeHeading);
 
   if (!disableTOC) {
     return (

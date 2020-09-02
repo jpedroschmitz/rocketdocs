@@ -17,6 +17,7 @@ export const Wrapper = styled.div`
     order: 0;
     max-width: 100%;
     margin-left: 0;
+    padding-top: 0;
   }
 `;
 
