@@ -23,15 +23,15 @@ export const Container = styled.aside`
   }
 
   @media (max-width: 780px) {
-    max-width: 240px;
-    min-width: 240px;
+    max-width: 75%;
+    min-width: auto;
     z-index: 1001;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     padding-top: 32px;
-    background: ${({ theme }) => theme.colors.shape};
+    background: ${({ theme }) => theme.colors.background};
     transform: translate3d(
       ${({ isMenuOpen }) => (isMenuOpen ? '0' : '-100%')},
       0,
@@ -122,10 +122,8 @@ export const Item = styled.li`
     }
 
     @media (max-width: 780px) {
-      background: ${({ theme }) => theme.colors.shape};
-
       &.active-link {
-        background: ${({ theme }) => theme.colors.background};
+        background: ${({ theme }) => theme.colors.shape};
       }
     }
   }
