@@ -78,6 +78,12 @@ export default function GlobalStyle() {
             no-historical-ligatures no-contextual;
         }
 
+        h1 code.inline-code,
+        h2 code.inline-code {
+          font-size: calc(100% - 5px);
+          padding: 4px;
+        }
+
         a {
           color: ${theme.colors.text};
           font-weight: bold;
@@ -89,12 +95,15 @@ export default function GlobalStyle() {
         }
 
         blockquote {
-          margin: 0;
+          margin-bottom: 16px;
+          width: 100%;
 
           p {
             padding: 1rem;
-            background: ${theme.colors.text};
             border-radius: 5px;
+            background: ${theme.colors.shape};
+            color: ${theme.colors.text};
+            margin: 0;
           }
         }
 
@@ -258,7 +267,8 @@ export default function GlobalStyle() {
           content: 'bash';
         }
 
-        pre[class~='language-yaml']::before {
+        pre[class~='language-yaml']::before,
+        pre[class~='language-yml']::before {
           content: 'yaml';
           background: #ffa8df;
         }

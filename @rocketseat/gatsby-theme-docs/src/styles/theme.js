@@ -1,8 +1,8 @@
 export default {
   colors: {
     primary: '#8257E6',
-    background: '#F2F2FA',
-    shape: `#FFFFFF`,
+    background: '#FFFFFF',
+    shape: `#F2F2FA`,
     title: `#3D3D4D`,
     text: `#6C6C80`,
   },

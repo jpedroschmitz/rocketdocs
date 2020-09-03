@@ -21,6 +21,7 @@ export const Pre = styled.pre`
   code {
     float: left;
     min-width: 100%;
+    padding-right: 1rem;
   }
 
   .token-line {
@@ -31,7 +32,8 @@ export const Pre = styled.pre`
 
   .highlight-line {
     background-color: #44475a;
-    margin: 0 -1rem;
+    margin-left: -1rem;
+    margin-right: -2rem;
     padding: 0 0.75rem;
     border-left: 4px solid ${({ theme }) => theme.colors.primary};
   }
@@ -93,8 +95,9 @@ export const LiveError = styled(AuxLiveError)`
 
 export const PreHeader = styled.div`
   background-color: ${darken('0.05', '#282a36')};
-  color: rgb(248, 248, 242);
+  color: rgb(248, 248, 242, 0.75);
   font-size: 12px;
+  line-height: 18px;
   margin-top: 0.5rem;
   padding: 0.8rem 1rem;
   border-radius: 5px 5px 0 0;

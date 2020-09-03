@@ -31,7 +31,7 @@ const calculateLinesToHighlight = (meta) => {
 };
 
 export default function CodeHighlight({
-  children,
+  codeString,
   className,
   live,
   highlight,
@@ -39,7 +39,6 @@ export default function CodeHighlight({
   lineNumbers,
 }) {
   const [copied, setCopied] = useState(false);
-  const codeString = children.trim();
   const language = className && className.replace(/language-/, '');
 
   const shouldHighlightLine = calculateLinesToHighlight(highlight);
@@ -136,7 +135,7 @@ export default function CodeHighlight({
 }
 
 CodeHighlight.propTypes = {
-  children: PropTypes.string.isRequired,
+  codeString: PropTypes.string.isRequired,
   className: PropTypes.string.isRequired,
   live: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   title: PropTypes.string,

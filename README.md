@@ -31,8 +31,6 @@
 
 🚀 [`gatsby-theme-docs`](./@rocketseat/gatsby-theme-docs): Out of the box Gatsby Theme for creating documentation websites easily and quickly.
 
-🏗 [`gatsby-theme-seo`](./@rocketseat/gatsby-theme-seo): A work in progress theme that will change the way you deal with SEO in Gatsby.
-
 ## Contributing
 
 Thanks for being interested in contributing! We’re so glad you want to help! Please take a little bit of your time and look at our [contributing guidelines](.github/CONTRIBUTING.md) and our
