@@ -1,5 +1,6 @@
 ---
 title: 'Getting started'
+description: Learn how to get started with Rocket Docs.
 ---
 
 The best way to start is by using our starter:
@@ -44,19 +45,21 @@ module.exports = {
     siteImage: `/banner.png`,
     siteLanguage: `en`,
     themeColor: `#8257E6`,
+    basePath: `/`,
   },
   plugins: [
     {
       resolve: `@rocketseat/gatsby-theme-docs`,
       options: {
-        docsPath: `src/docs`,
         basePath: `/`,
+        configPath: `src/config`,
+        docsPath: `src/docs`,
+        githubUrl: `https://github.com/rocketseat/gatsby-themes`,
+        baseDir: `examples/gatsby-theme-docs`,
       },
     },
   ],
 };
 ```
 
-Once you have installed the dependencies you will need to create the [navigation](/usage/navigation) and [documentation](/usage/creating-docs) file.
-
-After that, you are ready 🚀
+Once you have installed the dependencies you will need to create the [navigation](/usage/navigation) and [documentation](/usage/creating-docs) files.
