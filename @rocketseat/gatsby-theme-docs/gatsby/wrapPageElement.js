@@ -10,7 +10,6 @@ const components = {
     const props = preToCodeBlock(preProps);
 
     if (props) {
-      console.log(props);
       return <Code {...props} />;
     }
 
