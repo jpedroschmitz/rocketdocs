@@ -78,6 +78,12 @@ export default function GlobalStyle() {
             no-historical-ligatures no-contextual;
         }
 
+        h1 code.inline-code,
+        h2 code.inline-code {
+          font-size: calc(100% - 5px);
+          padding: 4px;
+        }
+
         a {
           color: ${theme.colors.text};
           font-weight: bold;

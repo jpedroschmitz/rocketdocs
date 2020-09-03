@@ -21,6 +21,7 @@ export const Pre = styled.pre`
   code {
     float: left;
     min-width: 100%;
+    padding-right: 1rem;
   }
 
   .token-line {
