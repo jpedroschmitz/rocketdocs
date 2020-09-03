@@ -1,11 +1,21 @@
 /* eslint-disable */
 import React from 'react';
+import { preToCodeBlock } from 'mdx-utils';
 import { MDXProvider } from '@mdx-js/react';
 
 import Code from '../src/components/Code';
 
 const components = {
-  code: Code,
+  pre: (preProps) => {
+    const props = preToCodeBlock(preProps);
+
+    if (props) {
+      console.log(props);
+      return <Code {...props} />;
+    }
+
+    return <pre {...preProps} />;
+  },
   inlineCode: (props) => <code className="inline-code" {...props} />,
   table: ({ children, ...rest }) => (
     <div style={{ overflowX: `auto` }}>

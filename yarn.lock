@@ -8677,7 +8677,7 @@ gatsby-transformer-yaml@^2.2.23:
     lodash "^4.17.15"
     unist-util-select "^1.5.0"
 
-gatsby@^2.18.18, gatsby@^2.19.45:
+gatsby@^2.19.45:
   version "2.24.51"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.24.51.tgz#f91c2f3876544ed57bacefc612363523ba930e0e"
   integrity sha512-z7Fkvg+sk9uSETmhsyml6eITWdvXCC8Q4JmLgBzDlKweZPTudwScO2HRUdXxQIANcdIu7u6NU3In52a3P3ZwLA==
@@ -11952,6 +11952,11 @@ mdurl@^1.0.0:
   resolved "https://registry.yarnpkg.com/mdurl/-/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
   integrity sha1-/oWy7HWlkDfyrf7BAP1sYBdhFS4=
 
+mdx-utils@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/mdx-utils/-/mdx-utils-0.2.0.tgz#b759c5d06545c4f5c49ac3adba3b93942039ac52"
+  integrity sha512-kRhSIrvJ/++jz+ppDNqG3vjJSqSipjqdh2BqYXxUTJBo1cO+hRtQwuudM0ljAWKf5WmePwT4OBRjoCrhmiK+RA==
+
 meant@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/meant/-/meant-1.0.2.tgz#5d0c78310a3d8ae1408a16be0fe0bd42a969f560"
@@ -14510,7 +14515,7 @@ react-dev-utils@^4.2.3:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@^16.12.0, react-dom@^16.13.0, react-dom@latest:
+react-dom@^16.13.0, react-dom@latest:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
   integrity sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==
@@ -14687,7 +14692,7 @@ react-use@^15.3.3:
     ts-easing "^0.2.0"
     tslib "^2.0.0"
 
-react@^16.12.0, react@^16.13.0, react@^16.8.0, react@latest:
+react@^16.13.0, react@^16.8.0, react@latest:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
   integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
