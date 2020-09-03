@@ -22,13 +22,16 @@
 
 ## 🚀 Features
 
-- MDX for docs;
-- Fully customizable through the usage of Gatsby Themes
-- Sidebar customization with Yaml;
-- Code highlighting with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) and [react-live](https://github.com/FormidableLabs/react-live) support. Copy code button and option to show line numbers.
-- SEO (Sitemap, schema.org data, Open Graph and Twitter tags).
-- Google Analytics support;
-- Offline Support & WebApp Manifest
+- 📝 MDX for docs;
+- 🛣 Yaml-based sidebar navigation;
+- 📱 Responsive and mobile friendly;
+- 🖥 Code highlighting with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) and [react-live](https://github.com/FormidableLabs/react-live) support;
+- 🥇 SEO (Sitemap, schema.org data, Open Graph and Twitter tags).
+- 📈 Google Analytics support;
+- 📄 Custom docs schema;
+- 🖱 Table of Contents;
+- ⚡️ Offline Support & WebApp Manifest;
+- and much more 🔥
 
 ## ⚡️ Getting started
 

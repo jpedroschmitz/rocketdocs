@@ -1,10 +1,11 @@
 ---
 title: Shadowing
+description: Rocket Docs allows to customize the look by using Gatsby theme shadowing feature.
 ---
 
-To shadow/override this theme, you will need to place your files into `src/@rocketseat/gatsby-theme-docs/` folder.
+To shadow/override this theme, you will need to place your files into `src/@rocketseat/gatsby-theme-docs` folder.
 
-_ps: if you still have questions, check the [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) article._
+If you don't know what shadowing is, or have questions about it, [check this tutorial](https://www.gatsbyjs.com/docs/themes/shadowing/) from the Gatsby documentation.
 
 ## Changing the logo
 
@@ -31,4 +32,56 @@ export default function Logo(props) {
 
 ## Changing the home text
 
-Create a file at `src/@rocketseat/gatsby-theme-docs/text/index.mdx` to edit the text.
+Create a file at `src/@rocketseat/gatsby-theme-docs/text/index.mdx` to edit the text. Example:
+
+```mdx title=src/@rocketseat/gatsby-theme-docs/text/index.mdx
+# Introduction
+
+My awesome project!
+
+import Navigation from '@rocketseat/gatsby-theme-docs/src/components/Docs/PostNav';
+
+<Navigation
+  prev={null}
+  next={{
+    label: 'Installation',
+    link: '/installation',
+  }}
+/>
+```
+
+## Changing theme colors
+
+We use Emotion for theming. To change the theme colors, create a file under `src/@rocketseat/gatsby-theme-docs/styles/theme.js`.
+
+Remember that you need to restart your server to see the update.
+
+```js title=src/@rocketseat/gatsby-theme-docs/styles/theme.js
+export default {
+  colors: {
+    primary: '#8257E6',
+    background: '#FFFFFF',
+    shape: `#F2F2FA`,
+    title: `#3D3D4D`,
+    text: `#6C6C80`,
+  },
+};
+```
+
+## Adding elements to React Live scope
+
+By default we add some elements to React Live Scope. If you need to add more, just
+shadow the following file:
+
+```js title=src/@rocketseat/gatsby-theme-docs/components/Code/LiveCodeScope.js
+import { mdx } from '@mdx-js/react';
+import { css, jsx } from '@emotion/core';
+
+export default {
+  css,
+  jsx,
+  mdx,
+};
+```
+
+If you want to know more about Scope, [check this explanation](https://github.com/FormidableLabs/react-live#how-does-the-scope-work).
