@@ -89,12 +89,15 @@ export default function GlobalStyle() {
         }
 
         blockquote {
-          margin: 0;
+          margin-bottom: 16px;
+          width: 100%;
 
           p {
             padding: 1rem;
-            background: ${theme.colors.text};
             border-radius: 5px;
+            background: ${theme.colors.shape};
+            color: ${theme.colors.text};
+            margin: 0;
           }
         }
 
