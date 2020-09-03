@@ -258,7 +258,8 @@ export default function GlobalStyle() {
           content: 'bash';
         }
 
-        pre[class~='language-yaml']::before {
+        pre[class~='language-yaml']::before,
+        pre[class~='language-yml']::before {
           content: 'yaml';
           background: #ffa8df;
         }
