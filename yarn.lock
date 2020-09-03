@@ -2778,6 +2778,31 @@
   dependencies:
     tslib "^2.0.0"
 
+"@rocketseat/gatsby-theme-docs@^2.2.3":
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/@rocketseat/gatsby-theme-docs/-/gatsby-theme-docs-2.2.3.tgz#a95c6fe007ea187d2780c42903693e3527aa3f68"
+  integrity sha512-kMkVgVJqaxLAgQfimDWCf1XN5tKRcBC8wPoqvCKJUSdzulb8ycy2gZF7lj+C6ZLVmczbPNZB/PFIQp1Mz+56lQ==
+  dependencies:
+    "@emotion/core" "^10.0.27"
+    "@emotion/styled" "^10.0.27"
+    "@mdx-js/react" "^1.6.16"
+    "@rocketseat/gatsby-theme-docs-core" "^1.2.0"
+    emotion-theming "^10.0.27"
+    gatsby-plugin-catch-links "^2.1.24"
+    gatsby-plugin-emotion "^4.1.21"
+    gatsby-plugin-mdx "^1.2.37"
+    gatsby-plugin-react-helmet "^3.1.16"
+    mdx-utils "^0.2.0"
+    parse-numeric-range "^1.2.0"
+    polished "^3.4.2"
+    prism-react-renderer "^1.0.2"
+    prop-types "^15.7.2"
+    react-helmet "^5.2.1"
+    react-icons "^3.8.0"
+    react-live "^2.2.2"
+    react-use "^15.3.3"
+    url-join "^4.0.1"
+
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.1.tgz#a21117b19ee9be70c379ec1877537ef2e1c63301"
@@ -8293,6 +8318,13 @@ gatsby-plugin-react-helmet@^3.1.16:
   version "3.3.10"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-3.3.10.tgz#ba2f84715cc2471606b90327c7c3ba11c5287bc7"
   integrity sha512-AcXYwmS3r298JWs6iQ3OLNxIe8L8i5a2iSdLr/SDMpHqumYm7q/vB9kCX0et5wM7DIuZ7aPXDrdi5yDCAvU5lg==
+  dependencies:
+    "@babel/runtime" "^7.10.3"
+
+gatsby-plugin-remove-trailing-slashes@^2.3.11:
+  version "2.3.11"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-remove-trailing-slashes/-/gatsby-plugin-remove-trailing-slashes-2.3.11.tgz#1ebcf55a01c34686a83cdefd9b83d98ed13c9e56"
+  integrity sha512-wYlfSDhUWqAapdyO4bClQIYZFIwHZmBUDdoNTmly+DU4Cw+yN1Q/jQSsT81jYyBHGvlOmnnfYPWyzQwMl0hUXA==
   dependencies:
     "@babel/runtime" "^7.10.3"
 

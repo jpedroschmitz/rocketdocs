@@ -39,6 +39,7 @@ module.exports = {
         // trackingId: ``,
       },
     },
+    `gatsby-plugin-remove-trailing-slashes`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
