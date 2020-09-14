@@ -1,42 +1,26 @@
 ---
 title: Creating docs
+description: Learn how to create docs using Rocket Docs.
 ---
 
-By creating a MDX file inside your docs folder it will be created as a page, with the path defined by the filename.
+All MDX files created inside your docs folder will become pages, with the path defined by the filename.
 Inside all docs files, you can define the following options:
 
-<div style="overflow-x:auto;">
-  <table>
-    <tr>
-      <th>Key</th>
-      <th>Required?</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>title</td>
-      <td>Yes</td>
-      <td>Page title</td>
-    </tr>
-    <tr>
-      <td>description</td>
-      <td>No</td>
-      <td>Page description</td>
-    </tr>
-    <tr>
-      <td>image</td>
-      <td>No</td>
-      <td>Used for og:image</td>
-    </tr>
-  </table>
-</div>
+| Key                    | Required | Description                |
+| ---------------------- | -------- | -------------------------- |
+| title                  | Yes      | No                         |
+| description            | No       | Page description           |
+| image                  | No       | Used for og:image          |
+| disableTableOfContents | No       | Disables Table Of Contents |
 
-### Example:
+## Example
 
 ```mdx
 ---
 title: 'My Example'
 description: 'A simple description for this page'
 image: /banner.jpeg
+disableTableOfContents: false
 ---
 
 Wow, this is a nice page
@@ -52,9 +36,11 @@ https://youtu.be/QfcozcbDhNM
 
 ## Code Highlight
 
+We support many options for code components.
+
 ### Title
 
-To show the title, just add it to your code block. Ex: `title=src/myfile.css`
+To show a title, just add it to your code block. Ex: `title=src/myfile.css`
 
 ```css title=src/myfile.css
 .gatsby::before {
@@ -64,7 +50,7 @@ To show the title, just add it to your code block. Ex: `title=src/myfile.css`
 
 ### Line numbers
 
-If you want to show line number, just add a option `lineNumbers=true`.
+To add line numbers for that code block, pass an option `lineNumbers=true`.
 
 ```js lineNumbers=true
 const rocket = {
@@ -81,7 +67,26 @@ create a playground for live editing React components.
 
 To use it, just add a `live=true` option to your code block.
 
-```jsx live=true
+```jsx lineNumbers=true title=gatsby-config.js live=true
+function MyComponent() {
+  function handleButtonClick() {
+    alert('wowww');
+  }
+
+  return <button onClick={handleButtonClick}>Hey, click me!</button>;
+}
+
+render(<MyComponent />);
+```
+
+> If you need to add elements to the scope, check this [guide](/usage/shadowing#http://localhost:8000/usage/shadowing#adding-elements-to-react-live-scope).
+
+### Highlight lines
+
+To highlight lines, you can pass ranges to a `highlight` option.
+For example `highlight={1-4,6-7,9}` on the code below would result in:
+
+```jsx highlight={1-4,6-7,9}
 function MyComponent() {
   function handleButtonClick() {
     alert('wowww');

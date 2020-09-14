@@ -1,16 +1,15 @@
 module.exports = {
   siteMetadata: {
-    siteTitle: `@rocketseat/gatsby-theme-docs`,
-    defaultTitle: `@rocketseat/gatsby-theme-docs`,
-    siteTitleShort: `gatsby-theme-docs`,
+    siteTitle: `Rocket Docs`,
+    defaultTitle: `Rocket Docs`,
+    siteTitleShort: `Rocket Docs`,
     siteDescription: `Out of the box Gatsby Theme for creating documentation websites easily and quickly`,
     siteUrl: `https://rocketdocs.netlify.com`,
     siteAuthor: `@rocketseat`,
     siteImage: `/banner.png`,
     siteLanguage: `en`,
-    themeColor: `#7159c1`,
+    themeColor: `#8257E6`,
     basePath: `/`,
-    footer: `Theme by Rocketseat`,
   },
   plugins: [
     {
@@ -40,6 +39,7 @@ module.exports = {
         // trackingId: ``,
       },
     },
+    `gatsby-plugin-remove-trailing-slashes`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {

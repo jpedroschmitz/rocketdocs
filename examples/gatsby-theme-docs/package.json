@@ -7,16 +7,17 @@
   "license": "MIT",
   "starter-name": "gatsby-starter-rocket-docs",
   "dependencies": {
-    "@rocketseat/gatsby-theme-docs": "latest",
-    "gatsby": "latest",
+    "@rocketseat/gatsby-theme-docs": "^2.2.3",
+    "gatsby": "^2.24.53",
     "gatsby-plugin-canonical-urls": "^2.1.19",
     "gatsby-plugin-google-analytics": "^2.1.34",
     "gatsby-plugin-manifest": "^2.2.37",
     "gatsby-plugin-offline": "^3.0.32",
+    "gatsby-plugin-remove-trailing-slashes": "^2.3.11",
     "gatsby-plugin-sitemap": "^2.2.26",
     "prop-types": "^15.7.2",
-    "react": "latest",
-    "react-dom": "latest"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {},
   "keywords": [

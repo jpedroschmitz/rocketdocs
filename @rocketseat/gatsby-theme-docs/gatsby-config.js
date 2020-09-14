@@ -2,6 +2,7 @@ const withDefault = require('@rocketseat/gatsby-theme-docs-core/util/with-defaul
 
 module.exports = options => {
   const themeOtions = withDefault(options);
+
   return {
     siteMetadata: {
       defaultTitle: `Gatsby Themes from Rocketseat`,
@@ -12,7 +13,6 @@ module.exports = options => {
       siteAuthor: `@rocketseat`,
       siteImage: `/banner.png`,
       siteLanguage: `en`,
-      footer: `Theme by Rocketseat`,
       basePath: themeOtions.basePath,
       docsPath: themeOtions.docsPath,
     },

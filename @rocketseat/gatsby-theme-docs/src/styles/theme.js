@@ -1,14 +1,9 @@
 export default {
   colors: {
-    primary: '#7159c1',
-    background: '#fff',
-    sidebar: {
-      background: '#ffffff',
-      link: '#999',
-      heading: '#aaa',
-      linkActive: '#13131A',
-      itemActive: '#F5F5FA',
-      footer: '#A8A8B3',
-    },
+    primary: '#8257E6',
+    background: '#FFFFFF',
+    shape: `#F2F2FA`,
+    title: `#3D3D4D`,
+    text: `#6C6C80`,
   },
 };

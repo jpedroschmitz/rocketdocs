@@ -11,9 +11,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/PRs-welcome-%237159c1.svg" alt="PRs welcome!" />
+  <img src="https://img.shields.io/badge/PRs-welcome-%238257E6.svg" alt="PRs welcome!" />
 
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-%237159c1">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-%238257E6">
 
   <a href="https://twitter.com/intent/follow?screen_name=rocketseat">
     <img src="https://img.shields.io/twitter/follow/rocketseat.svg?label=Follow%20@rocketseat" alt="Follow @rocketseat" />
@@ -22,10 +22,10 @@
 
 <p align="center">
   <a href="#-features">Features</a> •
-  <a href="#%EF%B8%8F-getting-started">Getting started</a> •
+  <a href="#-getting-started">Getting started</a> •
   <a href="#-docs">Docs</a> •
   <a href="#-contributing">Contributing</a> •
-  <a href="#memo-license">License</a>
+  <a href="#-license">License</a>
 </p>
 
 ## 🚀 Features
@@ -37,6 +37,7 @@
 - 🥇 SEO (Sitemap, schema.org data, Open Graph and Twitter tags).
 - 📈 Google Analytics support;
 - 📄 Custom docs schema;
+- 🖱 Table of Contents;
 - ⚡️ Offline Support & WebApp Manifest;
 - and much more 🔥
 
@@ -66,11 +67,11 @@ Looking for docs? Check our live demo and documentation [website](https://rocket
 ## ✨ Contributing
 
 Thanks for being interested in contributing! We’re so glad you want to help! Please take a little bit of your time and look at our [contributing guidelines](https://github.com/Rocketseat/gatsby-themes/blob/master/.github/CONTRIBUTING.md) and our
-[code of conduct](https://github.com/Rocketseat/gatsby-themes/blob/master/.github/CODE_OF_CONDUCT.md)! All type of contributions are welcome, such as bug fixes, issues or feature requests. Also, don't forget to check the [roadmap](#roadmap).
+[code of conduct](https://github.com/Rocketseat/gatsby-themes/blob/master/.github/CODE_OF_CONDUCT.md)! All type of contributions are welcome, such as bug fixes, issues or feature requests.
 
-## 🗺 Roadmap
+## 🗺 Changelog
 
-If you'd like to see our next steps or in which feature our bug fix we are working on, please check our [project roadmap](https://github.com/Rocketseat/gatsby-themes/projects/2).
+All notable changes to this project will be documented on the website, [click here to access](https://rocketdocs.netlify.app/changelog).
 
 ## 📝 License
 

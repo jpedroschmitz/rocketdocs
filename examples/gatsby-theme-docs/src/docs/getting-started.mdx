@@ -1,8 +1,9 @@
 ---
 title: 'Getting started'
+description: Learn how to get started with Rocket Docs.
 ---
 
-The best way yo start is by using our starter:
+The best way to start is by using our starter:
 
 ```bash
 gatsby new rocket-docs https://github.com/rocketseat/gatsby-starter-rocket-docs
@@ -20,13 +21,15 @@ npm i @rocketseat/gatsby-theme-docs
 
 ## Theme Options
 
-| Key        | Default | Required | Description                                                                                                                    |
-| ---------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| basePath   | /       | No       | Root url for all docs                                                                                                          |
-| configPath | config  | No       | Location of config files                                                                                                       |
-| docsPath   | docs    | No       | The site description for SEO and social (FB, Twitter) tags                                                                     |
-| githubUrl  | -       | No       | The complete URL of your repository. For example: `https://github/rocketseat/gatsby-themes`                                    |
-| baseDir    | -       | No       | If your Gatsby site does not live in the root of your project directory/git repo, pass the subdirectory name here (ex: `docs`) |
+| Key        | Default | Required | Description                                                                                                                                                            |
+| ---------- | ------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| basePath   | /       | No       | Root url for all docs                                                                                                                                                  |
+| configPath | config  | No       | Location of config files                                                                                                                                               |
+| docsPath   | docs    | No       | The site description for SEO and social (FB, Twitter) tags                                                                                                             |
+| githubUrl  | -       | No       | The complete URL of your repository. For example: `https://github/rocketseat/gatsby-themes`                                                                            |
+| baseDir    | -       | No       | If your Gatsby site does not live in the root of your project directory/git repo, pass the subdirectory name here (ex: `docs`)                                         |
+| withMdx    | true    | No       | If necessary, you can add your own MDX options to the theme. To do so, make sure you turn this option to false and include `gatsby-plugin-mdx` on your `gatsby-config` |
+| branch     | master  | No       | Default branch of the repository                                                                                                                                       |
 
 ## Example usage
 
@@ -41,20 +44,22 @@ module.exports = {
     siteAuthor: `@rocketseat`,
     siteImage: `/banner.png`,
     siteLanguage: `en`,
-    themeColor: `#7159c1`,
+    themeColor: `#8257E6`,
+    basePath: `/`,
   },
   plugins: [
     {
       resolve: `@rocketseat/gatsby-theme-docs`,
       options: {
-        docsPath: `src/docs`,
         basePath: `/`,
+        configPath: `src/config`,
+        docsPath: `src/docs`,
+        githubUrl: `https://github.com/rocketseat/gatsby-themes`,
+        baseDir: `examples/gatsby-theme-docs`,
       },
     },
   ],
 };
 ```
 
-Once you have installed the dependencies you will need to create the [navigation](/usage/navigation) and [documentation](/usage/creating-docs) file.
-
-After that, you are ready 🚀
+Once you have installed the dependencies you will need to create the [navigation](/usage/navigation) and [documentation](/usage/creating-docs) files.
