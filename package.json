@@ -2,9 +2,8 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "lint": "eslint --ignore-path .gitignore . --ext .js,.jsx",
-    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx)\"",
-    "format": "yarn prettier -- --write"
+    "lint": "eslint --ignore-path .gitignore \"**/*.+(ts|js|tsx|jsx)\"",
+    "format": "prettier --ignore-path .gitignore \"**/*.+(ts|js|tsx|jsx)\" --write"
   },
   "engines": {
     "yarn": "^1.17.3",
@@ -14,9 +13,29 @@
     "@rocketseat/*",
     "examples/*"
   ],
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "**/*.{ts,js,jsx,tsx}": [
+      "yarn lint --fix",
+      "yarn format"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
-    "commitlint": "^8.3.4",
-    "commitlint-config-rocketseat": "^0.0.1",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "commitizen": "^4.2.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.9.0",
