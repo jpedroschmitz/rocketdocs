@@ -25,9 +25,9 @@ const calculateLinesToHighlight = (meta) => {
     const strlineNumbers = RE.exec(meta)[1];
     const lineNumbers = rangeParser(strlineNumbers);
     return (index) => lineNumbers.includes(index + 1);
-  } else {
-    return () => false;
   }
+
+  return () => false;
 };
 
 export default function CodeHighlight({
@@ -137,6 +137,7 @@ export default function CodeHighlight({
 CodeHighlight.propTypes = {
   codeString: PropTypes.string.isRequired,
   className: PropTypes.string.isRequired,
+  highlight: PropTypes.string.isRequired,
   live: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   title: PropTypes.string,
   lineNumbers: PropTypes.string,

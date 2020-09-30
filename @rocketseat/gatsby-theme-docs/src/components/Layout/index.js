@@ -1,5 +1,5 @@
 /* @jsx jsx */
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { jsx, css } from '@emotion/core';
 import PropTypes from 'prop-types';
 

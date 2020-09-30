@@ -50,7 +50,7 @@ exports.createPages = (
         }
       }
     `,
-  ).then(result => {
+  ).then((result) => {
     if (result.errors) {
       reporter.panic(
         `docs: there was an error loading the docs folder!`,
@@ -70,7 +70,7 @@ exports.createPages = (
 
     sidebar.forEach(({ node: { label, link, items } }) => {
       if (Array.isArray(items)) {
-        items.forEach(item => {
+        items.forEach((item) => {
           listOfItems.push({
             label: item.label,
             link: resolveLink(item.link, basePath),
@@ -86,7 +86,7 @@ exports.createPages = (
 
     // Generate docs pages
     const docs = result.data.files.edges;
-    docs.forEach(doc => {
+    docs.forEach((doc) => {
       const {
         childMdx: {
           fields: { slug },
@@ -103,7 +103,7 @@ exports.createPages = (
 
       const pageLink = slug.slice(0, slug.length - 1);
       const currentPageIndex = listOfItems.findIndex(
-        page => page.link === pageLink,
+        (page) => page.link === pageLink,
       );
 
       const prev = listOfItems[currentPageIndex - 1];
@@ -158,7 +158,7 @@ exports.onPreBootstrap = ({ store, reporter }, themeOptions) => {
     path.join(program.directory, docsPath),
   ];
 
-  dirs.forEach(dir => {
+  dirs.forEach((dir) => {
     if (!fs.existsSync(dir)) {
       reporter.success(`docs: intialized the ${dir} directory`);
       fs.mkdirSync(dir);

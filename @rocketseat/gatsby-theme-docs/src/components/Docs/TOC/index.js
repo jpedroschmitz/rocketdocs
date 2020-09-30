@@ -51,6 +51,8 @@ export default function TableOfContents({ headings, disableTOC, contentRef }) {
         }
       }
     }
+
+    return null;
   }, [offsets, height, y, isMobile, disableTOC]);
 
   if (!disableTOC) {
@@ -99,7 +101,7 @@ export default function TableOfContents({ headings, disableTOC, contentRef }) {
 TableOfContents.propTypes = {
   headings: PropTypes.array,
   disableTOC: PropTypes.bool.isRequired,
-  contentRef: PropTypes.shape({ current: PropTypes.object }),
+  contentRef: PropTypes.shape({ current: PropTypes.object }).isRequired,
 };
 
 TableOfContents.defaultProps = {

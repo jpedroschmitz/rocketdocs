@@ -1,6 +1,6 @@
 const withDefault = require(`./util/with-default`);
 
-module.exports = options => {
+module.exports = (options) => {
   const { basePath, configPath, docsPath, withMdx } = withDefault(options);
 
   return {

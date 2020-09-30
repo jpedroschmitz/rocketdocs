@@ -1,6 +1,6 @@
 const withDefault = require('@rocketseat/gatsby-theme-docs-core/util/with-default');
 
-module.exports = options => {
+module.exports = (options) => {
   const themeOtions = withDefault(options);
 
   return {
