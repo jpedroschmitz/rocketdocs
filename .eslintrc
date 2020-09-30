@@ -1,8 +1,15 @@
 {
-  "extends": ["airbnb", "eslint-config-prettier"],
-  "plugins": ["import", "react"],
-  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["import", "jsx-a11y", "react", "react-hooks", "prettier"],
+  "extends": ["airbnb", "eslint-config-prettier", "prettier/react"],
   "rules": {
+    "prettier/prettier": "error",
     "react/jsx-filename-extension": [
       "warn",
       {
@@ -16,6 +23,8 @@
     "react/forbid-prop-types": "off"
   },
   "env": {
-    "browser": false
+    "browser": true,
+    "jest": true,
+    "node": true
   }
 }

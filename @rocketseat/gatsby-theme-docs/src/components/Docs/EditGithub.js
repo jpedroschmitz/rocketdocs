@@ -1,5 +1,4 @@
 /* @jsx jsx */
-import React from 'react';
 import { jsx, css } from '@emotion/core';
 import PropTypes from 'prop-types';
 import { MdEdit } from 'react-icons/md';
