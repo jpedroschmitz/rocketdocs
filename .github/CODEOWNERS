@@ -1,0 +1,6 @@
+# Learn how to add code owners here:
+# https://help.github.com/en/articles/about-code-owners
+
+*                @jpedroschmitz
+@rocketseat/     @jpedroschmitz
+examples/        @jpedroschmitz
