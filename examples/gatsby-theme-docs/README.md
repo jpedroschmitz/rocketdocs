@@ -38,7 +38,7 @@
 1. Create the website.
 
    ```sh
-   gatsby new rocket-docs https://github.com/rocketseat/gatsby-starter-rocket-docs
+   npx gatsby new rocket-docs https://github.com/rocketseat/gatsby-starter-rocket-docs
    ```
 
 2. Start developing.
