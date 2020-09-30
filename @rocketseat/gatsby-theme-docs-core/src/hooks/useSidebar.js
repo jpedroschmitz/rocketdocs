@@ -35,7 +35,7 @@ export function useSidebar() {
     const normalizedSidebar = edges.map(
       ({ node: { label, link, items, id } }) => {
         if (Array.isArray(items)) {
-          items = items.map(item => ({
+          items = items.map((item) => ({
             label: item.label,
             link: resolveLink(item.link, basePath),
           }));
