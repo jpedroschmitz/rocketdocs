@@ -49,11 +49,6 @@
     "react-use": "^15.3.3",
     "url-join": "^4.0.1"
   },
-  "devDependencies": {
-    "gatsby": "^2.19.45",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0"
-  },
   "peerDependencies": {
     "gatsby": "^2.13.13",
     "react": "^16.8.6",
