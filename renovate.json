@@ -1,5 +1,9 @@
 {
-  "extends": ["config:base", ":disablePeerDependencies"],
+  "extends": [
+    "config:base",
+    ":disablePeerDependencies",
+    ":preserveSemverRanges"
+  ],
   "includePaths": ["package.json", "examples/**", "@rocketseat/**"],
   "dependencyDashboard": true,
   "semanticCommits": true,
