@@ -137,7 +137,7 @@ export default function CodeHighlight({
 CodeHighlight.propTypes = {
   codeString: PropTypes.string.isRequired,
   className: PropTypes.string.isRequired,
-  highlight: PropTypes.string.isRequired,
+  highlight: PropTypes.string,
   live: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   title: PropTypes.string,
   lineNumbers: PropTypes.string,
@@ -147,4 +147,5 @@ CodeHighlight.defaultProps = {
   live: false,
   title: null,
   lineNumbers: null,
+  highlight: null,
 };
