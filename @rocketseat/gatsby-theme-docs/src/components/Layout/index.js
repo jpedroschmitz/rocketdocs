@@ -1,5 +1,5 @@
 /* @jsx jsx */
-import { useState, useRef } from 'react';
+import { useState, useRef, Fragment } from 'react';
 import { jsx, css } from '@emotion/core';
 import PropTypes from 'prop-types';
 
@@ -25,7 +25,7 @@ export default function Layout({
   }
 
   return (
-    <>
+    <Fragment>
       <Overlay isMenuOpen={isMenuOpen} onClick={handleMenuOpen} />
       <Container>
         <Sidebar isMenuOpen={isMenuOpen} />
@@ -65,7 +65,7 @@ export default function Layout({
           />
         </Main>
       </Container>
-    </>
+    </Fragment>
   );
 }
 
