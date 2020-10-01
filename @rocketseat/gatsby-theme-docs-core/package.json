@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "main": "index.js",
   "description": "Core theme for @rocketseat/gatsby-theme-docs with no additional theming or style opinions. Includes all of the data structures you need to get up and build a documentation website.",
-  "author": "João Pedro Schmitz <oi@joaopedro.cc> (@joaopedro_cc)",
+  "author": "João Pedro Schmitz <oi@joaopedro.cc> (@jpedroschmitz)",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -29,17 +29,17 @@
     "url": "https://github.com/Rocketseat/gatsby-themes/issues"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.5.5",
-    "gatsby-plugin-mdx": "^1.0.67",
-    "gatsby-plugin-sharp": "^2.4.0",
-    "gatsby-remark-autolink-headers": "^2.1.23",
-    "gatsby-remark-copy-linked-files": "^2.1.36",
+    "@mdx-js/mdx": "^1.6.18",
+    "gatsby-plugin-mdx": "^1.2.43",
+    "gatsby-plugin-sharp": "^2.6.38",
+    "gatsby-remark-autolink-headers": "^2.3.14",
+    "gatsby-remark-copy-linked-files": "^2.3.18",
     "gatsby-remark-embedder": "^3.0.0",
-    "gatsby-remark-images": "^3.1.42",
-    "gatsby-remark-responsive-iframe": "^2.2.31",
-    "gatsby-source-filesystem": "^2.1.46",
-    "gatsby-transformer-sharp": "^2.3.13",
-    "gatsby-transformer-yaml": "^2.2.23",
+    "gatsby-remark-images": "^3.3.32",
+    "gatsby-remark-responsive-iframe": "^2.4.16",
+    "gatsby-source-filesystem": "^2.3.32",
+    "gatsby-transformer-sharp": "^2.5.16",
+    "gatsby-transformer-yaml": "^2.4.13",
     "url-join": "^4.0.1"
   },
   "peerDependencies": {
