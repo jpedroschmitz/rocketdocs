@@ -42,11 +42,6 @@
     "gatsby-transformer-yaml": "^2.2.23",
     "url-join": "^4.0.1"
   },
-  "devDependencies": {
-    "gatsby": "^2.19.45",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0"
-  },
   "peerDependencies": {
     "@mdx-js/react": "^1.5.1",
     "gatsby": "^2.13.13",
