@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
   padding-top: 72px;
   max-height: calc(100vh - 72px);
   overflow-y: auto;
+  overflow-x: hidden;
   width: 100%;
   max-width: 200px;
 
@@ -46,6 +47,7 @@ export const Container = styled.div`
         font-weight: 400;
         text-decoration: none;
         transition: all 0.2s;
+        overflow-wrap: break-word;
 
         &:hover {
           text-decoration: underline;
