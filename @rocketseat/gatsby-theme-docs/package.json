@@ -1,6 +1,6 @@
 {
   "name": "@rocketseat/gatsby-theme-docs",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "main": "index.js",
   "description": "Out of the box Gatsby Theme for creating documentation websites easily and quickly.",
   "author": "João Pedro Schmitz <oi@joaopedro.cc> (@jpedroschmitz)",
