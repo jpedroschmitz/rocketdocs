@@ -171,6 +171,11 @@ export default function GlobalStyle() {
           }
         }
 
+        li ul,
+        li ol {
+          margin-bottom: 0;
+        }
+
         .gatsby-highlight {
           font-family: Hack, SFMono-Regular, Menlo, Monaco, Consolas,
             'Liberation Mono', 'Courier New', monospace;
