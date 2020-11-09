@@ -30,6 +30,21 @@ export default function Logo(props) {
 }
 ```
 
+If your logo is a png, you could use it like this:
+
+```js title=src/@rocketseat/gatsby-theme-docs/components/Logo.js
+import React from 'react';
+
+// Path to the logo file on your project
+import rocketseatLogo from 'assets/logo.png';
+
+const Logo = () => (
+  <img src={rocketseatLogo} alt="Rocketseat logo" style={{ width: 180 }} />
+);
+
+export default Logo;
+```
+
 ## Changing the home text
 
 Create a file at `src/@rocketseat/gatsby-theme-docs/text/index.mdx` to edit the text. Example:
