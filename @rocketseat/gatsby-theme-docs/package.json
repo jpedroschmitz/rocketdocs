@@ -29,13 +29,13 @@
     "url": "https://github.com/Rocketseat/gatsby-themes/issues"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.35",
+    "@emotion/core": "^10.1.1",
     "@emotion/styled": "^10.0.27",
     "@mdx-js/react": "^1.6.18",
     "@rocketseat/gatsby-theme-docs-core": "^1.2.0",
     "emotion-theming": "^10.0.27",
     "gatsby-plugin-catch-links": "^2.3.14",
-    "gatsby-plugin-emotion": "^4.3.12",
+    "gatsby-plugin-emotion": "^4.3.15",
     "gatsby-plugin-mdx": "^1.2.43",
     "gatsby-plugin-react-helmet": "^3.3.12",
     "mdx-utils": "^0.2.0",
