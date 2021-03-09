@@ -7,7 +7,7 @@
     }
   },
   "plugins": ["import", "jsx-a11y", "react", "react-hooks", "prettier"],
-  "extends": ["airbnb", "eslint-config-prettier", "prettier/react"],
+  "extends": ["airbnb", "eslint-config-prettier", "prettier"],
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [
