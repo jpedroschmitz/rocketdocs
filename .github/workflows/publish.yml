@@ -3,12 +3,12 @@ name: Publish Starters
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - 'examples/**'
 
 jobs:
-  master:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master

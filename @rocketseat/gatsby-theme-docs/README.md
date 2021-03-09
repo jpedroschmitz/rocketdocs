@@ -66,8 +66,8 @@ Looking for docs? Check our live demo and documentation [website](https://rocket
 
 ## ✨ Contributing
 
-Thanks for being interested in contributing! We’re so glad you want to help! Please take a little bit of your time and look at our [contributing guidelines](https://github.com/Rocketseat/gatsby-themes/blob/master/.github/CONTRIBUTING.md) and our
-[code of conduct](https://github.com/Rocketseat/gatsby-themes/blob/master/.github/CODE_OF_CONDUCT.md)! All type of contributions are welcome, such as bug fixes, issues or feature requests.
+Thanks for being interested in contributing! We’re so glad you want to help! Please take a little bit of your time and look at our [contributing guidelines](https://github.com/Rocketseat/gatsby-themes/blob/main/.github/CONTRIBUTING.md) and our
+[code of conduct](https://github.com/Rocketseat/gatsby-themes/blob/main/.github/CODE_OF_CONDUCT.md)! All type of contributions are welcome, such as bug fixes, issues or feature requests.
 
 ## 🗺 Changelog
 

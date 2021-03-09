@@ -2,20 +2,22 @@
 
 ## Table of Contents
 
-- [Getting started](#getting-started)
-  - [Language](#language)
-    - [For native English speakers](#for-native-english-speakers)
-  - [Code of Conduct](#code-of-conduct)
-- [How can I help?](#how-can-i-help)
-  - [Documentation](#documentation)
-  - [Issues](#issues)
-    - [Submitting an issue](#submitting-an-issue)
-  - [Feedback](#feedback)
-  - [Code](#code)
-    - [Dev environment](#dev-environment)
-- [Commiting](#commiting)
-  - [Why all these rules?](#why-all-these-rules)
-- [Submitting a pull request](#submitting-a-pull-request)
+- [Contribution guidelines](#contribution-guidelines)
+  - [Table of Contents](#table-of-contents)
+  - [Getting started](#getting-started)
+    - [Language](#language)
+      - [For native English speakers](#for-native-english-speakers)
+    - [Code of Conduct](#code-of-conduct)
+  - [How can I help?](#how-can-i-help)
+    - [Documentation](#documentation)
+    - [Issues](#issues)
+      - [Submitting an issue](#submitting-an-issue)
+    - [Feedback](#feedback)
+    - [Code](#code)
+      - [Dev environment](#dev-environment)
+  - [Commiting](#commiting)
+    - [Why all these rules?](#why-all-these-rules)
+  - [Submitting a pull request](#submitting-a-pull-request)
 
 ## Getting started
 
@@ -206,7 +208,7 @@ We try to enforce these rules for the following reasons:
 
 Before submitting a pull request, please make sure the following is done:
 
-- [Fork](https://help.github.com/en/articles/fork-a-repo) the repository and create your branch from `master`.
+- [Fork](https://help.github.com/en/articles/fork-a-repo) the repository and create your branch from `main`.
   - Example: `feature/my-awesome-feature` or `fix/annoying-bug`;
 - Run `yarn` in the repository root;
 - If you’ve fixed a bug or added code that should be tested, **add tests**;
