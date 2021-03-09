@@ -4,7 +4,7 @@ module.exports = {
     defaultTitle: `Rocket Docs`,
     siteTitleShort: `Rocket Docs`,
     siteDescription: `Out of the box Gatsby Theme for creating documentation websites easily and quickly`,
-    siteUrl: `https://rocketdocs.netlify.com`,
+    siteUrl: `https://rocketdocs.netlify.app`,
     siteAuthor: `@rocketseat`,
     siteImage: `/banner.png`,
     siteLanguage: `en`,
@@ -18,7 +18,7 @@ module.exports = {
       options: {
         configPath: `src/config`,
         docsPath: `src/docs`,
-        githubUrl: `https://github.com/rocketseat/gatsby-themes`,
+        repositoryUrl: `https://github.com/rocketseat/gatsby-themes`,
         baseDir: `examples/gatsby-theme-docs`,
       },
     },
