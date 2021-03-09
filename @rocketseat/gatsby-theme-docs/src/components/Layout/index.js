@@ -1,6 +1,6 @@
 /* @jsx jsx */
 import { useState, useRef, Fragment } from 'react';
-import { jsx, css } from '@emotion/core';
+import { jsx, css } from '@emotion/react';
 import PropTypes from 'prop-types';
 
 import TableOfContents from '../Docs/TOC';
