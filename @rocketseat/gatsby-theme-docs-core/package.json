@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "main": "index.js",
   "description": "Core theme for @rocketseat/gatsby-theme-docs with no additional theming or style opinions. Includes all of the data structures you need to get up and build a documentation website.",
-  "author": "João Pedro Schmitz <oi@joaopedro.cc> (@jpedroschmitz)",
+  "author": "João Pedro Schmitz <hey@joaopedro.dev> (@jpedroschmitz)",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -44,8 +44,8 @@
   },
   "peerDependencies": {
     "@mdx-js/react": "^1.5.1",
-    "gatsby": "^2.13.13",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "gatsby": "^3.0.0",
+    "react": "^16.9.0 || ^17.0.0",
+    "react-dom": "^16.9.0 || ^17.0.0"
   }
 }
