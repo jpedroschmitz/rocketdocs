@@ -3,13 +3,13 @@ import { useTheme, jsx, css } from '@emotion/react';
 import PropTypes from 'prop-types';
 import { MdEdit } from 'react-icons/md';
 
-export default function EditGithub({ githubEditUrl }) {
+export default function EditGithub({ repositoryEditUrl, repositoryProvider }) {
   const theme = useTheme();
 
-  if (githubEditUrl) {
+  if (repositoryEditUrl) {
     return (
       <a
-        href={githubEditUrl}
+        href={repositoryEditUrl}
         target="_blank"
         rel="noopener noreferrer"
         css={css`
@@ -24,7 +24,7 @@ export default function EditGithub({ githubEditUrl }) {
         `}
       >
         <MdEdit style={{ marginRight: '5px' }} />
-        Edit this page on GitHub
+        Edit this page on {repositoryProvider}
       </a>
     );
   }
@@ -32,9 +32,11 @@ export default function EditGithub({ githubEditUrl }) {
 }
 
 EditGithub.propTypes = {
-  githubEditUrl: PropTypes.string,
+  repositoryEditUrl: PropTypes.string,
+  repositoryProvider: PropTypes.string,
 };
 
 EditGithub.defaultProps = {
-  githubEditUrl: null,
+  repositoryEditUrl: null,
+  repositoryProvider: null,
 };

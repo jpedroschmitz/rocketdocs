@@ -6,15 +6,45 @@ const urljoin = require(`url-join`);
 const { normalizeBasePath, resolveLink } = require(`./util/url`);
 const withDefault = require(`./util/with-default`);
 
+function generateRepositoryEditLink(themeOptions, relativePath) {
+  const { baseDir, docsPath, repositoryUrl, githubUrl, branch } = withDefault(
+    themeOptions,
+  );
+
+  const repoUrl = !repositoryUrl && githubUrl ? githubUrl : repositoryUrl;
+  const pathToFile = path.join(branch, baseDir, docsPath);
+
+  if (repoUrl.includes('github')) {
+    return {
+      editUrl: urljoin(repoUrl, `tree`, pathToFile, relativePath),
+      provider: `GitHub`,
+    };
+  }
+
+  if (repoUrl.includes('gitlab')) {
+    return {
+      editUrl: urljoin(repoUrl, '-', 'blob', pathToFile, relativePath),
+      provider: `GitLab`,
+    };
+  }
+
+  if (repoUrl.includes('bitbucket')) {
+    return {
+      editUrl: urljoin(repoUrl, 'src', pathToFile, relativePath),
+      provider: `BitBucket`,
+    };
+  }
+
+  return null;
+}
+
 exports.createPages = (
   { graphql, actions: { createPage }, reporter },
   themeOptions,
 ) => {
   reporter.success(`onCreateDocs`);
 
-  const { basePath, baseDir, docsPath, githubUrl, branch } = withDefault(
-    themeOptions,
-  );
+  const { basePath, githubUrl, repositoryUrl } = withDefault(themeOptions);
 
   const docsTemplate = require.resolve(`./src/templates/docs-query.js`);
   const homeTemplate = require.resolve(`./src/templates/homepage-query.js`);
@@ -59,6 +89,12 @@ exports.createPages = (
       return;
     }
 
+    if (!repositoryUrl && githubUrl) {
+      reporter.warn(
+        `@rocketseat/gatsby-theme-docs: The option \`githubUrl\` was deprecated in favor of \`repositoryUrl\`. \nTo remove this warning, replace \`githubUrl\` with \`repositoryUrl\`.`,
+      );
+    }
+
     createPage({
       path: basePath,
       component: homeTemplate,
@@ -94,12 +130,11 @@ exports.createPages = (
         relativePath,
       } = doc.node;
 
-      let githubEditUrl;
-
-      if (githubUrl) {
-        const pathLink = path.join(branch, baseDir, docsPath);
-        githubEditUrl = urljoin(githubUrl, `tree`, pathLink, relativePath);
-      }
+      // Get the file edit link based on the repository url
+      const repositoryEditUrl = generateRepositoryEditLink(
+        themeOptions,
+        relativePath,
+      );
 
       const pageLink = slug.slice(0, slug.length - 1);
       const currentPageIndex = listOfItems.findIndex(
@@ -116,7 +151,8 @@ exports.createPages = (
           slug,
           prev,
           next,
-          githubEditUrl,
+          repositoryEditUrl: repositoryEditUrl.editUrl || '',
+          repositoryProvider: repositoryEditUrl.provider || '',
         },
       });
     });

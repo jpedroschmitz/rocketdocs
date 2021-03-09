@@ -8,7 +8,7 @@ import PostNav from './PostNav';
 import EditGithub from './EditGithub';
 
 export default function Docs({ mdx, pageContext }) {
-  const { prev, next, githubEditUrl } = pageContext;
+  const { prev, next, repositoryEditUrl, repositoryProvider } = pageContext;
   const { title, description, image, disableTableOfContents } = mdx.frontmatter;
   const { headings, body } = mdx;
   const { slug } = mdx.fields;
@@ -22,7 +22,10 @@ export default function Docs({ mdx, pageContext }) {
         headings={headings}
       >
         <MDXRenderer>{body}</MDXRenderer>
-        <EditGithub githubEditUrl={githubEditUrl} />
+        <EditGithub
+          repositoryEditUrl={repositoryEditUrl}
+          repositoryProvider={repositoryProvider}
+        />
         <PostNav prev={prev} next={next} />
       </Layout>
     </>
@@ -46,6 +49,7 @@ Docs.propTypes = {
   pageContext: PropTypes.shape({
     prev: PropTypes.shape({}),
     next: PropTypes.shape({}),
-    githubEditUrl: PropTypes.string,
+    repositoryEditUrl: PropTypes.string,
+    repositoryProvider: PropTypes.string,
   }).isRequired,
 };

@@ -51,15 +51,19 @@ npm i @rocketseat/gatsby-theme-docs-core
 
 ### Theme options
 
-| Key        | Default | Required | Description                                                                                                                                                            |
-| ---------- | ------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| basePath   | /       | No       | Root url for all docs                                                                                                                                                  |
-| configPath | config  | No       | Location of config files                                                                                                                                               |
-| docsPath   | docs    | No       | The site description for SEO and social (FB, Twitter) tags                                                                                                             |
-| githubUrl  | -       | No       | The complete URL of your repository. For example: `https://github/rocketseat/gatsby-themes`                                                                            |
-| baseDir    | -       | No       | If your Gatsby site does not live in the root of your project directory/git repo, pass the subdirectory name here (`docs`, for example)                                |
-| withMdx    | true    | No       | If necessary, you can add your own MDX options to the theme. To do so, make sure you turn this option to false and include `gatsby-plugin-mdx` on your `gatsby-config` |
-| branch     | main    | No       | Default branch of the repository                                                                                                                                       |
+| Key           | Default | Required | Description                                                                                                                                                            |
+| ------------- | ------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| basePath      | /       | No       | Root url for all docs                                                                                                                                                  |
+| configPath    | config  | No       | Location of config files                                                                                                                                               |
+| docsPath      | docs    | No       | The site description for SEO and social (FB, Twitter) tags                                                                                                             |
+| githubUrl     | -       | -        | Deprecated in favor of `repositoryUrl`                                                                                                                                 |
+| repositoryUrl | -       | No       | The URL of your repository (supports GitHub, GitLab and Bitbucket). Example: `https://github/rocketseat/gatsby-themes`                                                 |
+| baseDir       | -       | No       | If your Gatsby site does not live in the root of your project directory/git repo, pass the subdirectory name here (`docs`, for example)                                |
+| withMdx       | true    | No       | If necessary, you can add your own MDX options to the theme. To do so, make sure you turn this option to false and include `gatsby-plugin-mdx` on your `gatsby-config` |
+| branch        | main    | No       | Default branch of the repository                                                                                                                                       |
+
+> Note: When adding a BitBucket link on the `repositoryUrl` option, don't add the `src/<branch>` to it.
+> Example of correct link: `https://bitbucket.org/jpedroschmitz/gatsby-themes`
 
 ### Example usage
 
