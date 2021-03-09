@@ -7,7 +7,7 @@
 </h2>
 
 <p align="center">
-  Core theme for <a href="https://github.com/Rocketseat/gatsby-themes/tree/master/%40rocketseat/gatsby-theme-docs">@rocketseat/gatsby-theme-docs</a> with no additional theming or style opinions. Includes all of the data structures you need to get up and build a documentation website.
+  Core theme for <a href="https://github.com/Rocketseat/gatsby-themes/tree/main/%40rocketseat/gatsby-theme-docs">@rocketseat/gatsby-theme-docs</a> with no additional theming or style opinions. Includes all of the data structures you need to get up and build a documentation website.
 </p>
 
 <p align="center">
@@ -59,7 +59,7 @@ npm i @rocketseat/gatsby-theme-docs-core
 | githubUrl  | -       | No       | The complete URL of your repository. For example: `https://github/rocketseat/gatsby-themes`                                                                            |
 | baseDir    | -       | No       | If your Gatsby site does not live in the root of your project directory/git repo, pass the subdirectory name here (`docs`, for example)                                |
 | withMdx    | true    | No       | If necessary, you can add your own MDX options to the theme. To do so, make sure you turn this option to false and include `gatsby-plugin-mdx` on your `gatsby-config` |
-| branch     | master  | No       | Default branch of the repository                                                                                                                                       |
+| branch     | main    | No       | Default branch of the repository                                                                                                                                       |
 
 ### Example usage
 
@@ -160,8 +160,8 @@ In general, you will need to create two files (`Docs.js` and `Homepage.js`) into
 
 ## ✨ Contributing
 
-Thanks for being interested in contributing! We’re so glad you want to help! Please take a little bit of your time and look at our [contributing guidelines](https://github.com/Rocketseat/gatsby-themes/blob/master/.github/CONTRIBUTING.md) and our
-[code of conduct](https://github.com/Rocketseat/gatsby-themes/blob/master/.github/CODE_OF_CONDUCT.md)! All type of contributions are welcome, such as bug fixes, issues or feature requests.
+Thanks for being interested in contributing! We’re so glad you want to help! Please take a little bit of your time and look at our [contributing guidelines](https://github.com/Rocketseat/gatsby-themes/blob/main/.github/CONTRIBUTING.md) and our
+[code of conduct](https://github.com/Rocketseat/gatsby-themes/blob/main/.github/CODE_OF_CONDUCT.md)! All type of contributions are welcome, such as bug fixes, issues or feature requests.
 
 ## 📝 License
 
