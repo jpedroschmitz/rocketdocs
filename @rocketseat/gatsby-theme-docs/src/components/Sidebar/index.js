@@ -61,13 +61,9 @@ export default function Sidebar({ isMenuOpen }) {
         <List>
           {data.map(({ node: { label, link, items, id } }) => {
             if (Array.isArray(items)) {
-              const subitems = items.map((item) => {
-                return (
-                  <Item key={item.link}>
-                    {renderLink(item.link, item.label)}
-                  </Item>
-                );
-              });
+              const subitems = items.map((item) => (
+                <Item key={item.link}>{renderLink(item.link, item.label)}</Item>
+              ));
 
               return (
                 <ListWithSubItems key={id} text={label}>
