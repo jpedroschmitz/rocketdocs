@@ -126,7 +126,9 @@ exports.createPages = (
 };
 
 exports.createSchemaCustomization = ({ actions }) => {
-  actions.createTypes(`
+  const { createTypes } = actions;
+
+  createTypes(`
     type MdxFrontmatter {
       title: String!
       description: String
@@ -135,7 +137,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
   `);
 
-  actions.createTypes(`
+  createTypes(`
     type SidebarItems implements Node {
       label: String!
       link: String
@@ -191,57 +193,3 @@ exports.onCreateNode = (
     value: node.id,
   });
 };
-
-/**
-[
-  {
-    "node": {
-      "label": "Home",
-      "link": "/",
-      "items": null,
-      "id": "a2913be3-af3c-5fc9-967e-a058e86b20a9"
-    }
-  },
-  {
-    "node": {
-      "label": "With dropdown",
-      "link": null,
-      "items": [
-        { "label": "My Example", "link": "/my-example" },
-        { "label": "Teste 2", "link": "/teste-2" }
-      ],
-      "id": "c7d9606c-4bda-5097-a0df-53108e9f4efd"
-    }
-  }
-]
-*/
-
-// Ler todo o array e salvar em uma objeto chave/valor
-/**
- * {
- *    '/': {
- *       prev: null,
- *       next: {
- *          label: 'My example',
- *          link: '/my-example'
- *       }
- *    },
- *    '/my-example': {
- *       prev: {
- *          label: 'Home',
- *          link: '/'
- *       },
- *       next: {
- *          label: 'Teste 2',
- *          link: '/teste-2'
- *       }
- *    },
- *    '/teste-2': {
- *       prev: {
- *          label: 'My example',
- *          link: '/my-example'
- *       },
- *       next: null
- *    }
- * }
- */

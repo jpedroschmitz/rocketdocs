@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 import useWindowScroll from 'react-use/lib/useWindowScroll';
 import useWindowSize from 'react-use/lib/useWindowSize';
 
