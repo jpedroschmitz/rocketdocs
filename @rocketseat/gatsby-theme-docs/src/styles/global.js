@@ -100,9 +100,13 @@ export default function GlobalStyle() {
           p {
             padding: 1rem;
             border-radius: 5px;
-            background: ${theme.colors.shape};
-            color: ${theme.colors.text};
+            background: ${theme.colors.components.blockquote.background};
+            color: ${theme.colors.components.blockquote.text};
             margin: 0;
+
+            a {
+              color: ${theme.colors.components.blockquote.text};
+            }
           }
         }
 
