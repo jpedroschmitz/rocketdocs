@@ -1,0 +1,15 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@1.5.0/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "rocketseat/gatsby-themes" }
+  ],
+  "commit": false,
+  "linked": [
+    ["@rocketseat/gatsby-theme-docs", "@rocketseat/gatsby-theme-docs-core"]
+  ],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "ignore": ["gatsby-starter-rocket-docs"]
+}
