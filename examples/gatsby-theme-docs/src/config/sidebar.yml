@@ -16,9 +16,5 @@
   items:
     - label: FAQ
       link: /faq
-    - label: Changelog
-      link: /changelog
-- label: Community
-  items:
     - label: 'Github'
       link: https://github.com/rocketseat/gatsby-themes
