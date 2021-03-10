@@ -42,6 +42,13 @@ If you need help, feel free to open an issue with a description of the problem
 you're facing or, if you prefer, you can chat with us on our
 [forum](https://github.com/Rocketseat/gatsby-themes/discussions).
 
+## Thanks
+
+The following Open Source projects heavily inspire this project! Thanks, Apollo and LekoArts!
+
+- [LekoArts Gatsby themes](https://github.com/LekoArts/gatsby-themes)
+- [Apollo Gatsby themes](https://github.com/apollographql/gatsby-theme-apollo)
+
 ## License
 
 MIT © [Rocketseat](https://github.com/Rocketseat)
