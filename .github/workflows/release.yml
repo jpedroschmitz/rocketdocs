@@ -27,7 +27,7 @@ jobs:
         id: changesets
         uses: changesets/action@master
         with:
-          commit: 'chore(release): Publish'
+          commit: 'chore(release): publish'
           title: 'Changesets: Version Packages'
           publish: yarn release
         env:
