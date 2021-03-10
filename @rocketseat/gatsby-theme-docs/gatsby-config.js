@@ -9,7 +9,7 @@ module.exports = (options) => {
       siteTitle: `Rocketseat Gatsby Themes`,
       siteTitleShort: `Rocketseat Gatsby Themes`,
       siteDescription: `Discover free Gatsby themes, plugins and templates created with love by Rocketseat.`,
-      siteUrl: `https://rocketdocs.netlify.com`,
+      siteUrl: `https://rocketdocs.netlify.app`,
       siteAuthor: `@rocketseat`,
       siteImage: `/banner.png`,
       siteLanguage: `en`,
