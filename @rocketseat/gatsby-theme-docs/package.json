@@ -32,7 +32,7 @@
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.0.0",
     "@mdx-js/react": "^1.6.18",
-    "@rocketseat/gatsby-theme-docs-core": "*",
+    "@rocketseat/gatsby-theme-docs-core": "^1.2.0",
     "gatsby-plugin-catch-links": "^3.0.0",
     "gatsby-plugin-emotion": "^6.0.0",
     "gatsby-plugin-mdx": "^2.0.0",
