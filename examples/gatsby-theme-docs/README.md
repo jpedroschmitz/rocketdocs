@@ -54,7 +54,7 @@
 
 ## 📄 Docs
 
-Looking for docs? Check our live demo and documentation [website](https://rocketdocs.netlify.com).
+Looking for docs? Check our live demo and documentation [website](https://rocketdocs.netlify.app).
 
 ---
 

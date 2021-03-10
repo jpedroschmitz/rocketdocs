@@ -158,7 +158,7 @@ Every file must have a custom title. Description and image are not required.
 
 ### Shadowing
 
-Check the [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) docs to understand how to customize this theme!
+Check the [Shadowing in Gatsby Themes](https://www.gatsbyjs.com/docs/themes/shadowing/) docs to understand how to customize this theme!
 
 In general, you will need to create two files (`Docs.js` and `Homepage.js`) into `src/@rocketseat/gatsby-theme-docs-core/components/templates` to shadow/override it.
 
@@ -169,7 +169,7 @@ Thanks for being interested in contributing! We’re so glad you want to help! P
 
 ## 📝 License
 
-Licensed under the [MIT License](./LICENSE).
+Licensed under the [MIT License](https://github.com/Rocketseat/gatsby-themes/blob/main/%40rocketseat/gatsby-theme-docs-core/LICENSE).
 
 ---
 

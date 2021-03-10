@@ -62,7 +62,7 @@
 
 ## 📄 Docs
 
-Looking for docs? Check our live demo and documentation [website](https://rocketdocs.netlify.com).
+Looking for docs? Check our live demo and documentation [website](https://rocketdocs.netlify.app).
 
 ## ✨ Contributing
 
@@ -71,11 +71,11 @@ Thanks for being interested in contributing! We’re so glad you want to help! P
 
 ## 🗺 Changelog
 
-All notable changes to this project will be documented on the website, [click here to access](https://rocketdocs.netlify.app/changelog).
+All notable changes to this project will be documented on the [CHANGELOG](https://github.com/Rocketseat/gatsby-themes/blob/main/%40rocketseat/gatsby-theme-docs/CHANGELOG.md) file.
 
 ## 📝 License
 
-Licensed under the [MIT License](./LICENSE).
+Licensed under the [MIT License](https://github.com/Rocketseat/gatsby-themes/blob/main/%40rocketseat/gatsby-theme-docs/LICENSE).
 
 ---
 

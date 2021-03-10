@@ -6,7 +6,7 @@
   <br>
 </h1>
 
-<h4 align="center">Gatsby themes that we use to build websites at <a href="https://rocketseat.com.br" target="_blank">Rocketseat</a> ⚡️🔥</h4>
+<h4 align="center">Gatsby themes that we use to build websites at <a href="https://rocketseat.com.br?utm_source=github-gatsby-themes" target="_blank">Rocketseat</a> ⚡️🔥</h4>
 
 <p align="center">
   <img src="https://img.shields.io/badge/PRs-welcome-%238257E6.svg" alt="PRs welcome!" />
@@ -40,7 +40,7 @@ Thanks for being interested in contributing! We’re so glad you want to help! P
 
 If you need help, feel free to open an issue with a description of the problem
 you're facing or, if you prefer, you can chat with us on our
-[Discord Community](https://rocketseat.com.br/comunidade).
+[forum](https://github.com/Rocketseat/gatsby-themes/discussions).
 
 ## License
 
