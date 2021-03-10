@@ -1,6 +1,6 @@
 {
   "name": "@rocketseat/gatsby-theme-docs-core",
-  "version": "1.2.0",
+  "version": "2.3.0",
   "main": "index.js",
   "description": "Core theme for @rocketseat/gatsby-theme-docs with no additional theming or style opinions. Includes all of the data structures you need to get up and build a documentation website.",
   "author": "João Pedro Schmitz <hey@joaopedro.dev> (@jpedroschmitz)",
