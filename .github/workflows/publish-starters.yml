@@ -1,14 +1,10 @@
 name: Publish Starters
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'examples/**'
+  workflow_dispatch:
 
 jobs:
-  publish:
+  publish-starters:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
