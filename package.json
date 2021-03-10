@@ -4,7 +4,10 @@
   "scripts": {
     "lint": "eslint --ignore-path .gitignore \"**/*.+(ts|js|tsx|jsx)\"",
     "format": "prettier --ignore-path .gitignore \"**/*.+(ts|js|tsx|jsx)\" --write",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish"
   },
   "engines": {
     "yarn": "^1.17.3",
@@ -29,6 +32,8 @@
     }
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.3.0",
+    "@changesets/cli": "^2.14.1",
     "@commitlint/cli": "12.0.1",
     "@commitlint/config-conventional": "12.0.1",
     "commitizen": "4.2.3",
