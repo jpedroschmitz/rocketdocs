@@ -7,7 +7,8 @@
     "postinstall": "husky install",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "changeset publish"
+    "release": "changeset publish",
+    "commit": "cz"
   },
   "engines": {
     "yarn": "^1.17.3",
