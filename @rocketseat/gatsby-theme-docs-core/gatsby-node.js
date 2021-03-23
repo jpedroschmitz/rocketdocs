@@ -35,7 +35,10 @@ function generateRepositoryEditLink(themeOptions, relativePath) {
     };
   }
 
-  return null;
+  return {
+    editUrl: null,
+    provider: null,
+  };
 }
 
 exports.createPages = (
