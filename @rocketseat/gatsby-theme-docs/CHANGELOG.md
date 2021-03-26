@@ -1,5 +1,14 @@
 # @rocketseat/gatsby-theme-docs
 
+## 2.3.1
+
+### Patch Changes
+
+- [#84](https://github.com/Rocketseat/gatsby-themes/pull/84) [`c6c4ada`](https://github.com/Rocketseat/gatsby-themes/commit/c6c4ada2d468b95a91bcbeb7ef1360a2f15f5c5d) Thanks [@jpedroschmitz](https://github.com/jpedroschmitz)! - fix repositoryUrl option as required field
+
+- Updated dependencies [[`4a1dd6d`](https://github.com/Rocketseat/gatsby-themes/commit/4a1dd6d016e4ed973e54df4a8c6a60f6e900ffbb)]:
+  - @rocketseat/gatsby-theme-docs-core@2.3.1
+
 ## 2.3.0
 
 ### Minor Changes

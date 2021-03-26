@@ -1,5 +1,11 @@
 # @rocketseat/gatsby-theme-docs-core
 
+## 2.3.1
+
+### Patch Changes
+
+- [#82](https://github.com/Rocketseat/gatsby-themes/pull/82) [`4a1dd6d`](https://github.com/Rocketseat/gatsby-themes/commit/4a1dd6d016e4ed973e54df4a8c6a60f6e900ffbb) Thanks [@colmcgiv](https://github.com/colmcgiv)! - repositoryUrl listed as required but build fails when not included
+
 ## 2.3.0
 
 ### Minor Changes
