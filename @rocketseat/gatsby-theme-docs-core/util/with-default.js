@@ -5,7 +5,6 @@ module.exports = (themeOptions) => {
   const branch = themeOptions.branch || `main`;
   const baseDir = themeOptions.baseDir || ``;
   const { withMdx = true } = themeOptions;
-
   const { githubUrl, repositoryUrl = '' } = themeOptions;
 
   return {
