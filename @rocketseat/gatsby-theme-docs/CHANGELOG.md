@@ -1,5 +1,11 @@
 # @rocketseat/gatsby-theme-docs
 
+## 2.3.3
+
+### Patch Changes
+
+- [#101](https://github.com/Rocketseat/gatsby-themes/pull/101) [`14d6c25`](https://github.com/Rocketseat/gatsby-themes/commit/14d6c251ee713812ef98d3e222cd87628c4ec070) Thanks [@jpedroschmitz](https://github.com/jpedroschmitz)! - Updated dependencies: @rocketseat/gatsby-theme-docs-core@2.3.2
+
 ## 2.3.1
 
 ### Patch Changes

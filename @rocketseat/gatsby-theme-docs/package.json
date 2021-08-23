@@ -1,6 +1,6 @@
 {
   "name": "@rocketseat/gatsby-theme-docs",
-  "version": "2.3.1",
+  "version": "2.3.3",
   "main": "index.js",
   "description": "Out of the box Gatsby Theme for creating documentation websites easily and quickly.",
   "author": "João Pedro Schmitz <hey@joaopedro.dev> (@jpedroschmitz)",
@@ -32,7 +32,7 @@
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.0.0",
     "@mdx-js/react": "^1.6.18",
-    "@rocketseat/gatsby-theme-docs-core": "^2.3.1",
+    "@rocketseat/gatsby-theme-docs-core": "^2.3.2",
     "gatsby-plugin-catch-links": "^3.0.0",
     "gatsby-plugin-emotion": "^6.0.0",
     "gatsby-plugin-mdx": "^2.0.0",
