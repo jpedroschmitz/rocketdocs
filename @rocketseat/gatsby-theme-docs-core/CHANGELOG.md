@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- [#99](https://github.com/Rocketseat/gatsby-themes/pull/99) [`418e3c7`](https://github.com/Rocketseat/gatsby-themes/commit/418e3c767f3d84cb7d53c9049873bee625c57071) Thanks [@jpedroschmitz](https://github.com/jpedroschmitz)! - fix: allow setting withMdx option to false
+- [#99](https://github.com/Rocketseat/gatsby-themes/pull/99) [`418e3c7`](https://github.com/Rocketseat/gatsby-themes/commit/418e3c767f3d84cb7d53c9049873bee625c57071) Thanks [@milgner](https://github.com/milgner)! - fix: allow setting withMdx option to false
 
 ## 2.3.1
 
