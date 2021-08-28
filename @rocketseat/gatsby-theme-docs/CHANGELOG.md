@@ -4,6 +4,12 @@
 
 ### Minor Changes
 
+- [#92](https://github.com/Rocketseat/gatsby-themes/pull/92) [`fa2cc45`](https://github.com/Rocketseat/gatsby-themes/commit/fa2cc45f23a387737c6207bad8fac1ce3f4d75b0) Thanks [@benomatis](https://github.com/benomatis)! - Allow changing font family
+
+## 2.4.0
+
+### Minor Changes
+
 - [#84](https://github.com/Rocketseat/gatsby-themes/pull/84) [`52ea0430`](https://github.com/Rocketseat/gatsby-themes/pull/84/commits/52ea043013226279e92e79a06beb25fb3b599fc1) - Allow changing font family
 
 ## 2.3.3
