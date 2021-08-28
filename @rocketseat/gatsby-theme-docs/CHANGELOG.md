@@ -1,5 +1,11 @@
 # @rocketseat/gatsby-theme-docs
 
+## 2.4.0
+
+### Minor Changes
+
+- [#84](https://github.com/Rocketseat/gatsby-themes/pull/84) [`52ea0430`](https://github.com/Rocketseat/gatsby-themes/pull/84/commits/52ea043013226279e92e79a06beb25fb3b599fc1) - Allow changing font family
+
 ## 2.3.3
 
 ### Patch Changes

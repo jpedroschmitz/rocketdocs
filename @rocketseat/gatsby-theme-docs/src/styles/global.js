@@ -17,8 +17,7 @@ export default function GlobalStyle() {
 
         body {
           font-size: 16px;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-            Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-family: ${theme.fonts.body};
           background-color: ${theme.colors.background};
           text-rendering: optimizelegibility;
           -webkit-font-smoothing: antialiased;

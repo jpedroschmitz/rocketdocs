@@ -89,6 +89,39 @@ export default {
 };
 ```
 
+## Changing the font family
+
+You can also change the default font family of the theme.
+
+To do this, create a file under `src/@rocketseat/gatsby-theme-docs/styles/theme.js` (or add to the existing default object if you already started customizing the theme).
+
+```js title=src/@rocketseat/gatsby-theme-docs/styles/theme.js
+export default {
+  fonts: {
+    fontFace: {
+      family: 'Roboto',
+      file: '/fonts/roboto-regular-webfont',
+    },
+    body: 'Roboto',
+  },
+};
+```
+
+The `fontFace` property will define the name of the font family for later use, while the `file` property will provide the path and file name of the font files.
+
+Font files should be placed in the [`static`](https://www.gatsbyjs.com/docs/how-to/images-and-media/static-folder/) folder in the root of the project (or a subfolder therein, eg. `fonts`), and their path specified accordingly.
+
+```
+.
+└── static
+    └── fonts
+        ├── roboto-regular-webfont.eot
+        ├── roboto-regular-webfont.svg
+        ├── roboto-regular-webfont.ttf
+        ├── roboto-regular-webfont.woff
+        └── roboto-regular-webfont.woff2
+```
+
 ## Adding elements to React Live scope
 
 By default we add some elements to React Live Scope. If you need to add more, just
