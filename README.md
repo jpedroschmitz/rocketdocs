@@ -1,20 +1,20 @@
 <h1 align="center">
-  <br>
-  <img src="https://storage.googleapis.com/golden-wind/github/gatsby-themes-logo.svg" alt="Rocketseat and Gatsby" width="260">
-  <br>
-  Rocketseat Gatsby Themes
+  <!-- <br> -->
+  <!-- <img src="https://storage.googleapis.com/golden-wind/github/gatsby-themes-logo.svg" alt="Rocketseat and Gatsby" width="260"> -->
+  <!-- <br> -->
+  Rocket Docs
   <br>
 </h1>
 
-<h4 align="center">Gatsby themes that we use to build websites at <a href="https://rocketseat.com.br?utm_source=github-gatsby-themes" target="_blank">Rocketseat</a> ⚡️🔥</h4>
+<h4 align="center">Easy to use Gatsby Theme to create documentation websites ⚡️🔥</h4>
 
 <p align="center">
   <img src="https://img.shields.io/badge/PRs-welcome-%238257E6.svg" alt="PRs welcome!" />
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-%238257E6">
 
-  <a href="https://twitter.com/intent/follow?screen_name=rocketseat">
-    <img src="https://img.shields.io/twitter/follow/rocketseat.svg?label=Follow%20@rocketseat" alt="Follow @rocketseat" />
+  <a href="https://twitter.com/intent/follow?screen_name=jpedroschmitz">
+    <img src="https://img.shields.io/twitter/follow/jpedroschmitz.svg?label=Follow%20@jpedroschmitz" alt="Follow @jpedroschmitz" />
   </a>
 </p>
 
@@ -51,4 +51,4 @@ The following Open Source projects heavily inspire this project! Thanks, Apollo 
 
 ## License
 
-MIT © [Rocketseat](https://github.com/Rocketseat)
+MIT © [João Pedro](https://github.com/jpedroschmitz)

@@ -5,12 +5,12 @@ module.exports = (options) => {
 
   return {
     siteMetadata: {
-      defaultTitle: `Gatsby Themes from Rocketseat`,
-      siteTitle: `Rocketseat Gatsby Themes`,
-      siteTitleShort: `Rocketseat Gatsby Themes`,
-      siteDescription: `Discover free Gatsby themes, plugins and templates created with love by Rocketseat.`,
+      defaultTitle: `Rocket Docs by João Pedro Schmitz`,
+      siteTitle: `Rocket Docs`,
+      siteTitleShort: `Rocket Docs`,
+      siteDescription: `Easy to use Gatsby Theme to create documentation websites`,
       siteUrl: `https://rocketdocs.netlify.app`,
-      siteAuthor: `@rocketseat`,
+      siteAuthor: `@jpedroschmitz`,
       siteImage: `/banner.png`,
       siteLanguage: `en`,
       basePath: themeOtions.basePath,

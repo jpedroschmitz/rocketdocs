@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-rocket-docs",
+  "name": "gatsby-starter-rocketdocs",
   "private": true,
   "version": "1.0.0",
   "description": "Out of the box Gatsby Starter for creating documentation websites easily and quickly. With support for MDX, code highlight, Analytics, SEO and more",
   "author": "João Pedro Schmitz <hey@joaopedro.dev> (@jpedroschmitz)",
   "license": "MIT",
-  "starter-name": "gatsby-starter-rocket-docs",
+  "starter-name": "gatsby-starter-rocketdocs",
   "dependencies": {
     "@rocketseat/gatsby-theme-docs": "^2.4.0",
     "gatsby": "^3.0.4",
@@ -22,7 +22,6 @@
   "devDependencies": {},
   "keywords": [
     "gatsby",
-    "rocketseat",
     "gatsby-starter"
   ],
   "scripts": {
