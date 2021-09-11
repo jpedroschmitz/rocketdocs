@@ -7,7 +7,7 @@
 </h2>
 
 <p align="center">
-  Out of the box Gatsby Starter for creating documentation websites easily and quickly. With support for MDX, code highlight, Analytics, SEO and more 🔥 Using the theme: <a href="https://github.com/Rocketseat/gatsby-themes/tree/main/%40rocketseat/gatsby-theme-docs">@rocketseat/gatsby-theme-docs</a>
+  Out of the box Gatsby Starter for creating documentation websites easily and quickly. With support for MDX, code highlight, Analytics, SEO and more 🔥 Using the theme: <a href="https://github.com/jpedroschmitz/rocketdocs/tree/main/%40rocketseat/gatsby-theme-docs">@rocketseat/gatsby-theme-docs</a>
 </p>
 
 <p align="center">

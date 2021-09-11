@@ -40,7 +40,7 @@ Thanks for being interested in contributing! We’re so glad you want to help! P
 
 If you need help, feel free to open an issue with a description of the problem
 you're facing or, if you prefer, you can chat with us on our
-[forum](https://github.com/Rocketseat/gatsby-themes/discussions).
+[forum](https://github.com/jpedroschmitz/rocketdocs/discussions).
 
 ## Thanks
 
