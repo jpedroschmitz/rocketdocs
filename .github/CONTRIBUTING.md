@@ -23,7 +23,7 @@
 
 First off, we would like to thank you for taking the time to contribute and make this a better project!
 
-Here we have a set of instructions and guidelines to reduce misunderstandings and make the process of contributing to Rocketseat Gatsby themes as smooth as possible.
+Here we have a set of instructions and guidelines to reduce misunderstandings and make the process of contributing to Rocket Docs as smooth as possible.
 
 We hope this guide makes the contribution process clear and answers any questions you may have.
 
@@ -121,10 +121,10 @@ After yarn has linked packages and installed the dependencies in the repo, you c
 yarn workspaces info
 ```
 
-As all themes are set up with a respective example page (to view the theme/changes), you could for example run the "@rocketseat/gatsby-theme-docs" workspace with the example "rocket-docs" like:
+As all themes are set up with a respective example page (to view the theme/changes), you could for example run the "@rocketseat/gatsby-theme-docs" workspace with the example "rocketdocs" like:
 
 ```sh
-yarn workspace gatsby-starter-rocket-docs start
+yarn workspace gatsby-starter-rocketdocs start
 ```
 
 ## Commiting

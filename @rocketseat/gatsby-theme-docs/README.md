@@ -15,8 +15,8 @@
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-%238257E6">
 
-  <a href="https://twitter.com/intent/follow?screen_name=rocketseat">
-    <img src="https://img.shields.io/twitter/follow/rocketseat.svg?label=Follow%20@rocketseat" alt="Follow @rocketseat" />
+  <a href="https://twitter.com/intent/follow?screen_name=jpedroschmitz">
+    <img src="https://img.shields.io/twitter/follow/jpedroschmitz.svg?label=Follow%20@jpedroschmitz" alt="Follow @jpedroschmitz" />
   </a>
 </p>
 
@@ -46,13 +46,13 @@
 1. Create the website.
 
    ```sh
-   npx gatsby new rocket-docs https://github.com/rocketseat/gatsby-starter-rocket-docs
+   npx gatsby new rocketdocs https://github.com/jpedroschmitz/gatsby-starter-rocketdocs
    ```
 
 2. Start developing.
 
    ```sh
-   cd rocket-docs
+   cd rocketdocs
    gatsby develop
    ```
 
@@ -79,4 +79,4 @@ Licensed under the [MIT License](https://github.com/jpedroschmitz/rocketdocs/blo
 
 ---
 
-Made with 💜 by Rocketseat :wave: [check our community!](https://discordapp.com/invite/gCRAFhc)
+Made with 💜 by João Pedro
