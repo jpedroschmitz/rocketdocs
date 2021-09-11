@@ -42,6 +42,18 @@ If you need help, feel free to open an issue with a description of the problem
 you're facing or, if you prefer, you can chat with us on our
 [forum](https://github.com/jpedroschmitz/rocketdocs/discussions).
 
+## Sponsors
+
+<table>
+  <tr>
+    <td>
+      <a aria-label="Rocketseat" href="https://rocketseat.com.br?utm_source=rocketdocs&utm_medium=sponsorship&utm_campaign=rocketdocs_sponsorship">
+        <img alt="" src="./.github/rocketseat.svg">
+      </a>
+    </td>
+  </tr>
+</table>
+
 ## Thanks
 
 The following Open Source projects heavily inspire this project! Thanks, Apollo and LekoArts!
