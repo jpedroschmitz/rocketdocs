@@ -29,21 +29,21 @@
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.18",
-    "gatsby-plugin-mdx": "^2.0.0",
-    "gatsby-plugin-sharp": "^3.0.0",
-    "gatsby-remark-autolink-headers": "^3.0.0",
-    "gatsby-remark-copy-linked-files": "^3.0.0",
+    "gatsby-plugin-mdx": "alpha-9689ff",
+    "gatsby-plugin-sharp": "alpha-9689ff",
+    "gatsby-remark-autolink-headers": "alpha-9689ff",
+    "gatsby-remark-copy-linked-files": "alpha-9689ff",
     "gatsby-remark-embedder": "^4.0.0",
-    "gatsby-remark-images": "^4.0.0",
-    "gatsby-remark-responsive-iframe": "^3.0.0",
-    "gatsby-source-filesystem": "^3.0.0",
-    "gatsby-transformer-sharp": "^3.0.0",
-    "gatsby-transformer-yaml": "^3.0.0",
+    "gatsby-remark-images": "alpha-9689ff",
+    "gatsby-remark-responsive-iframe": "alpha-9689ff",
+    "gatsby-source-filesystem": "alpha-9689ff",
+    "gatsby-transformer-sharp": "alpha-9689ff",
+    "gatsby-transformer-yaml": "alpha-9689ff",
     "url-join": "^4.0.1"
   },
   "peerDependencies": {
     "@mdx-js/react": "^1.5.1",
-    "gatsby": "^3.0.0",
+    "gatsby": "^4.0.0",
     "react": "^16.9.0 || ^17.0.0",
     "react-dom": "^16.9.0 || ^17.0.0"
   }
