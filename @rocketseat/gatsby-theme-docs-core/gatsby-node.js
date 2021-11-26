@@ -54,7 +54,12 @@ exports.createPages = (
   return graphql(
     `
       {
-        files: allFile(filter: { extension: { in: ["md", "mdx"] } }) {
+        files: allFile(
+          filter: {
+            extension: { in: ["md", "mdx"] }
+            sourceInstanceName: { eq: "docs" }
+          }
+        ) {
           edges {
             node {
               id
