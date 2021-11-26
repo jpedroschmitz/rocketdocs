@@ -4,7 +4,7 @@ import DocsComponent from '../components/Docs';
 export default DocsComponent;
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)

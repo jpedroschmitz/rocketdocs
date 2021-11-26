@@ -7,9 +7,8 @@ const { normalizeBasePath, resolveLink } = require(`./util/url`);
 const withDefault = require(`./util/with-default`);
 
 function generateRepositoryEditLink(themeOptions, relativePath) {
-  const { baseDir, docsPath, repositoryUrl, githubUrl, branch } = withDefault(
-    themeOptions,
-  );
+  const { baseDir, docsPath, repositoryUrl, githubUrl, branch } =
+    withDefault(themeOptions);
 
   const repoUrl = !repositoryUrl && githubUrl ? githubUrl : repositoryUrl;
   const pathToFile = path.join(branch, baseDir, docsPath);
