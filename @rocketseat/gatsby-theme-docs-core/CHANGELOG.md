@@ -1,5 +1,16 @@
 # @rocketseat/gatsby-theme-docs-core
 
+## 3.0.0
+
+### Major Changes
+
+- [#113](https://github.com/jpedroschmitz/rocketdocs/pull/113) [`3c2acfc`](https://github.com/jpedroschmitz/rocketdocs/commit/3c2acfc89f89a9d94643b8fcb4b7694a7c4c1031) Thanks [@jpedroschmitz](https://github.com/jpedroschmitz)! - Add support for Gatsby v4
+
+### Patch Changes
+
+- [#115](https://github.com/jpedroschmitz/rocketdocs/pull/115) [`528373b`](https://github.com/jpedroschmitz/rocketdocs/commit/528373be3002558fbc0e16436f2b937724268a91) Thanks [@jpedroschmitz](https://github.com/jpedroschmitz)! - fix: createPages only for docs content
+  chore: update dev dependencies
+
 ## 2.3.2
 
 ### Patch Changes
