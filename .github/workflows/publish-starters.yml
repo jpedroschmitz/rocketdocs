@@ -12,6 +12,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
       - name: publish:starters
         uses: johno/actions-push-subdirectories@master
         env:
