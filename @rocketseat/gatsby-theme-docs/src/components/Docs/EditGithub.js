@@ -28,6 +28,7 @@ export default function EditGithub({ repositoryEditUrl, repositoryProvider }) {
       </a>
     );
   }
+
   return null;
 }
 
