@@ -2,4 +2,4 @@
 '@rocketseat/gatsby-theme-docs-core': major
 ---
 
-Update Gatsby dependencies to support v4
+Add support for Gatsby v4
