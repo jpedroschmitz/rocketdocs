@@ -7,7 +7,7 @@
     }
   },
   "plugins": ["import", "jsx-a11y", "react", "react-hooks", "prettier"],
-  "extends": ["airbnb", "eslint-config-prettier", "prettier"],
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [
@@ -21,7 +21,13 @@
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-props-no-spreading": "off",
     "react/forbid-prop-types": "off",
-    "react/jsx-fragments": "off"
+    "react/jsx-fragments": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "function-declaration"
+      }
+    ]
   },
   "env": {
     "browser": true,
