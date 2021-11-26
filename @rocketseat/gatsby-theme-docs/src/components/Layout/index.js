@@ -20,9 +20,9 @@ export default function Layout({
   const disableTOC =
     disableTableOfContents === true || !headings || headings.length === 0;
 
-  function handleMenuOpen() {
+  const handleMenuOpen = () => {
     setMenuOpen(!isMenuOpen);
-  }
+  };
 
   return (
     <Fragment>
