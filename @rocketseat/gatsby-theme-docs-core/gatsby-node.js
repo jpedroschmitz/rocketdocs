@@ -195,17 +195,18 @@ exports.createSchemaCustomization = ({ actions }) => {
 };
 
 exports.onPreBootstrap = ({ store, reporter }, themeOptions) => {
-  const { configPath, docsPath } = withDefault(themeOptions);
+  const { configPath, docsPath, dataPath } = withDefault(themeOptions);
   const { program } = store.getState();
 
   const dirs = [
     path.join(program.directory, configPath),
     path.join(program.directory, docsPath),
+    path.join(program.directory, dataPath),
   ];
 
   dirs.forEach((dir) => {
     if (!fs.existsSync(dir)) {
-      reporter.success(`docs: intialized the ${dir} directory`);
+      reporter.success(`docs: initialized the ${dir} directory`);
       fs.mkdirSync(dir);
     }
   });
