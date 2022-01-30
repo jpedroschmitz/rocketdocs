@@ -3,13 +3,13 @@ title: Using YAML files
 description: Learn how to YAML files in Rocket Docs.
 ---
 
-To use YAML files, create a new YAML file in a `data` folder and it will be exposed as `all{FileName}Yaml` GraphQL node.
+To use YAML files, create a new YAML file in a `yamlFiles` folder and it will be exposed as `all{FileName}Yaml` GraphQL node.
 
-To store YAML in another folder, please change `dataPath` option of `@rocketseat/gatsby-theme-docs` plugin which configured in `gatsby.config.js`.
+To store YAML in another folder, please change `yamlFilesPath` option of `@rocketseat/gatsby-theme-docs` plugin which is configured in `gatsby.config.js`.
 
 ## Example file
 
-If our project has `letters.yml` or `letters.yaml` under a `data` folder which looks like:
+If our project has `letters.yml` or `letters.yaml` under a `yamlFiles` folder which looks like:
 
 ```yml
 - character: a

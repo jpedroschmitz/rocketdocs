@@ -195,13 +195,13 @@ exports.createSchemaCustomization = ({ actions }) => {
 };
 
 exports.onPreBootstrap = ({ store, reporter }, themeOptions) => {
-  const { configPath, docsPath, dataPath } = withDefault(themeOptions);
+  const { configPath, docsPath, yamlFilesPath } = withDefault(themeOptions);
   const { program } = store.getState();
 
   const dirs = [
     path.join(program.directory, configPath),
     path.join(program.directory, docsPath),
-    path.join(program.directory, dataPath),
+    path.join(program.directory, yamlFilesPath),
   ];
 
   dirs.forEach((dir) => {

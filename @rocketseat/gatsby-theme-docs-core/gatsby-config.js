@@ -3,7 +3,7 @@ const path = require(`path`);
 const _ = require(`lodash`);
 
 module.exports = (options) => {
-  const { basePath, configPath, docsPath, dataPath, withMdx } =
+  const { basePath, configPath, docsPath, yamlFilesPath, withMdx } =
     withDefault(options);
 
   return {
@@ -30,8 +30,8 @@ module.exports = (options) => {
       {
         resolve: `gatsby-source-filesystem`,
         options: {
-          name: `data`,
-          path: dataPath,
+          name: `yamlFiles`,
+          path: yamlFilesPath,
         },
       },
       {
