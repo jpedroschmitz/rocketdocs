@@ -12,6 +12,8 @@
       link: '/usage/navigation'
     - label: 'Shadowing'
       link: '/usage/shadowing'
+    - label: 'Using YAML files'
+      link: '/usage/using-yaml-files'
 - label: More
   items:
     - label: FAQ
