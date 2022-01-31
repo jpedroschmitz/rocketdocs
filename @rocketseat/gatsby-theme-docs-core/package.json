@@ -39,7 +39,7 @@
     "gatsby-source-filesystem": "^4.2.0",
     "gatsby-transformer-sharp": "^4.2.0",
     "gatsby-transformer-yaml": "^4.2.0",
-    "lodash": "^4.17.21",
+    "lodash.camelcase": "^4.3.0",
     "url-join": "^4.0.1"
   },
   "peerDependencies": {

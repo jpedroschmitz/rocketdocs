@@ -1,6 +1,8 @@
 const withDefault = require(`./util/with-default`);
 const path = require(`path`);
-const _ = require(`lodash`);
+const camelCase = require('lodash.camelcase');
+
+const upperFirst = (text) => text.charAt(0).toUpperCase() + text.slice(1);
 
 module.exports = (options) => {
   const { basePath, configPath, docsPath, yamlFilesPath, withMdx } =
@@ -37,10 +39,7 @@ module.exports = (options) => {
       {
         resolve: `gatsby-transformer-yaml`,
         options: {
-          /* eslint-disable no-unused-vars */
-          typeName: ({ node, object, isArray }) => {
-            /* eslint-enable no-unused-vars */
-
+          typeName: ({ node, isArray }) => {
             if (node.sourceInstanceName === `config`) {
               return `SidebarItems`;
             }
@@ -48,16 +47,16 @@ module.exports = (options) => {
             // Fallback to the existing algorithm from gatsby-transformer-yaml plugin.
             // https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-transformer-yaml/src/gatsby-node.js#L22-L28
             if (node.internal.type !== `File`) {
-              return _.upperFirst(_.camelCase(`${node.internal.type} Yaml`));
+              return upperFirst(camelCase(`${node.internal.type} Yaml`));
             }
 
             // Parsing algorithm: Array of Objects, where each file represents a collection.
             if (isArray) {
-              return _.upperFirst(_.camelCase(`${node.name} Yaml`));
+              return upperFirst(camelCase(`${node.name} Yaml`));
             }
 
             // Parsing algorithm: Single Object, where each subfolder represents a collection; each file represents one "record".
-            return _.upperFirst(_.camelCase(`${path.basename(node.dir)} Yaml`));
+            return upperFirst(camelCase(`${path.basename(node.dir)} Yaml`));
           },
         },
       },
