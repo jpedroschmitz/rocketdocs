@@ -1,5 +1,16 @@
 # @rocketseat/gatsby-theme-docs
 
+## 3.1.0
+
+### Minor Changes
+
+- [#124](https://github.com/jpedroschmitz/rocketdocs/pull/124) [`c4f8d21`](https://github.com/jpedroschmitz/rocketdocs/commit/c4f8d213010b61f20183632f9fc407fb659c151d) Thanks [@aaronamm](https://github.com/aaronamm)! - Support additional YAML files
+
+### Patch Changes
+
+- Updated dependencies [[`c4f8d21`](https://github.com/jpedroschmitz/rocketdocs/commit/c4f8d213010b61f20183632f9fc407fb659c151d)]:
+  - @rocketseat/gatsby-theme-docs-core@3.1.0
+
 ## 3.0.0
 
 ### Major Changes
