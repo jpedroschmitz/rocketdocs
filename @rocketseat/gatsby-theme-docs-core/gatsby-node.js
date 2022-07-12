@@ -130,6 +130,8 @@ exports.createPages = (
     // Generate docs pages
     const docs = result.data.files.edges;
     docs.forEach((doc) => {
+      try: 
+      {
       const {
         childMdx: {
           fields: { slug },
@@ -162,6 +164,10 @@ exports.createPages = (
           repositoryProvider: repositoryEditUrl.provider || '',
         },
       });
+      }
+      catch (e) {
+        reporter.error(`Error creating a doc: ` + e);
+      }
     });
 
     reporter.success(`docs pages created`);
