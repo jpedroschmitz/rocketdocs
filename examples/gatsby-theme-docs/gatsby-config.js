@@ -20,6 +20,11 @@ module.exports = {
         yamlFilesPath: `src/yamlFiles`,
         repositoryUrl: `https://github.com/jpedroschmitz/rocketdocs`,
         baseDir: `examples/gatsby-theme-docs`,
+        gatsbyRemarkPlugins: [
+          {
+            resolve: require.resolve(`./plugins/gatsby-remark-purple-headers`),
+          },
+        ],
       },
     },
     {

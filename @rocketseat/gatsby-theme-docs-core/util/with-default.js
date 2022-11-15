@@ -7,6 +7,8 @@ module.exports = (themeOptions) => {
   const baseDir = themeOptions.baseDir || ``;
   const withMdx =
     themeOptions.withMdx === undefined ? true : themeOptions.withMdx;
+  const gatsbyRemarkPlugins = themeOptions.gatsbyRemarkPlugins || [];
+
   const { githubUrl, repositoryUrl = '' } = themeOptions;
 
   return {
@@ -19,5 +21,6 @@ module.exports = (themeOptions) => {
     repositoryUrl,
     withMdx,
     branch,
+    gatsbyRemarkPlugins,
   };
 };

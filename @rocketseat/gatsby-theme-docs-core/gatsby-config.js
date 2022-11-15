@@ -5,8 +5,14 @@ const camelCase = require('lodash.camelcase');
 const upperFirst = (text) => text.charAt(0).toUpperCase() + text.slice(1);
 
 module.exports = (options) => {
-  const { basePath, configPath, docsPath, yamlFilesPath, withMdx } =
-    withDefault(options);
+  const {
+    basePath,
+    configPath,
+    docsPath,
+    yamlFilesPath,
+    withMdx,
+    gatsbyRemarkPlugins,
+  } = withDefault(options);
 
   return {
     siteMetadata: {
@@ -77,6 +83,7 @@ module.exports = (options) => {
             },
             `gatsby-remark-responsive-iframe`,
             `gatsby-remark-copy-linked-files`,
+            ...gatsbyRemarkPlugins,
           ],
           plugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-images`],
         },

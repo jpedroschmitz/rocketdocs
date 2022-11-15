@@ -1,7 +1,7 @@
 const withDefault = require('@rocketseat/gatsby-theme-docs-core/util/with-default');
 
 module.exports = (options) => {
-  const themeOtions = withDefault(options);
+  const themeOptions = withDefault(options);
 
   return {
     siteMetadata: {
@@ -13,13 +13,13 @@ module.exports = (options) => {
       siteAuthor: `@jpedroschmitz`,
       siteImage: `/banner.png`,
       siteLanguage: `en`,
-      basePath: themeOtions.basePath,
-      docsPath: themeOtions.docsPath,
+      basePath: themeOptions.basePath,
+      docsPath: themeOptions.docsPath,
     },
     plugins: [
       {
         resolve: `@rocketseat/gatsby-theme-docs-core`,
-        options: themeOtions,
+        options: themeOptions,
       },
       `gatsby-plugin-catch-links`,
       `gatsby-plugin-emotion`,
