@@ -1,5 +1,16 @@
 # @rocketseat/gatsby-theme-docs
 
+## 3.2.0
+
+### Minor Changes
+
+- [#146](https://github.com/jpedroschmitz/rocketdocs/pull/146) [`a4903ae`](https://github.com/jpedroschmitz/rocketdocs/commit/a4903ae1f5bb24cdb075b15f374135e7da554511) Thanks [@aaronamm](https://github.com/aaronamm)! - Add `gatsbyRemarkPlugins` option
+
+### Patch Changes
+
+- Updated dependencies [[`a4903ae`](https://github.com/jpedroschmitz/rocketdocs/commit/a4903ae1f5bb24cdb075b15f374135e7da554511)]:
+  - @rocketseat/gatsby-theme-docs-core@3.2.0
+
 ## 3.1.0
 
 ### Minor Changes
