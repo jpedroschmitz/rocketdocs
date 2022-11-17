@@ -7,7 +7,7 @@
   "license": "MIT",
   "starter-name": "gatsby-starter-rocketdocs",
   "dependencies": {
-    "@rocketseat/gatsby-theme-docs": "^3.1.0",
+    "@rocketseat/gatsby-theme-docs": "^3.2.0",
     "gatsby": "^4.2.0",
     "gatsby-plugin-canonical-urls": "^4.2.0",
     "gatsby-plugin-google-analytics": "^4.2.0",
