@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../Layout';
 import SEO from '../SEO';
 import PostNav from './PostNav';
 import EditGithub from './EditGithub';
 
-export default function Docs({ mdx, pageContext }) {
+export default function Docs({ mdx, pageContext, children }) {
   const { prev, next, repositoryEditUrl, repositoryProvider } = pageContext;
   const { title, description, image, disableTableOfContents } = mdx.frontmatter;
-  const { headings, body } = mdx;
+  const { headings } = mdx;
   const { slug } = mdx.fields;
 
   return (
@@ -21,7 +20,7 @@ export default function Docs({ mdx, pageContext }) {
         title={title}
         headings={headings}
       >
-        <MDXRenderer>{body}</MDXRenderer>
+        {children}
         <EditGithub
           repositoryEditUrl={repositoryEditUrl}
           repositoryProvider={repositoryProvider}
@@ -52,4 +51,5 @@ Docs.propTypes = {
     repositoryEditUrl: PropTypes.string,
     repositoryProvider: PropTypes.string,
   }).isRequired,
+  children: PropTypes.node.isRequired,
 };

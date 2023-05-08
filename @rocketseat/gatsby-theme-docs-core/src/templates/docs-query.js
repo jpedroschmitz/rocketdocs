@@ -17,7 +17,6 @@ export const query = graphql`
         image
         disableTableOfContents
       }
-      body
       headings {
         depth
         value

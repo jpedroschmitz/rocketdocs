@@ -2,9 +2,11 @@ const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const fs = require(`fs`);
 const urljoin = require(`url-join`);
+const { compileMDXWithCustomOptions } = require(`gatsby-plugin-mdx`);
 
 const { normalizeBasePath, resolveLink } = require(`./util/url`);
 const withDefault = require(`./util/with-default`);
+const { remarkHeadingsPlugin } = require(`./remark-headings-plugin`);
 
 function generateRepositoryEditLink(themeOptions, relativePath) {
   const { baseDir, docsPath, repositoryUrl, githubUrl, branch } =
@@ -68,6 +70,9 @@ exports.createPages = (
                 fields {
                   slug
                 }
+                internal {
+                  contentFilePath
+                }
               }
             }
           }
@@ -82,6 +87,13 @@ exports.createPages = (
                 link
               }
               id
+            }
+          }
+        }
+        homepage: allMdx(filter: { fields: { slug: { eq: "/" } } }) {
+          nodes {
+            internal {
+              contentFilePath
             }
           }
         }
@@ -102,9 +114,12 @@ exports.createPages = (
       );
     }
 
+    const homepage = result.data.homepage.nodes[0];
+
     createPage({
       path: basePath,
-      component: homeTemplate,
+      component: `${homeTemplate}?__contentFilePath=${homepage.internal.contentFilePath}`,
+      context: {},
     });
 
     // Generate prev/next items based on sidebar.yml file
@@ -133,6 +148,7 @@ exports.createPages = (
       const {
         childMdx: {
           fields: { slug },
+          internal: { contentFilePath },
         },
         relativePath,
       } = doc.node;
@@ -153,7 +169,7 @@ exports.createPages = (
 
       createPage({
         path: slug,
-        component: docsTemplate,
+        component: `${docsTemplate}?__contentFilePath=${contentFilePath}`,
         context: {
           slug,
           prev,
@@ -168,7 +184,16 @@ exports.createPages = (
   });
 };
 
-exports.createSchemaCustomization = ({ actions }) => {
+exports.createSchemaCustomization = async ({
+  getNode,
+  getNodesByType,
+  pathPrefix,
+  reporter,
+  cache,
+  actions,
+  schema,
+  store,
+}) => {
   const { createTypes } = actions;
 
   createTypes(`
@@ -192,6 +217,59 @@ exports.createSchemaCustomization = ({ actions }) => {
       link: String
     }
   `);
+
+  const headingsResolver = schema.buildObjectType({
+    name: `Mdx`,
+    fields: {
+      headings: {
+        type: `[MdxHeading]`,
+        async resolve(mdxNode) {
+          const fileNode = getNode(mdxNode.parent);
+
+          if (!fileNode) {
+            return null;
+          }
+
+          const result = await compileMDXWithCustomOptions(
+            {
+              source: mdxNode.body,
+              absolutePath: fileNode.absolutePath,
+            },
+            {
+              pluginOptions: {},
+              customOptions: {
+                mdxOptions: {
+                  remarkPlugins: [remarkHeadingsPlugin],
+                },
+              },
+              getNode,
+              getNodesByType,
+              pathPrefix,
+              reporter,
+              cache,
+              store,
+            },
+          );
+
+          if (!result) {
+            return null;
+          }
+
+          return result.metadata.headings;
+        },
+      },
+    },
+  });
+
+  createTypes([
+    `
+      type MdxHeading {
+        value: String
+        depth: Int
+      }
+    `,
+    headingsResolver,
+  ]);
 };
 
 exports.onPreBootstrap = ({ store, reporter }, themeOptions) => {

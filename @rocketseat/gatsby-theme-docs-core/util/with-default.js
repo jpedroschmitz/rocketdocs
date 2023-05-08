@@ -1,5 +1,6 @@
 module.exports = (themeOptions) => {
   const basePath = themeOptions.basePath || `/`;
+  const homePath = themeOptions.homePath || ``;
   const configPath = themeOptions.configPath || `config`;
   const docsPath = themeOptions.docsPath || `docs`;
   const yamlFilesPath = themeOptions.yamlFilesPath || `yamlFiles`;
@@ -13,6 +14,7 @@ module.exports = (themeOptions) => {
 
   return {
     basePath,
+    homePath,
     configPath,
     docsPath,
     yamlFilesPath,

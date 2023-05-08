@@ -2,6 +2,10 @@
 import React from 'react';
 import Docs from '../../../components/Docs';
 
-export default function Docspage({ data: { mdx }, pageContext }) {
-  return <Docs mdx={mdx} pageContext={pageContext} />;
+export default function Docspage({ data: { mdx }, pageContext, children }) {
+  return (
+    <Docs mdx={mdx} pageContext={pageContext}>
+      {children}
+    </Docs>
+  );
 }
