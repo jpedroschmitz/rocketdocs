@@ -3,8 +3,7 @@ title: 'Getting started'
 description: Learn how to get started with Rocket Docs.
 ---
 
-> Rocket Docs is ready for Gatsby v4. New projects will use the new version! <br />
-> If you are still on Gatsby v3 or v2, configure it manually.
+> Rocket Docs is ready for Gatsby v5. New projects will use the new version!
 
 The best way to start is by using our starter:
 
@@ -33,6 +32,7 @@ npm i @rocketseat/gatsby-theme-docs
 | basePath      | /       | No       | Root url for all docs                                                                                                                                                  |
 | configPath    | config  | No       | Location of config files                                                                                                                                               |
 | docsPath      | docs    | No       | The site description for SEO and social (FB, Twitter) tags                                                                                                             |
+| homePath      | -       | No       | Location of home file                                                                                                                                                  |
 | githubUrl     | -       | -        | Deprecated in favor of `repositoryUrl`                                                                                                                                 |
 | repositoryUrl | -       | No       | The complete URL of your repository (supports GitHub, GitLab and Bitbucket). Example: `https://github/jpedroschmitz/rocketdocs`                                        |
 | baseDir       | -       | No       | If your Gatsby site does not live in the root of your project directory/git repo, pass the subdirectory name here (ex: `docs`)                                         |
@@ -67,6 +67,7 @@ module.exports = {
         basePath: `/`,
         configPath: `src/config`,
         docsPath: `src/docs`,
+        homePath: `src/home`,
         repositoryUrl: `https://github.com/jpedroschmitz/rocketdocs`,
         baseDir: `examples/gatsby-theme-docs`,
       },
