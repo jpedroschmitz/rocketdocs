@@ -1,6 +1,7 @@
 const withDefault = require(`./util/with-default`);
 const path = require(`path`);
 const gfmPlugin = require(`remark-gfm`);
+const { rehypeMetaAsAttributes } = require(`./rehype-meta-as-attributes`);
 const camelCase = require('lodash.camelcase');
 
 const upperFirst = (text) => text.charAt(0).toUpperCase() + text.slice(1);
@@ -73,6 +74,7 @@ module.exports = (options) => {
           extensions: [`.mdx`, `.md`],
           mdxOptions: {
             remarkPlugins: [gfmPlugin],
+            rehypePlugins: [rehypeMetaAsAttributes],
           },
           gatsbyRemarkPlugins: [
             `gatsby-remark-autolink-headers`,
