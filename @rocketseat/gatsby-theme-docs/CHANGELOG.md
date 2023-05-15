@@ -1,5 +1,16 @@
 # @rocketseat/gatsby-theme-docs
 
+## 4.0.0
+
+### Major Changes
+
+- [#150](https://github.com/jpedroschmitz/rocketdocs/pull/150) [`ed4b5b3`](https://github.com/jpedroschmitz/rocketdocs/commit/ed4b5b31dd60f732abced13d09df97671e9af828) Thanks [@tekmaven](https://github.com/tekmaven)! - Upgrade to Gatsby v5
+
+### Patch Changes
+
+- Updated dependencies [[`ed4b5b3`](https://github.com/jpedroschmitz/rocketdocs/commit/ed4b5b31dd60f732abced13d09df97671e9af828)]:
+  - @rocketseat/gatsby-theme-docs-core@4.0.0
+
 ## 3.2.0
 
 ### Minor Changes
