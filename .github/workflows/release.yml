@@ -16,9 +16,9 @@ jobs:
           fetch-depth: 0
 
       - name: Set up Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: lts/*
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
