@@ -1,5 +1,11 @@
 # @rocketseat/gatsby-theme-docs
 
+## 4.0.1
+
+### Patch Changes
+
+- [#156](https://github.com/jpedroschmitz/rocketdocs/pull/156) [`10de666`](https://github.com/jpedroschmitz/rocketdocs/commit/10de6661b08f5c9551c223ef26f027dbb18aa8e2) Thanks [@tekmaven](https://github.com/tekmaven)! - Fix peerDependencies to React 18
+
 ## 4.0.0
 
 ### Major Changes
