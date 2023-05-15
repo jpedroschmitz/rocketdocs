@@ -1,5 +1,5 @@
 ---
-title: Shadowing
+title: Customizing
 description: Rocket Docs allows to customize the look by using Gatsby theme shadowing feature.
 ---
 
@@ -47,9 +47,9 @@ export default Logo;
 
 ## Changing the home text
 
-Create a file at `src/@rocketseat/gatsby-theme-docs/text/index.mdx` to edit the text. Example:
+Create a file at `src/docs/index.mdx` with the text. Next, add the `homePath: 'src/home'` setting in the plugin options. Example:
 
-```mdx title=src/@rocketseat/gatsby-theme-docs/text/index.mdx
+```mdx title=src/docs/index.mdx
 # Introduction
 
 My awesome project!

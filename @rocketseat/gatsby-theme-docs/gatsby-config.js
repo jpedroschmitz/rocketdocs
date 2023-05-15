@@ -18,6 +18,13 @@ module.exports = (options) => {
     },
     plugins: [
       {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `homepage`,
+          path: themeOptions.homePath || `${__dirname}/src/text`,
+        },
+      },
+      {
         resolve: `@rocketseat/gatsby-theme-docs-core`,
         options: themeOptions,
       },

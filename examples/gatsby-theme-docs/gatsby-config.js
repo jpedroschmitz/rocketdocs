@@ -17,6 +17,7 @@ module.exports = {
       options: {
         configPath: `src/config`,
         docsPath: `src/docs`,
+        homePath: `src/home`,
         yamlFilesPath: `src/yamlFiles`,
         repositoryUrl: `https://github.com/jpedroschmitz/rocketdocs`,
         baseDir: `examples/gatsby-theme-docs`,
