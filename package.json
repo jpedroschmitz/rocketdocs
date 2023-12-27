@@ -34,21 +34,21 @@
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.0",
     "@changesets/cli": "^2.14.1",
-    "@commitlint/cli": "16.3.0",
-    "@commitlint/config-conventional": "16.2.4",
+    "@commitlint/cli": "18.4.3",
+    "@commitlint/config-conventional": "18.4.3",
     "commitizen": "4.2.4",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "8.15.0",
     "eslint-config-airbnb": "19.0.4",
-    "eslint-config-prettier": "8.5.0",
+    "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-jsx-a11y": "6.5.1",
-    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-prettier": "5.1.2",
     "eslint-plugin-react": "7.29.4",
     "eslint-plugin-react-hooks": "4.5.0",
     "eslint-utils": "^3.0.0",
-    "husky": "7.0.4",
-    "lint-staged": "12.4.1",
-    "prettier": "2.6.2"
+    "husky": "8.0.3",
+    "lint-staged": "15.2.0",
+    "prettier": "3.1.1"
   }
 }

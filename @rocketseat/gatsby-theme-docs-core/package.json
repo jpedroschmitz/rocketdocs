@@ -28,22 +28,22 @@
     "url": "https://github.com/jpedroschmitz/rocketdocs/issues"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/mdx": "^3.0.0",
     "gatsby-plugin-mdx": "^5.9.0",
     "gatsby-plugin-sharp": "^5.9.0",
     "gatsby-remark-autolink-headers": "^6.9.0",
     "gatsby-remark-copy-linked-files": "^6.9.0",
-    "gatsby-remark-embedder": "^6.0.1",
+    "gatsby-remark-embedder": "^7.0.0",
     "gatsby-remark-images": "^7.9.0",
     "gatsby-remark-responsive-iframe": "^6.9.0",
     "gatsby-source-filesystem": "^5.9.0",
     "gatsby-transformer-sharp": "^5.9.0",
     "gatsby-transformer-yaml": "^5.9.0",
     "lodash.camelcase": "^4.3.0",
-    "mdast-util-to-string": "^2",
-    "remark-gfm": "^1",
-    "unist-util-visit": "^2",
-    "url-join": "^4.0.1"
+    "mdast-util-to-string": "^4.0.0",
+    "remark-gfm": "^4.0.0",
+    "unist-util-visit": "^5.0.0",
+    "url-join": "^5.0.0"
   },
   "peerDependencies": {
     "@mdx-js/react": "^2.3.0",
